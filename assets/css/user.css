@@ -1,0 +1,61 @@
+/** Change made recent **/
+#notification-container{ height: 40.7vw;}
+#chat-container{height: 37.2vw;}
+.xploadchatnotif-container .notification-container .ui-resizable-se {right: .2vw;bottom: -2.8vw;}
+.xploadchatnotif-container .chat-container .ui-resizable-se {right: .1vw;bottom: -6.3vw;}
+.xploadwebinar-container .webinar-container{padding-bottom: .5%;}
+#xprowebinarSubscriberImage{display: none;}
+.deleteChat{display: none;}
+.actual_msg:hover .deleteChat{display: none;}
+#xprowebinarSubscriberCamera{object-fit: cover;height: 11.44vw;}
+
+/* (1920x1080) Full HD Display */
+@media  screen and (max-width: 1920px) {
+    /* insert styles here */
+  #notification-container {height: 40.90vw;}
+  #chat-container {height: 37.1vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.7vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -6.5vw;}
+  #xprowebinarSubscriberCamera {height: 11.44vw;}
+}
+/* (1680x1050) WSXGA+ Display */
+@media  screen and (max-width: 1680px) {
+  #notification-container {height: 41.2vw;}
+  #chat-container {height: 36.9vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.7vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7vw;}
+}
+/* (1600x900) HD+ Display */
+@media  screen and (max-width: 1600px) {
+  #notification-container {height: 41.3vw;}
+  #chat-container {height: 36.666vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.8vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.2vw;}
+}
+/* (1440x900) WXGA+ Display */
+@media  screen and (max-width: 1440px) {
+  #notification-container {height: 41.6vw;}
+  #chat-container {height: 36.5vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.7vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.6vw;}
+}
+/* (1366x768) WXGA Display */
+@media  screen and (max-width: 1366px) {
+    #notification-container {height: 41.77vw;}
+    #chat-container {height: 36.444vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.7vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.9vw;}
+} 
+/* (1280x1024) SXGA Display */
+@media  screen and (max-width: 1280px) {
+    #notification-container {height: 42.1vw;}
+    #chat-container {height: 36.11vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.7vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.3vw;}
+}
+@media  screen and (max-width: 1180px) {
+  #notification-container {height: 42.3vw;}
+  #chat-container {height: 35.999vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -2.6vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.7vw;}
+}

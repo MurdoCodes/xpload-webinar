@@ -1,0 +1,10 @@
+{
+    "require": {
+        "pusher/pusher-php-server": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "XploadWebinar\\": "xpload-webinar/"
+        }
+    }
+}

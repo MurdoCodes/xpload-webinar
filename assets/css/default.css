@@ -1,0 +1,63 @@
+.nopadding {padding: 0 !important;margin: 0 !important;}
+.nopad{padding: 0 !important;}
+
+@-moz-document url-prefix() { 
+  .notification-container .notificationBox{
+  	height: 100%;
+  }
+}
+
+/** Change made recent **/
+/* (1920x1080) Full HD Display */
+@media  screen and (max-width: 1920px) {    
+    #notification-container {height: 37.1vw;}
+    #chat-container{height: 37.1vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -6.5vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -6.5vw;}
+    #xprowebinarPublisherCamera {height: 11.1vw;}
+}
+/* (1680x1050) WSXGA+ Display */
+@media  screen and (max-width: 1680px) {
+  #notification-container {height: 36.9vw;}
+  #chat-container {height: 36.9vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7vw;}
+  #xprowebinarPublisherCamera {height: 11vw;}
+}
+/* (1600x900) HD+ Display */
+@media  screen and (max-width: 1600px) {
+  #notification-container {height: 36.666vw;}
+  #chat-container {height: 36.666vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.2vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.2vw;}
+}
+/* (1440x900) WXGA+ Display */
+@media  screen and (max-width: 1440px) {
+  #notification-container {height: 36.66vw;}
+  #chat-container {height: 36.66vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.6vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.6vw;}
+  #xprowebinarPublisherCamera {height: 11.01vw;object-fit: cover;}
+}
+/* (1366x768) WXGA Display */
+@media  screen and (max-width: 1366px) {
+    #notification-container {height: 36.80vw;}
+    #chat-container {height: 36.6vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.9vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.9vw;}
+    #xprowebinarPublisherCamera {height: 11.02vw;object-fit: cover;}
+} 
+/* (1280x1024) SXGA Display */
+@media  screen and (max-width: 1280px) {
+    #notification-container {height: 36.11vw;}
+    #chat-container {height: 36.11vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -8.3vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.3vw;}
+}
+@media  screen and (max-width: 1180px) {
+  #notification-container {height: 35.88vw;}
+  #chat-container {height: 35.88vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -8.7vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.7vw;}
+  #xprowebinarPublisherCamera {height: 10.666vw;}
+}
