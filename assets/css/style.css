@@ -225,7 +225,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 #videoContainer #header-image #webinarLogo{width: 20%;}
 #videoContainer #header-image:hover{cursor: move;}
 /** Change made recent **/
-#notification-container{position: absolute;height: 36.22vw;width: 100%}
+#notification-container{position: absolute;height: 36.22vw;width: 100%;}
 #notification-container:hover .ui-resizable-se{opacity: 1;}
 #notification-container h5:hover{cursor: move;}
 /** Change made recent **/

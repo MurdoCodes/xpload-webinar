@@ -69,17 +69,15 @@ class XploadWebinar{
 					/** CONFIRM **/
 						wp_enqueue_style( 'xpload-confirm', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css', __FILE__ );
 					/** PLUGIN STYLESHEET **/
-						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.90' );
-						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.90' );
+						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.1.1' );
+						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.1.1' );
 				
 				/** ENQUEUE JS  **/
 					// JQUERY
 						 
-				    wp_deregister_script('jquery-ui'); 
-				    wp_register_script('jquery-ui', ('https://code.jquery.com/ui/1.11.4/jquery-ui.min.js'), false, '1.8.16'); 
-				    wp_enqueue_script('jquery-ui');  
-					// LOADER
-						wp_enqueue_script( 'xpload-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js', array( 'jquery' ), __FILE__ );
+				    // wp_deregister_script('jquery-ui');
+				    wp_register_script('jquery-ui-2', ('https://code.jquery.com/ui/1.12.1/jquery-ui.js'), false, '1.12.1'); 
+				    wp_enqueue_script('jquery-ui-2');  
 					// NOTIFICATION PUSHER
 						wp_enqueue_script( 'xpload-pusher', 'https://js.pusher.com/7.0/pusher.min.js', array( 'jquery' ), null, true );
 					// TOASTR
@@ -105,22 +103,22 @@ class XploadWebinar{
 
 						if ( current_user_can('administrator') && is_user_logged_in() ) :
 
-							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.0.90', true );
-							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.0.90', true );
+							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.1.1', true );
+							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.1.1', true );
 							wp_localize_script('xpload-publisher', 'pluginsURL', array(
 							    'pluginsURL' => plugins_url(),
 							));
 
 						elseif ( !current_user_can('administrator') && is_user_logged_in() ):
 							
-							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.90' );
-							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.0.90', true );
-							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.0.90', true );
+							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.1.1' );
+							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.1.1', true );
+							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.1.1', true );
 
 						endif;
 						
 						// SITE
-						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.0.90', true );
+						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.1.1', true );
 						wp_localize_script('xpload-webinar-script', 'pluginsURL', array(
 						    'pluginsURL' => plugins_url(),
 						));
@@ -144,6 +142,7 @@ class XploadWebinar{
 		// echo '<div id="loadingDiv">
 		// 		<div class="loader"></div>
 		// 	</div>';
+		// if (current_user_can('administrator')) :
 	?>
 		<div class="xploadwebinar-container container-fluid nopad">
 	<?php
@@ -485,11 +484,14 @@ class XploadWebinar{
 				</audio>
 				<?php
 					else :
-						echo "<h1 style='text-align:center;'>Sorry!</br>Your are not allowed to access this page.</br>Please subscribe to one of our products.</br>Thank You!";
+						echo "<h1 style='text-align:center;'>Sorry!</br>Your are not allowed to access this page.</br>Please subscribe to one of our products.</br>Thank You!</h1>";
 					endif;
 				?>
 			</div>
 		</div>
+		<?php 
+			// endif;
+		?>
 		<!-- <div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">

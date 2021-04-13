@@ -735,6 +735,7 @@ jQuery(function($) {
 				avatar2.style.zIndex = "1";
 				avatar3.style.zIndex = "1";
 			}
+			$('#notification-container').css('max-width', '100%');
 		},
 	    stop: function (e, $el, opt) {		        
 	        var style = document.getElementById(e.target.id).style.cssText;
@@ -752,6 +753,7 @@ jQuery(function($) {
 				avatar2.style.zIndex = "1";
 				avatar3.style.zIndex = "1";
 			}
+			$('#chat-container').css('max-width', '100%');
 		},
 	    stop: function (e, $el, opt) {		        
 	        var style = document.getElementById(e.target.id).style.cssText;
