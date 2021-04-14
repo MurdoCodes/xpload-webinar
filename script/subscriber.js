@@ -107,15 +107,19 @@ jQuery(function($) {
 		// }
 
 		window.focus();
-		var r = confirm("Live Webinar is starting in a few seconds");		
-		document.getElementById("presenter").style.display = "none";
-	    if (r == true) {
-	        $('.live-webinar-popup').remove();
-	        $('.live-webinar-popup').css("display", "none")
-	    } else {
-	        $('.live-webinar-popup').remove();
-	        $('.live-webinar-popup').css("display", "none")
-	    }
+		$.confirm({
+		    title: 'Live Traders',
+		    content: 'Live Webinar is starting in a few seconds',
+		    buttons: {
+		        confirm: function () {
+		            $('.live-webinar-popup').remove();
+	        		$('.live-webinar-popup').css("display", "none")
+		        },
+		        cancel: function () {
+		            
+		        }
+		    }
+		});
 
 		// Screen share
 		(function (red5prosdk) {
