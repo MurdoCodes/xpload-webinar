@@ -124,6 +124,7 @@ class XploadWebinar{
 	}
 
 	function xploadWebinarHTML(){
+		if(is_page( 'live-webinar' ) || is_page( 'free-live-trading-stream' ) || is_page( 'free-live-stream' )){
 		$host = 'livetraders-webinar-db.chptae1kylfw.us-east-2.rds.amazonaws.com';
 		$user = 'admin';
 		$pass = 'tBGaPAcdnPivUYQp2RVL';
@@ -518,9 +519,11 @@ class XploadWebinar{
 		</div>
 		<!-- Modal -->
 		<?php
+		}
 	}
 
 	function xploadWebinarHTMLPublic(){
+		if(is_page( 'live-webinar' ) || is_page( 'free-live-trading-stream' ) || is_page( 'free-live-stream' )){
 		$host = 'livetraders-webinar-db.chptae1kylfw.us-east-2.rds.amazonaws.com';
 		$user = 'admin';
 		$pass = 'tBGaPAcdnPivUYQp2RVL';
@@ -818,7 +821,7 @@ class XploadWebinar{
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h2 class="modal-title" id="exampleModalLongTitle" style='font-weight: 600;'>Please enter your username...</h2>
+		        <h2 class="modal-title" id="exampleModalLongTitle" style='font-weight: 600;font-color:#000;'>Please enter your username</h2>
 		      </div>
 		      <div class="modal-body">
 		        <input type="text" id="modalUserNameInput" placeholder="Enter Username..." style="width: 100%;margin-bottom:10px;">
@@ -831,6 +834,7 @@ class XploadWebinar{
 		</div>
 		<!-- Modal Get Username-->
 		<?php
+		}
 	}
 
 	function xploadWebinarChatMessagesTableDB(){

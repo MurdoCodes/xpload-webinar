@@ -229,7 +229,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 #notification-container:hover .ui-resizable-se{opacity: 1;}
 #notification-container h5:hover{cursor: move;}
 /** Change made recent **/
-#chat-container{position: absolute;height: 36.22vw;right: 0;padding-right: 0px;width: 100%;}
+#chat-container{position: absolute;height: 36.22vw;left: calc(100% - 19.8vw);padding-right: 0px;width: 100%;}
 #chat-container:hover .ui-resizable-se{opacity: 1;}
 #chat-container h5:hover{cursor: move;}
 /** Change made recent **/
