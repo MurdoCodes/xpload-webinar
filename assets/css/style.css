@@ -1,38 +1,13 @@
- /**
-    * LOADER CSS
-.loader, .loader:after {border-radius: 50%;width: 10em;height: 10em;}
-.loader {margin: 60px auto;font-size: 10px;position: relative;text-indent: -9999em;border-top: 1.1em solid rgba(255, 255, 255, 0.2);border-right: 1.1em solid rgba(255, 255, 255, 0.2);border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);border-left: 1.1em solid #ffffff;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: load8 1.1s infinite linear;animation: load8 1.1s infinite linear;margin-top:20%;}
-@-webkit-keyframes load8 {
-    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
-}
-@keyframes load8 {
-    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
-}
-#loadingDiv {position:fixed;padding:0;margin:0;top:0;left:0;width: 100%;height: 100%;background:rgb(10 0 0);z-index: 99;}
-**/
 .xploadhide{display:none !important;}
 .xploadshow{display:block !important;}
 /**
     * REMOVE ADMIN BAR
 **/
 #wpadminbar{display:none !important;}
-html{
-    height: 0 !important;
-    background-image: none !important;
-    background-repeat: no-repeat !important;
-    background-attachment: unset !important;
-    min-height: -webkit-fill-available !important;
-}
-/*REMOVE SIDEBAR BB PRESS*/
-body{min-height: -webkit-fill-available !important;background-image: url(../images/lt-webinar-bg.png);background-size: cover;background-position: center;    margin-top: -2.2vw !important;}
-body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-boxed[style*=width], body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-full_width[style*=width], body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-stretched[style*=width]{padding-left:0px !important;}
-.crisp-client{display:none !important;}
-.amaran-wrapper.right{display:none !important;}
-body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[style*=width], body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-full_width[style*=width], body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-stretched[style*=width]{
-    padding-left:0px !important;
-}
+/* REMOVE HTML PREDEFINED CSS */
+html{height: 100% !important;background-image: none !important;background-repeat: no-repeat !important;background-attachment: unset !important;min-height: -webkit-fill-available !important;}
+/* BODY CSS */
+body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);background-position: center;background-repeat: no-repeat;}
 /** 
     * SCROLLBAR CSS
 **/
@@ -42,10 +17,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 /**
     * LOADER
 **/
-.loader{position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('/wp-content/uploads/2021/04/Slide3__LiveSessioinBeginning.png') 50% 50% no-repeat #fff;}
-    /*.elementor-editor-active .loader{
-    display: none;
-    }*/
+.loader{position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('../images/loader.png') 50% 50% no-repeat #fff;}
 /**
     * WEBINAR CONTAINER
 **/

@@ -45,10 +45,24 @@ class XploadWebinar{
 	function enqueueStyleScripts(){
 
 			if(is_page( 'live-webinar' ) || is_page( 'free-live-trading-stream' ) || is_page( 'free-live-stream' )){
+				// DEREGISTER SCRIPTS
+    			wp_deregister_style( 'dashicons' );
+    			wp_deregister_style( 'elementor-icons' );
+    			wp_deregister_style( 'elementor-common' );
+    			wp_deregister_style( 'wp-block-library' );
+    			wp_deregister_style( 'buddyboss-theme-icons' );
+    			wp_deregister_style( 'buddyboss-theme-fonts' );
+    			wp_deregister_style( 'elbuddyboss-theme-magnific-popup-css' );
+    			wp_deregister_style( 'buddyboss-theme-select2-css' );
+    			wp_deregister_style( 'buddyboss-theme-css' );
+    			wp_deregister_style( 'buddyboss-theme-elementor' );
+    			wp_deregister_style( 'buddyboss-child-css' );
+
+				wp_deregister_script('jquery-core');
 				// ENQUEUE CSS
 					/** CHAT **/
 						// JQUERY
-						wp_enqueue_style( 'xpload-jquery-ui-css', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', __FILE__ );
+						wp_enqueue_style( 'xpload-jquery-ui-css', plugin_dir_url( __FILE__ ). 'assets/css/jquery-ui.css', __FILE__ );
 						// emoji
 						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.2.16' );
 						// Text color change
@@ -64,13 +78,16 @@ class XploadWebinar{
 					/** CONFIRM **/
 						wp_enqueue_style( 'xpload-confirm', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css', __FILE__ );
 					/** PLUGIN STYLESHEET **/
-						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.2.16' );
-						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.2.16' );
+						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.2.17' );
+						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.2.17' );
 				
 				/** ENQUEUE JS  **/
-					// JQUERY
-				    wp_register_script('jquery-ui-2', ('https://code.jquery.com/ui/1.12.1/jquery-ui.js'), false, '1.2.5'); 
-				    wp_enqueue_script('jquery-ui-2');  
+					// // JQUERY
+					// // wp_enqueue_script( 'jquery-ui-core');
+				 //    wp_register_script('jquery', plugin_dir_url( __FILE__ ) .'assets/js/jquery.js', false, '1.12.1'); 
+				 //    wp_enqueue_script('jquery-ui-2'); 
+				    	wp_enqueue_script( 'jquery', plugin_dir_url( __FILE__ ) .'assets/js/jquery.js', array( 'jquery' ), null, false );
+				    	wp_enqueue_script( 'jquery-ui', plugin_dir_url( __FILE__ ) .'assets/js/jquery-ui.js', array( 'jquery' ), null, false );
 					// NOTIFICATION PUSHER
 						wp_enqueue_script( 'xpload-pusher', 'https://js.pusher.com/7.0/pusher.min.js', array( 'jquery' ), null, true );
 					// TOASTR
@@ -96,26 +113,26 @@ class XploadWebinar{
 
 						if ( current_user_can('administrator') && is_user_logged_in() ) :
 
-							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.2.16', true );
-							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.2.16', true );
+							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.2.17', true );
+							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.2.17', true );
 							wp_localize_script('xpload-publisher', 'pluginsURL', array(
 							    'pluginsURL' => plugins_url(),
 							));
 
 						else:
 							
-							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.2.16' );
-							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.2.16', true );
-							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.2.16', true );
+							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.2.17' );
+							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.2.17', true );
+							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.2.17', true );
 
 							if ( !is_user_logged_in() ) :
-								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.2.16', true );
+								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.2.17', true );
 							endif;
 
 						endif;
 						
 						// SITE
-						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.2.16', true );
+						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.2.17', true );
 						wp_localize_script('xpload-webinar-script', 'pluginsURL', array(
 						    'pluginsURL' => plugins_url(),
 						));
@@ -460,20 +477,19 @@ class XploadWebinar{
 				</div>
 			</div>
 
-			<div class="row">
-				<audio autostart="false" width="0" height="0" id="PlayChatSound">
-				  <source src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/chat.mp3'; ?>" type="audio/mpeg">
-				</audio>
+			
+			<audio autostart="false" width="0" height="0" id="PlayChatSound">
+			  <source src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/chat.mp3'; ?>" type="audio/mpeg">
+			</audio>
 
-				<audio autostart="" width="0" height="0" id="PlayNotificationSound">
-				  <source src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 9.mp3'; ?>" type="audio/mp3" id="PlayNotificationSoundFile">
-				</audio>
-				<?php
-					else :
-						echo "<h1 style='text-align:center;'>Sorry!</br>Your are not allowed to access this page.</br>Please subscribe to one of our products.</br>Thank You!</h1>";
-					endif;
-				?>
-			</div>
+			<audio autostart="" width="0" height="0" id="PlayNotificationSound">
+			  <source src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 9.mp3'; ?>" type="audio/mp3" id="PlayNotificationSoundFile">
+			</audio>
+			<?php
+				else :
+					echo "<h1 style='text-align:center;'>Sorry!</br>Your are not allowed to access this page.</br>Please subscribe to one of our products.</br>Thank You!</h1>";
+				endif;
+			?>
 		</div>
 
 		<!-- Modal Notification-->

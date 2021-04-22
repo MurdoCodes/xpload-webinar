@@ -15,7 +15,6 @@ jQuery(function($) {
 	var pusherWebinar = new Pusher('a6e881af5162a58d2816', {
 		cluster: 'us2'
 	});
-
 	/**
 		** 
 		* Display Notification To Everyone		
@@ -773,7 +772,7 @@ jQuery(function($) {
 	});
 	$( "#avatar2" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		resize: function( e, $el, opt ) {
+		resize: function( e, $el, opt ) {			
 			if(e.target.id == "avatar2"){
 				videoContainer.style.zIndex = "1";
 				notificationcontainer.style.zIndex = "1";
@@ -793,6 +792,11 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar3"){
+
+				console.log(e);
+				console.log($el);
+				console.log(opt);
+
 				videoContainer.style.zIndex = "1";
 				notificationcontainer.style.zIndex = "1";
 				chatcontainer.style.zIndex = "1";
