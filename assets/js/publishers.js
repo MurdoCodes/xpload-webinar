@@ -190,7 +190,7 @@ jQuery(function($) {
 		event.preventDefault();
 		$("#member-list").css('display', "flex");
 		$(".user-info-in").css('display', "flex");
-	    $("#member-list").animate({width:"30%"}, 0).find(".user-info-in").animate({width:"19.8vw"}, 0);
+	    $("#member-list").animate({width:"100%"}, 0).find(".user-info-in").animate({width:"100%"}, 0);
 	    // $("#member-list").css("width", "30%").find(".user-info-in")css("width", "19.8vw");
 	});
 

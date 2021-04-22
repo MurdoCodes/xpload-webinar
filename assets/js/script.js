@@ -15,6 +15,7 @@ jQuery(function($) {
 	var pusherWebinar = new Pusher('a6e881af5162a58d2816', {
 		cluster: 'us2'
 	});
+
 	/**
 		** 
 		* Display Notification To Everyone		
@@ -595,8 +596,7 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			var style = document.getElementById(event.target.id).style.cssText;
-		    saveElementPosition(event.target, style);
+		    dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
 
@@ -614,8 +614,7 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			var style = document.getElementById(event.target.id).style.cssText;
-		    saveElementPosition(event.target, style);
+			dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
 	// Chat Contianer
@@ -632,8 +631,29 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			var style = document.getElementById(event.target.id).style.cssText;
-		    saveElementPosition(event.target, style);
+			document.getElementById(event.target.id).style.position = 'absolute';
+			document.getElementById(event.target.id).style.height = 'inherit';
+
+			var curr_width = document.getElementById(event.target.id).style.width;
+
+			if(curr_width == ""){
+				document.getElementById(event.target.id).style.width = '50%';
+			}else{
+				document.getElementById(event.target.id).style.width = curr_width;
+			}
+			var top = event.target.offsetTop / window.innerWidth * 100;
+	        var left = event.target.offsetLeft / window.innerWidth * 100;
+
+	        document.getElementById(event.target.id).style.top = top + "vw";
+	        document.getElementById(event.target.id).style.left = left + "vw";
+	        var style = document.getElementById(event.target.id).style.cssText;
+
+	        if(window.innerWidth <= 991){
+	        	document.getElementById(event.target.id).style.cssText = "";
+	        }else{
+		        var style = document.getElementById(event.target.id).style.cssText;
+		        saveElementPosition(event.target, style);
+	        }
 		}
 	});
 	// Avatar 1
@@ -650,8 +670,7 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			var style = document.getElementById(event.target.id).style.cssText;
-		    saveElementPosition(event.target, style);
+			dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
 	// Avatar 2
@@ -668,8 +687,7 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			var style = document.getElementById(event.target.id).style.cssText;
-		    saveElementPosition(event.target, style);
+			dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
 	// Avatar 3
@@ -686,10 +704,26 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			var style = document.getElementById(event.target.id).style.cssText;
-		    saveElementPosition(event.target, style);
+			dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
+
+	function dragConvertToVw(id, top, left, target){
+		var top = top / window.innerWidth * 100;
+        var left = left / window.innerWidth * 100;
+
+        document.getElementById(id).style.top = top + "vw";
+        document.getElementById(id).style.left = left + "vw";
+        var style = document.getElementById(id).style.cssText;
+        saveElementPosition(target, style);
+
+        if(window.innerWidth <= 991){
+        	document.getElementById(id).style.cssText = "";
+        }else{
+	        var style = document.getElementById(id).style.cssText;
+	        saveElementPosition(target, style);
+        }
+	}
 
 	/**
 		**
@@ -709,12 +743,39 @@ jQuery(function($) {
 				avatar3.style.zIndex = "1";
 			}
 			$('#videocontainerrow').css('position', 'absolute').css('top', '0');
-			$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31.1vw');
 			$('#xprowebinar-subscriber').css('height', '100%');
+			if(window.innerWidth <= 1920){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.85vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1680){				
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.8vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1600){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.85vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1440){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.88vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1366){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.9vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1329){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.9vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1280){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1180){
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 991){
+				document.getElementById("avatarcontainerow").style.cssText = "";
+			}
 		},
-	    stop: function (e, $el, opt) {        
-	        var style = document.getElementById(e.target.id).style.cssText;
-	        saveElementPosition(e.target, style);
+	    stop: function (e, $el, opt) {
+	        var vw = e.target.clientWidth / window.innerWidth * 100;
+	        var vh = e.target.clientHeight / window.innerWidth * 100;
+	        document.getElementById(e.target.id).style.width = vw + "vw";
+	        document.getElementById(e.target.id).style.height = vh + "vw";
+
+	        if(window.innerWidth <= 991){
+	        	document.getElementById(e.target.id).style.cssText = "";
+	        }else{
+		        var style = document.getElementById(e.target.id).style.cssText;
+		        saveElementPosition(e.target, style);
+	        }
 	    }
 	});
 	$( "#notification-container" ).resizable({
@@ -731,8 +792,7 @@ jQuery(function($) {
 			$('#notification-container').css('max-width', '100%');
 		},
 	    stop: function (e, $el, opt) {		        
-	        var style = document.getElementById(e.target.id).style.cssText;
-	        saveElementPosition(e.target, style);
+	        convertToVW( e.target.id, e.target.clientWidth, e.target.clientHeight, e.target );
 	    }
 	});
 	$( "#chat-container" ).resizable({
@@ -749,8 +809,7 @@ jQuery(function($) {
 			$('#chat-container').css('max-width', '100%');
 		},
 	    stop: function (e, $el, opt) {		        
-	        var style = document.getElementById(e.target.id).style.cssText;
-	        saveElementPosition(e.target, style);
+	        convertToVW( e.target.id, e.target.clientWidth, e.target.clientHeight, e.target );
 	    }
 	});
 	$( "#avatar1" ).resizable({
@@ -766,13 +825,12 @@ jQuery(function($) {
 			}	
 		},
 	    stop: function (e, $el, opt) {		        
-	        var style = document.getElementById(e.target.id).style.cssText;
-	        saveElementPosition(e.target, style);
+	        convertToVW( e.target.id, e.target.clientWidth, e.target.clientHeight, e.target );
 	    }
 	});
 	$( "#avatar2" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		resize: function( e, $el, opt ) {			
+		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar2"){
 				videoContainer.style.zIndex = "1";
 				notificationcontainer.style.zIndex = "1";
@@ -784,19 +842,13 @@ jQuery(function($) {
 			$('#xprowebinarPublisherCamera').css('height', '100%');
 		},
 	    stop: function (e, $el, opt) {		        
-	        var style = document.getElementById(e.target.id).style.cssText;
-	        saveElementPosition(e.target, style);
+	        convertToVW( e.target.id, e.target.clientWidth, e.target.clientHeight, e.target );
 	    }
 	});
 	$( "#avatar3" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar3"){
-
-				console.log(e);
-				console.log($el);
-				console.log(opt);
-
 				videoContainer.style.zIndex = "1";
 				notificationcontainer.style.zIndex = "1";
 				chatcontainer.style.zIndex = "1";
@@ -805,11 +857,42 @@ jQuery(function($) {
 				avatar3.style.zIndex = "2";
 			}
 		},
-	    stop: function (e, $el, opt) {		        
-	        var style = document.getElementById(e.target.id).style.cssText;
-	        saveElementPosition(e.target, style);
+	    stop: function (e, $el, opt) {
+	        convertToVW( e.target.id, e.target.clientWidth, e.target.clientHeight, e.target );
 	    }
 	});
+
+	function convertToVW( id, width, height, target ){
+		var vw = width / window.innerWidth * 100;
+        var vh = height / window.innerWidth * 100;
+        document.getElementById(id).style.width = vw + "vw";
+        document.getElementById(id).style.height = vh + "vw";
+        if(window.innerWidth <= 991){
+        	document.getElementById(id).style.cssText = "";
+        }else{
+	        var style = document.getElementById(id).style.cssText;
+	        saveElementPosition(target, style);
+        }
+	}
+
+	function reportWindowSize() {
+		if(window.innerWidth <= 991){
+			document.getElementById("videocontainerrow").style.position = "relative";
+			document.getElementById("avatarcontainerow").style.position = "relative";
+			document.getElementById("avatarcontainerow").style.top = "unset";
+			document.getElementById("avatarcontainerow").style.width = "auto";			
+			document.getElementById("xprowebinar-subscriber").style.height = "100%";
+			document.getElementById("xprowebinarPublisherCamera").style.height = "100%";
+			document.getElementById("avatar1").style.position = "relative";
+			document.getElementById("avatar2").style.position = "relative";
+			document.getElementById("avatar3").style.position = "relative";
+		}else{
+			// document.getElementById("avatar1").style.position = "absolute";
+			// document.getElementById("avatar2").style.position = "absolute";
+			// document.getElementById("avatar3").style.position = "absolute";
+		}
+	}
+	window.onresize = reportWindowSize;
 	
 	$( "#resetView" ).click(function() {
 	  	$.confirm({
@@ -829,6 +912,24 @@ jQuery(function($) {
 
 		            document.getElementById("videocontainerrow").style.cssText = style2;
 		            document.getElementById("avatarcontainerow").style.cssText = style2;
+
+		            if(window.innerWidth == 1920){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1680){				
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1600){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1440){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1366){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1329){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1280){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}else if(window.innerWidth == 1180){
+						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
+					}
 
 		            document.getElementById("xprowebinarPublisherCamera").style.cssText = style2;
 
@@ -927,11 +1028,5 @@ jQuery(function($) {
 			avatarcontainer.style.zIndex = "1"
 		}
 	});
-
-	/** Change made recent **/
-	// $(function () {
-	//   $('[data-toggle="tooltip"]').tooltip()
-	// })
-
 	
 });

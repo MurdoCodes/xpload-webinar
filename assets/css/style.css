@@ -1,13 +1,21 @@
 .xploadhide{display:none !important;}
 .xploadshow{display:block !important;}
+.nopadding{padding-left:0;padding-right:0;}
+.paddingfive{padding-left:8px;padding-right:10px;}
+.nomargin{margin-left:0;margin-right:0;}
 /**
     * REMOVE ADMIN BAR
 **/
 #wpadminbar{display:none !important;}
-/* REMOVE HTML PREDEFINED CSS */
-html{height: 100% !important;background-image: none !important;background-repeat: no-repeat !important;background-attachment: unset !important;min-height: -webkit-fill-available !important;}
-/* BODY CSS */
-body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);background-position: center;background-repeat: no-repeat;}
+html{height: 0 !important;background-image: none !important;background-repeat: no-repeat !important;background-attachment: unset !important;min-height: -webkit-fill-available !important;}
+/*REMOVE SIDEBAR BB PRESS*/
+body{min-height: -webkit-fill-available !important;background-image: url(../images/lt-webinar-bg.png);background-size: cover;background-position: center;}
+body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-boxed[style*=width], body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-full_width[style*=width], body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-stretched[style*=width]{padding-left:0px !important;}
+.crisp-client{display:none !important;}
+.amaran-wrapper.right{display:none !important;}
+body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[style*=width], body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-full_width[style*=width], body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-stretched[style*=width]{
+    padding-left:0px !important;
+}
 /** 
     * SCROLLBAR CSS
 **/
@@ -17,7 +25,7 @@ body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);backgro
 /**
     * LOADER
 **/
-.loader{position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('../images/loader.png') 50% 50% no-repeat #fff;}
+.loader{position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('../images/Slide3__LiveSessioinBeginning.png.png') 50% 50% no-repeat #fff;}
 /**
     * WEBINAR CONTAINER
 **/
@@ -30,21 +38,28 @@ body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);backgro
     * XPload Main Video Container
 **/
 /** Change made recent **/
+.red5pro-media-container{display: contents;}
 .xploadwebinar-container .webinar-container .xploadvideo-container{margin-bottom:.5%;}
 .elementor embed, .elementor iframe, .elementor object, .elementor video{width:100% !important;height: 100%;}
-#xprowebinar-subscriber{height: 27.6vw;object-fit: cover;position: relative;}
-#xprowebinarPublisherCamera{height: 10.4vw;object-fit: cover;}
+#xprowebinar-subscriber{height: 100%;object-fit: cover;position: relative;}
+#xprowebinarPublisherCamera{object-fit: cover;height: 100%;box-shadow: 0px 3px 3px rgb(41 41 41 / 73%);}
+
 /** 
     * Xpload Webinar Video, Chat and Notification Container
 **/
-.xploadwebinar-container .webinar-container .xploadchatnotif-container{display:flex;padding-left:.222vw !important;}
+.xploadwebinar-container .webinar-container .xploadchatnotif-container{display:flex;}
+.messaging-container{flex-grow: 1;height: 37.6vw;width: 50%;}
+.messaging-container .ui-resizable-se {right: 0vw;bottom: -5.6vw;}
+.messaging-container .ui-resizable-s {position: inherit;}
 /*Avatar*/
 /** Change made recent **/
-.avatar-container{width:100%;display: flex;justify-content: space-evenly;height: auto;}
-.avatar-container .avatar{width:33%;border-radius: unset !important;}
+.avatar-container{display: flex;}
+.avatar-container .avatar{flex-grow: 1;height: 11.33vw;width: 33%;padding-top:.1%;padding-bottom:0%;}
 .avatar-container .avatar h3{margin:0;color:#fff;font-size: .8vw;padding-left:1em;background-color: #331f5c;width: 100%;}
-.avatar-container .avatar img{height: 100%;width: 100%;box-shadow:0px 3px 3px rgb(41 41 41 / 73%);}
-.avatar-container #avatar2{background-color: #000;border-radius: unset;width:33%;box-shadow:0px 3px 3px rgb(41 41 41 / 73%);}
+.avatar-container .avatar img{width: 100%;height:100%;box-shadow:0px 3px 3px rgb(41 41 41 / 73%);}
+.avatar-container #avatar1{height: 100%;}
+.avatar-container #avatar2{padding-left:.5%;padding-right:.5%;height: 100%;}
+.avatar-container #avatar3{height: 100%;}
 .avatar-container #avatar2 label{color:#fff;}
 .avatar-container #avatar2 .selectvidimage{display: flex;position: absolute;background-color: #322663;border-radius: unset;width: 65%;box-shadow: 0px 3px 3px rgb(41 41 41 / 73%);padding: .5%;opacity:0;z-index: 9990;}
 .avatar-container #avatar2:hover .selectvidimage{opacity: 1;}
@@ -53,7 +68,7 @@ body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);backgro
 #xprowebinarPublisherImage{width:100% !important;height: 22vh !important;}
 /*Notification*/
 /** Change made recent **/
-.xploadchatnotif-container .notification-container{padding-right:.5% !important;padding-left:0px !important;}
+.notification-container{padding-right:.5%;height: 100%;}
 .notification-container .notificationBox{height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(146, 121, 110, 0.26);border: solid 1px #BDBDBD;padding:2%;margin: 0px !important;background-image:url("../images/chat%20box.jpg");background-size: 100% 100%;background-repeat: no-repeat;}
 .actual_msg p{font-size:.7vw;}
 .notification-container .notificationBox .actual_msg img{float:none !important;}
@@ -64,15 +79,12 @@ body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);backgro
 .notificationInput-container #xprowebinarNotification{width:100%;height: 7.77vh;}
 .notificationInput-container .sp-preview{width: 30px;height: 30px;margin-right: 4px;margin-top: 2vh;}
 .notificationInput-container .sp-dd{display: none !important;}
-.xploadchatnotif-container .notification-container .ui-resizable-se{right: .2vw;bottom: -6.5vw;}
-.xploadchatnotif-container .notification-container .ui-resizable-s{bottom: .4vw;}
 
 .xploadchatnotif-container .notification-container .notification__title{height: auto;padding-right: 1%;padding-left: 1%;background-color: #331f5c;border-top-left-radius: 4px;border-top-right-radius: 4px;display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;width: 100%;justify-content: space-between;}
 .xploadchatnotif-container .notification-container .notification__title h5 {margin: 0;line-height: 2.777vw;position: relative;display: flex;-webkit-flex-grow: 1;flex-grow: 1;color: #fff;text-decoration: none;overflow: hidden;cursor: default;font-size: .8vw;white-space: nowrap;width: 100%;}
 /*Chat*/
 /** Change made recent **/
-.xploadchatnotif-container .chat-container{padding-left:.5% !important;}
-.xploadchatnotif-container .chat-container .ui-resizable-se{bottom: -6.5vw;}
+.chat-container{padding-left:.5%;height: 100%;}
 .chat-container #fontSizeSelect{font-size: .6vw;font-weight: bold;height: 30px;padding: 0 .5vw;width: 100%;}
 .chat-container .chatbox{width: 100%;height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(146, 121, 110, 0.26);border-radius: 0px;border: solid 1px #BDBDBD;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;margin: 0px !important;background-image:url("../images/chat box.jpg");background-size:cover;}
 .chatboxmaxheight{height:90% !important;}
@@ -203,17 +215,14 @@ body{overflow: hidden;background-image: url(../images/lt-webinar-bg.png);backgro
 #videoContainer #header-image #webinarLogo{width: 20%;}
 #videoContainer #header-image:hover{cursor: move;}
 /** Change made recent **/
-#notification-container{position: absolute;height: 36.22vw;width: 100%;}
 #notification-container:hover .ui-resizable-se{opacity: 1;}
 #notification-container h5:hover{cursor: move;}
 /** Change made recent **/
-#chat-container{position: absolute;height: 36.22vw;left: calc(100% - 19.8vw);padding-right: 0px;width: 100%;}
 #chat-container:hover .ui-resizable-se{opacity: 1;}
 #chat-container h5:hover{cursor: move;}
 /** Change made recent **/
-.avatar-container #avatar1{position: absolute;left:0;display:table;height:auto;}
-.avatar-container #avatar2{position: absolute;display:table;height:100%;}
-.avatar-container #avatar3{position: absolute;right:0;display:table;height:auto;left: calc(100% - 18.4vw);}
+.avatar .ui-resizable-se{bottom: -1.1vw;}
+.avatar .ui-resizable-s {bottom: 0;position: inherit;}
 .avatar-container #avatar1:hover .ui-resizable-se{opacity: 1;}
 .avatar-container #avatar2:hover .ui-resizable-se{opacity: 1;}
 .avatar-container #avatar3:hover .ui-resizable-se{opacity: 1;}
