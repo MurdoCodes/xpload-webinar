@@ -3,7 +3,7 @@ define( 'SHORTINIT', true );
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-content/plugins/xpload-webinar/vendor/autoload.php' );
 
-if ( $_POST['userId'] && $_POST['userName'] ){
+if ( $_POST['userId'] && $_POST['userName'] && $_POST['userIPAddress']){
 
 	$options = array(
 		'cluster' => 'us2',
@@ -21,7 +21,8 @@ if ( $_POST['userId'] && $_POST['userName'] ){
 	$content = array(
 						'userID'=>$_POST['userId'],
 						'userName'=>$_POST['userName'],
-						'time'=>date('jS M, Y \a\t g:i a',time())
+						'time'=>date('jS M, Y \a\t g:i a',time()),
+						'userIPAddress'=>$_POST['userIPAddress']
 					);
 	echo json_encode($content);	
 	$pusher->trigger($channel_name, $channel_event, $content);

@@ -83,29 +83,6 @@ jQuery(function($) {
 	var channelWebinar = pusherWebinar.subscribe('startwebinar');
 
 	channelWebinar.bind('startwebinarevent', function(data) {
-		// var currentAdminId = $('#currentAdminId').val();
-		// var thisadmin = $('#thisadmin').val();
-
-		// if(data != currentAdminId && thisadmin != "administrator"){
-		// 	// remove start webinar button
-		// 	var captureButton = $('.startVideoCapture');
-		//   	var pauseCaptureButton = $('.pauseVideoCapture');
-		//   	var stopCaptureButton = $('.stopVideoCapture');
-
-		// 	captureButton.css('display','initial');
-		// 	pauseCaptureButton.css("display", "none");
-		// 	stopCaptureButton.css("display", "initial");
-
-		// 	// Remove Publisher Camera on other admins
-		// 	$( "#xprowebinarPublisherCamera" ).remove();
-		// 	// Append video for other admin to subscribe to webinar
-			
-		// 	if(!$('#xprowebinarPublisherCamera').length){
-		// 		alert("Admin Camera does not exist");
-		// 		$( "#xprowebinarSubscriberCamera" ).css('display', 'inherit');
-		// 	}
-		// }
-
 		window.focus();
 		$.confirm({
 		    title: 'Live Traders',
@@ -114,6 +91,7 @@ jQuery(function($) {
 		        confirm: function () {
 		            $('.live-webinar-popup').remove();
 	        		$('.live-webinar-popup').css("display", "none")
+	        		onloadSubscriber();
 		        },
 		        cancel: function () {
 		            
@@ -202,4 +180,45 @@ jQuery(function($) {
 			vid.muted = false;
 		}
 	});
+
+	/**
+		**
+		* Subscriber Subscribing to chat and added
+		* Attendees List
+		**
+	**/
+	function onloadSubscriber(){
+		var chatUserID = $("#chatUserID").val();
+	 	var chatUserName = $("#chatUserName").val();
+	 	var chatIPAddress = "";
+	 	var url = pluginsURL.pluginsURL + '/xpload-webinar/php/presence_auth.php';
+
+	 	$.getJSON("https://api.ipify.org/?format=json", function(e) {	 		
+		    chatIPAddress = e.ip;
+		    console.log(chatIPAddress);
+
+		    if(chatIPAddress != ""){
+			    jQuery.ajax({            
+		            type: "POST",
+		            url: url,
+		            data: ({ userId: chatUserID, userName: chatUserName, userIPAddress: chatIPAddress}),
+		            dataType: 'json',
+		    		cache: false,
+			        success: function(response) {
+			        	var html = '';
+		            	var newmessage = 0;
+		            	$.alert({
+						    title: 'Congratulations!',
+						    content: 'You may now start chatting!',
+						});
+		            	$('#joinchatcontainer').hide();
+		            	$(".chatboxsubscriber").css("display", "block");
+			        },
+			        error: function(response) {
+			            console.log(response);
+			        }
+		        });
+	        }
+		});
+	}
 });

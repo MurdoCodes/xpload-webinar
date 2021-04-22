@@ -173,34 +173,41 @@ jQuery(function($) {
 		var userID = data.userID;
 		var userName = data.userName; 
 		var time = data.time;
+		var userIPAddress = data.userIPAddress;
+		$.get( "https://ipapi.co/"+userIPAddress+"/json", function( data ) {
+			var userLocation = data.city +", "+ data.country_name;
+			console.log(userLocation);
 
-		// toastr.success(userName + ': has connected!');
-		var html = '';
-		html += "<div id='subscriberOnline' style='display:flex;'><span></span><p>"+userName+"</p></div>";
-		$("#member-list .list").append(html); 
+			var html = '';
+			html += "<div id='subscriberOnline' class='subscriberOnline' style='display:flex;' data-toggle='tooltip' data-placement='bottom' title='"+userLocation+"'><span></span><p>"+userName+"</p></div>";
+			$("#member-list .list").append(html); 
+		});
+		
 	}
+	$('.subscriberOnline').tooltip();
 
 	$("#show_subscribers").click(function(event){
 		event.preventDefault();
 		$("#member-list").css('display', "flex");
 		$(".user-info-in").css('display', "flex");
-	    $("#member-list").animate({width:"30%"}, 200).find(".user-info-in").animate({width:"18.6vw"}, 200);   
+	    $("#member-list").animate({width:"30%"}, 0).find(".user-info-in").animate({width:"19.8vw"}, 0);
+	    // $("#member-list").css("width", "30%").find(".user-info-in")css("width", "19.8vw");
 	});
 
 	$("#chatbuttonsubscribe").click(function(event){
 		event.preventDefault();
 		$("#member-list").css('display', "none")
-	    $(".user-info-in").animate({width:"0%"},200);
-	    $("#member-list").animate({width:"0%"},200);   
+	    $(".user-info-in").animate({width:"0%"},0);
+	    $("#member-list").animate({width:"0%"},0);   
 	});
 
-	$("#member-list").click(function(event){
-		event.preventDefault();
-		$("#member-list").css('display', "none")
-		$(".user-info-in").css('display', "none");
-	    $(".user-info-in").animate({width:"0%"},200);
-	    $("#member-list").animate({width:"0%"},200);      
-	});
+	// $("#member-list").click(function(event){
+	// 	event.preventDefault();
+	// 	$("#member-list").css('display', "none")
+	// 	$(".user-info-in").css('display', "none");
+	//     $(".user-info-in").animate({width:"0%"},200);
+	//     $("#member-list").animate({width:"0%"},200);      
+	// });
 
 	$(".cc").click(function(e){ 
 	    $("#member-list").css('display', "none")

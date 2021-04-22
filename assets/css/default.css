@@ -6,58 +6,380 @@
   	height: 100%;
   }
 }
-
 /** Change made recent **/
-/* (1920x1080) Full HD Display */
 @media  screen and (max-width: 1920px) {    
-    #notification-container {height: 37.1vw;}
-    #chat-container{height: 37.1vw;}
+    #notification-container {height: 37.16vw;}
+    #chat-container{height: 37.16vw;}
     .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -6.5vw;}
     .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -6.5vw;}
-    #xprowebinarPublisherCamera {height: 11.1vw;}
+    #xprowebinarPublisherCamera {height: 11.12vw;}
 }
 /* (1680x1050) WSXGA+ Display */
 @media  screen and (max-width: 1680px) {
-  #notification-container {height: 36.9vw;}
-  #chat-container {height: 36.9vw;}
+  #notification-container {height: 36.99vw;}
+  #chat-container {height: 36.99vw;}
   .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7vw;}
   .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7vw;}
-  #xprowebinarPublisherCamera {height: 11vw;}
+  #xprowebinarPublisherCamera {height: 11.08vw;}
 }
 /* (1600x900) HD+ Display */
 @media  screen and (max-width: 1600px) {
-  #notification-container {height: 36.666vw;}
-  #chat-container {height: 36.666vw;}
+  #notification-container {height: 36.91vw;}
+  #chat-container {height: 36.91vw;}
   .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.2vw;}
   .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.2vw;}
+  #xprowebinarPublisherCamera {height: 11.1vw;}
 }
 /* (1440x900) WXGA+ Display */
 @media  screen and (max-width: 1440px) {
-  #notification-container {height: 36.66vw;}
-  #chat-container {height: 36.66vw;}
+  #notification-container {height: 36.666vw;}
+  #chat-container {height: 36.666vw;}
   .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.6vw;}
   .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.6vw;}
-  #xprowebinarPublisherCamera {height: 11.01vw;object-fit: cover;}
+  #xprowebinarPublisherCamera {height: 11.077vw;}
 }
 /* (1366x768) WXGA Display */
 @media  screen and (max-width: 1366px) {
-    #notification-container {height: 36.80vw;}
-    #chat-container {height: 36.6vw;}
+    #notification-container {height: 36.54vw;}
+    #chat-container {height: 36.54vw;}
     .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.9vw;}
     .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.9vw;}
-    #xprowebinarPublisherCamera {height: 11.02vw;object-fit: cover;}
+    #xprowebinarPublisherCamera {height: 11.07vw;}
+}
+@media  screen and (max-width: 1329px) {
+    #notification-container {height: 36.44vw;}
+    #chat-container {height: 36.44vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -7.9vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -7.9vw;}
+    #xprowebinarPublisherCamera {height: 11vw;}
 } 
-/* (1280x1024) SXGA Display */
 @media  screen and (max-width: 1280px) {
-    #notification-container {height: 36.11vw;}
-    #chat-container {height: 36.11vw;}
+    #notification-container {height: 36.344vw;}
+    #chat-container {height: 36.344vw;}
     .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -8.3vw;}
     .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.3vw;}
+    #xprowebinarPublisherCamera {height: 11vw;}
+}
+@media  screen and (max-width: 1200px) {
+    #notification-container {height: 36.2vw;}
+    #chat-container {height: 36.2vw;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -8.3vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.3vw;}
+    #xprowebinarPublisherCamera {height: 11vw;}
 }
 @media  screen and (max-width: 1180px) {
-  #notification-container {height: 35.88vw;}
-  #chat-container {height: 35.88vw;}
+  #notification-container {height: 36.13vw;}
+  #chat-container {height: 36.13vw;}
   .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -8.7vw;}
   .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.7vw;}
-  #xprowebinarPublisherCamera {height: 10.666vw;}
+  #xprowebinarPublisherCamera {height: 10.9vw;}
 }
+@media  screen and (max-width: 1139px) {
+  #notification-container {height: 36.05vw;}
+  #chat-container {height: 36.05vw;}
+  .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -8.7vw;}
+  .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -8.7vw;}
+  #xprowebinarPublisherCamera {height: 10.9vw;}
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 992px){
+  #videoContainer #header-image #webinarLogo {width: 25%;}
+  #webinarHead .right {padding-top: 0px;width: 80%;margin: 0 auto;}
+  .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 2%;}
+  #xprowebinar-subscriber {height: 49vw;}
+  .avatar-container .avatar {position: relative !important;}
+  .avatar-container .avatar h3 {font-size: 1.8vw;}
+  #xprowebinarPublisherCamera {height: 18.97vw;}
+  #notification-container {position: relative;}
+  #chat-container {position: relative;left: 0;padding-right: 0;width: 100%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container{padding-left: 0px;padding-right: 0px;}
+  #notification-container {height: 65vw;}
+  #chat-container {height: 65vw;}
+  .xploadchatnotif-container .notification-container .notification__title h5 {font-size: 1.8vw;}
+  .chat-container .chatbox__title h5 {font-size: 1.8vw;}
+  .emojionearea .emojionearea-editor{line-height: 1;}
+  .notification-container #notificationSound{font-size: 1.5vw;}
+  .chat-container #fontSizeSelect{font-size: 1.5vw;}
+  .avatar-container #avatar3{right: 0;left: 0;}
+}
+@media (max-width: 767px) {
+  #videoContainer #header-image #webinarLogo {width: 25%;}
+  #webinarHead .right {padding-top: 0px;width: 80%;margin: 0 auto;}
+  .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 2%;}
+  #xprowebinar-subscriber {height: 49vw;}
+  .avatar-container .avatar {position: relative !important;}
+  .avatar-container .avatar h3 {font-size: 1.8vw;}
+  #xprowebinarPublisherCamera {height: 18.222vw;}
+  #notification-container {position: relative;}
+  #chat-container {position: relative;left: 0;padding-right: 0;width: 100%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container{padding-left: 0px;padding-right: 0px;}
+  #notification-container {height: 65vw;}
+  #chat-container {height: 65vw;}
+  .xploadchatnotif-container .notification-container .notification__title h5 {font-size: 1.8vw;}
+  .chat-container .chatbox__title h5 {font-size: 1.8vw;}
+  .emojionearea .emojionearea-editor{line-height: 1;}
+  .notification-container #notificationSound{font-size: 2vw;}
+  .chat-container #fontSizeSelect{font-size: 2vw;}
+  .avatar-container #avatar3{right: 0;left: 0;}
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+  #videoContainer #header-image #webinarLogo {width: 25%;}
+  #webinarHead .right {padding-top: 0px;width: 80%;margin: 0 auto;}
+  .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 2%;}
+  #xprowebinar-subscriber {height: 49vw;}
+  .avatar-container .avatar {position: relative !important;}
+  .avatar-container .avatar h3 {font-size: 1.8vw;}
+  #xprowebinarPublisherCamera {height:18.98vw;}
+  #notification-container {position: relative;height: 86.5vw;}
+  #chat-container {position: relative;left: 0;padding-right: 0;width: 100%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container{padding-left: 0px;padding-right: 0px;}
+  #notification-container {height: 65vw;}
+  #chat-container {height: 65vw;}
+  .xploadchatnotif-container .notification-container .notification__title h5 {font-size: 1.8vw;}
+  .chat-container .chatbox__title h5 {font-size: 1.8vw;}
+  .chat-container .chatbox__title h5 a{font-size: 1.8vw;}
+  .emojionearea .emojionearea-editor{line-height: 1;}
+  .notification-container #notificationSound{font-size: 2vw;}
+  .chat-container #fontSizeSelect{font-size: 2vw;}
+  .xploadwebinar-container .webinar-container {padding-left: 2%;padding-right: 2%;}
+  .avatar-container #avatar3{right: 0;left: 0;}
+}
+
+@-moz-document url-prefix() { 
+  #xprowebinarPublisherCamera {height: 11.24vw;}
+  .avatar-container #avatar3 {left: calc(100% - 18.66vw);}
+  #notification-container {height: 37.388vw;}
+  #chat-container {height: 37.388vw;}
+  .xploadchatnotif-container .notification-container {padding-right: 0px !important;padding-left: 0px !important;}
+
+  @media  screen and (max-width: 1920px) {    
+    #notification-container {height: 37.33vw;}
+    #chat-container{height: 37.33vw;left: calc(100% - 19.88vw);}
+    .avatar-container #avatar2{line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.67vw;}
+  }
+  @media  screen and (max-width: 1680px) {
+    #notification-container {height: 37.099vw;}
+    #chat-container {height: 37.099vw;left: calc(100% - 19.777vw);}
+    .xploadchatnotif-container .chat-container {padding-left: .1% !important;}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.67vw;}
+  }
+  @media  screen and (max-width: 1600px) {
+    #notification-container {height: 37.099vw;}
+    #chat-container {height: 37.099vw;}
+    .xploadchatnotif-container .chat-container {padding-left: .1% !important;}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.7vw;}
+  }
+  @media  screen and (max-width: 1440px) {
+    #notification-container {height: 36.8vw;}
+    #chat-container {height: 36.8vw;left: calc(100% - 19.8vw);}
+    #xprowebinarPublisherCamera {height: 11.17vw;}
+    .xploadchatnotif-container .chat-container {padding-left: .1% !important;}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.77vw;}
+  }
+  @media  screen and (max-width: 1366px) {
+      #notification-container {height: 36.7vw;}
+      #chat-container {height: 36.7vw;left: calc(100% - 19.85vw);}
+      #xprowebinarPublisherCamera {height: 11.15vw;}
+      .xploadchatnotif-container .chat-container {padding-left: 0% !important;}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.77vw;}
+  }
+  @media  screen and (max-width: 1329px) {
+      #notification-container {height: 36.6vw;}
+      #chat-container {height: 36.6vw;}
+      .avatar-container #avatar3 {left: calc(100% - 18.77vw);}
+      .xploadchatnotif-container .chat-container {padding-left: 0 !important;}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.77vw;}
+  } 
+  @media  screen and (max-width: 1280px) {
+      #notification-container {height: 36.55vw;}
+      #chat-container {height: 36.55vw;left: calc(100% - 19.85vw);}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.77vw;}
+  }
+  @media  screen and (max-width: 1200px) {
+      #notification-container {height: 36.4vw;}
+      #chat-container {height: 36.4vw;}
+      .avatar-container #avatar3 {left: calc(100% - 18.8vw);}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.8vw;}
+  }
+  @media  screen and (max-width: 1180px) {
+    #notification-container {height: 36.3vw;}
+    #chat-container {height: 36.3vw;}
+    #chat-container {left: calc(100% - 19.9vw);}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.8vw;}
+  }
+  @media (max-width: 992px){
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 20.33vw;}
+    .avatar-container #avatar3 {left: calc(100% - 97.8vw);}
+    .webinar-container{margin-bottom: 12vw;}
+    .xploadchatnotif-container .chat-container {padding-left: .5% !important;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -10.1vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -10.1vw;}
+    #chat-container {left: 0;}
+  }
+  @media (max-width: 767px) {
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 20.444vw;}
+    .avatar-container #avatar3 {left: calc(100% - 98.8vw);}
+    .webinar-container{margin-bottom: 12vw;}
+    .avatar-container #avatar3{right: 0;left: 0;}
+    .xploadchatnotif-container .chat-container {padding-left: .5% !important;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -13.1vw;}
+    #webinarHead .right {width: 100%;}
+    #chat-container {left: 0;  }
+  @media (max-width: 575px) {
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 20.1vw;}
+    .avatar-container #avatar3 {left: calc(100% - 96.5vw);}
+    .webinar-container{margin-bottom: 12vw;}
+    .xploadwebinar-container .webinar-container {padding-left: 2%;padding-right: 2%;}
+    .avatar-container #avatar3{right: 0;left: 0;}
+    .xploadchatnotif-container .chat-container {padding-left: .5% !important;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -17.6vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -17.7vw;}
+    #webinarHead .right {width: 100%;}
+    #chat-container {left: 0;  }
+  }
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+
+  #xprowebinarPublisherCamera {height: 11.24vw;}
+  .avatar-container #avatar3 {left: calc(100% - 18.66vw);}
+  #notification-container {height: 37.388vw;}
+  #chat-container {height: 37.388vw;}
+  .xploadchatnotif-container .notification-container {padding-right: 0px !important;padding-left: 0px !important;}
+
+  @media  screen and (max-width: 1920px) {    
+    #notification-container {height: 37.33vw;}
+    #chat-container{height: 37.33vw;left: calc(100% - 19.88vw);}
+    .avatar-container #avatar2{line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.67vw;}
+  }
+  @media  screen and (max-width: 1680px) {
+    #notification-container {height: 37.099vw;}
+    #chat-container {height: 37.099vw;left: calc(100% - 19.777vw);}
+    .xploadchatnotif-container .chat-container {padding-left: .1% !important;}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.67vw;}
+  }
+  @media  screen and (max-width: 1600px) {
+    #notification-container {height: 37.099vw;}
+    #chat-container {height: 37.099vw;}
+    .xploadchatnotif-container .chat-container {padding-left: .1% !important;}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.7vw;}
+  }
+  @media  screen and (max-width: 1440px) {
+    #notification-container {height: 36.8vw;}
+    #chat-container {height: 36.8vw;left: calc(100% - 19.8vw);}
+    #xprowebinarPublisherCamera {height: 11.17vw;}
+    .xploadchatnotif-container .chat-container {padding-left: .1% !important;}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.77vw;}
+  }
+  @media  screen and (max-width: 1366px) {
+      #notification-container {height: 36.7vw;}
+      #chat-container {height: 36.7vw;left: calc(100% - 19.85vw);}
+      #xprowebinarPublisherCamera {height: 11.15vw;}
+      .xploadchatnotif-container .chat-container {padding-left: 0% !important;}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.77vw;}
+  }
+  @media  screen and (max-width: 1329px) {
+      #notification-container {height: 36.6vw;}
+      #chat-container {height: 36.6vw;}
+      .avatar-container #avatar3 {left: calc(100% - 18.77vw);}
+      .xploadchatnotif-container .chat-container {padding-left: 0 !important;}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.77vw;}
+  } 
+  @media  screen and (max-width: 1280px) {
+      #notification-container {height: 36.55vw;}
+      #chat-container {height: 36.55vw;left: calc(100% - 19.85vw);}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.77vw;}
+  }
+  @media  screen and (max-width: 1200px) {
+      #notification-container {height: 36.4vw;}
+      #chat-container {height: 36.4vw;}
+      .avatar-container #avatar3 {left: calc(100% - 18.8vw);}
+      .avatar-container #avatar2 {line-height: 0;}    
+      .selectvidimage{line-height: 1.5;}
+      #xprowebinarPublisherCamera {height: 11.8vw;}
+  }
+  @media  screen and (max-width: 1180px) {
+    #notification-container {height: 36.3vw;}
+    #chat-container {height: 36.3vw;}
+    #chat-container {left: calc(100% - 19.9vw);}
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 11.8vw;}
+  }
+  @media (max-width: 992px){
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 20.33vw;}
+    .avatar-container #avatar3 {left: calc(100% - 97.8vw);}
+    .webinar-container{margin-bottom: 12vw;}
+    .xploadchatnotif-container .chat-container {padding-left: .5% !important;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -10.1vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -10.1vw;}
+    #chat-container {left: 0;}
+  }
+  @media (max-width: 767px) {
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 20.444vw;}
+    .avatar-container #avatar3 {left: calc(100% - 98.8vw);}
+    .webinar-container{margin-bottom: 12vw;}
+    .avatar-container #avatar3{right: 0;left: 0;}
+    .xploadchatnotif-container .chat-container {padding-left: .5% !important;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -13.1vw;}
+    #webinarHead .right {width: 100%;}
+    #chat-container {left: 0;  }
+  @media (max-width: 575px) {
+    .avatar-container #avatar2 {line-height: 0;}    
+    .selectvidimage{line-height: 1.5;}
+    #xprowebinarPublisherCamera {height: 20.1vw;}
+    .avatar-container #avatar3 {left: calc(100% - 96.5vw);}
+    .webinar-container{margin-bottom: 12vw;}
+    .xploadwebinar-container .webinar-container {padding-left: 2%;padding-right: 2%;}
+    .avatar-container #avatar3{right: 0;left: 0;}
+    .xploadchatnotif-container .chat-container {padding-left: .5% !important;}
+    .xploadchatnotif-container .notification-container .ui-resizable-se {bottom: -17.6vw;}
+    .xploadchatnotif-container .chat-container .ui-resizable-se {bottom: -17.7vw;}
+    #webinarHead .right {width: 100%;}
+    #chat-container {left: 0;  }
+  }
+}}

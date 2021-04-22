@@ -27,45 +27,6 @@ jQuery(function($) {
 	
 	/**
 		**
-		* Subscriber Subscribing to chat and added
-		* Attendees List
-		**
-	**/
-	$(".chatboxsubscriber").css("display", "none");
-	$("#join_chat").click(function(event){
-		event.preventDefault();
-	    onloadSubscriber();
-	});
-	
-    function onloadSubscriber(){
-		var chatUserID = $("#chatUserID").val();
-	 	var chatUserName = $("#chatUserName").val();
-	 	var url = pluginsURL.pluginsURL + '/xpload-webinar/php/presence_auth.php';
-	    jQuery.ajax({            
-            type: "POST",
-            url: url,
-            data: ({ userId: chatUserID, userName: chatUserName}),
-            dataType: 'json',
-    		cache: false,
-	        success: function(response) {
-	        	var html = '';
-            	var newmessage = 0;
-            	$.alert({
-				    title: 'Congratulation!',
-				    content: 'You may now start chatting!',
-				});
-            	$('#joinchatcontainer').hide();
-            	$(".chatboxsubscriber").css("display", "block");
-	        },
-	        error: function(response) {
-	            console.log(response);
-	        }
-        });
-	}
-
-	
-	/**
-		**
 		* If Admin Pause the webinar, video will pause
 		**
 	**/

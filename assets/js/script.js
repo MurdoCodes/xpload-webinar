@@ -3,18 +3,12 @@ jQuery(function($) {
 		**
 		* Page Loader
 		**
-	
-	$(window).on('load', function(){
-	  setTimeout(removeLoader, 2000);
-	});
-	function removeLoader(){
-	    $( "#loadingDiv" ).fadeOut(500, function() {
-	    $( "#loadingDiv" ).remove();	      
-	    $('#xpload-container').css('display', 'block');
-	  });  
-	}
 	**/
-
+	jQuery(window).load(function () {
+	    setTimeout(function () {
+	        $('.loader').fadeOut('slow');
+	    }, 1000);
+	});
 	/**
 		* Pusher Declaration
 	**/
@@ -831,6 +825,8 @@ jQuery(function($) {
 
 		            document.getElementById("videocontainerrow").style.cssText = style2;
 		            document.getElementById("avatarcontainerow").style.cssText = style2;
+
+		            document.getElementById("xprowebinarPublisherCamera").style.cssText = style2;
 
 		            var videoContainer = document.getElementById("videoContainer");
 		            var notificationcontainer = document.getElementById("notification-container");

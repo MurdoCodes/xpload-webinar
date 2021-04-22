@@ -50,7 +50,7 @@ class XploadWebinar{
 						// JQUERY
 						wp_enqueue_style( 'xpload-jquery-ui-css', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', __FILE__ );
 						// emoji
-						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__ );
+						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.2.16' );
 						// Text color change
 						wp_enqueue_style( 'xpload-xpectrum', plugin_dir_url( __FILE__ ). 'assets/css/spectrum.css', __FILE__ );
 						// Bootstrap
@@ -64,12 +64,12 @@ class XploadWebinar{
 					/** CONFIRM **/
 						wp_enqueue_style( 'xpload-confirm', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css', __FILE__ );
 					/** PLUGIN STYLESHEET **/
-						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.1.2' );
-						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.1.2' );
+						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.2.16' );
+						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.2.16' );
 				
 				/** ENQUEUE JS  **/
 					// JQUERY
-				    wp_register_script('jquery-ui-2', ('https://code.jquery.com/ui/1.12.1/jquery-ui.js'), false, '1.12.1'); 
+				    wp_register_script('jquery-ui-2', ('https://code.jquery.com/ui/1.12.1/jquery-ui.js'), false, '1.2.5'); 
 				    wp_enqueue_script('jquery-ui-2');  
 					// NOTIFICATION PUSHER
 						wp_enqueue_script( 'xpload-pusher', 'https://js.pusher.com/7.0/pusher.min.js', array( 'jquery' ), null, true );
@@ -96,26 +96,26 @@ class XploadWebinar{
 
 						if ( current_user_can('administrator') && is_user_logged_in() ) :
 
-							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.1.2', true );
-							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.1.2', true );
+							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.2.16', true );
+							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.2.16', true );
 							wp_localize_script('xpload-publisher', 'pluginsURL', array(
 							    'pluginsURL' => plugins_url(),
 							));
 
 						else:
 							
-							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.1.2' );
-							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.1.2', true );
-							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.1.2', true );
+							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.2.16' );
+							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.2.16', true );
+							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.2.16', true );
 
 							if ( !is_user_logged_in() ) :
-								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.1.2', true );
+								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.2.16', true );
 							endif;
 
 						endif;
 						
 						// SITE
-						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.1.2', true );
+						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.2.16', true );
 						wp_localize_script('xpload-webinar-script', 'pluginsURL', array(
 						    'pluginsURL' => plugins_url(),
 						));
@@ -134,7 +134,8 @@ class XploadWebinar{
 			die('Connection Error : ' . $conn->connect_error);
 		}
 		$table_name = 'elementPosition';
-	?>
+	?>	
+		<div class="loader"></div>
 		<div class="xploadwebinar-container container-fluid nopad">
 	<?php
 			if (is_user_logged_in()) :
@@ -148,10 +149,10 @@ class XploadWebinar{
 				echo "<input type='hidden'id='thisadmin' value='".implode(', ', $user_info->roles)."'>";
 			?>
 			<div class="row nopadding" id="webinarHead">
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 nopadding">
+				<div class="d-none d-sm-block col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 nopadding">
 					
 				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 					<?php if (current_user_can('administrator')) : ?>
 								
 						<div class='right'>
@@ -236,7 +237,7 @@ class XploadWebinar{
 								 ?>
 								<div id="avatar1" class="avatar" style="<?php echo $avatar1style ?>">
 									<div style="display: flex;justify-content: space-between;background-color: #331f5c;">
-										<h3>Ultimate Trading Starter Pack</h3>
+										<h3>Open House Special</h3>
 										<i class="fal fa-times-circle closeavatar" id="closeavatar1"></i>
 									</div>
 									
@@ -325,8 +326,8 @@ class XploadWebinar{
 					}
 				 ?>
 
-			    <div class="xploadchatnotif-container col-sm-12 col-md-12 col-lg-5 full-widthtablet">
-					<div class="notification-container col-sm-12 col-md-6 col-lg-6" id="notification-container" style="<?php echo $notificationstyle ?>">
+			    <div class="xploadchatnotif-container col-12 col-sm-12 col-md-12 col-lg-5 full-widthtablet">
+					<div class="notification-container col-6 col-sm-6 col-md-6 col-lg-6" id="notification-container" style="<?php echo $notificationstyle ?>">
 						<div class="notification__title">
 					        <h5>Trade Announcements</h5>
 					        <div class="volume-control-notif" style="display: flex;">
@@ -395,7 +396,7 @@ class XploadWebinar{
 							$chatstyle = "";						
 						}
 					 ?>
-					<div class="chat-container col-sm-12 col-md-6 col-lg-6" id="chat-container" style="<?php echo $chatstyle; ?>">							    	
+					<div class="chat-container col-6 col-sm-6 col-md-6 col-lg-6" id="chat-container" style="<?php echo $chatstyle; ?>">							    	
 				    	<div class="chatbox__title">
 					        <h5>
 					        	<a href="" id="chatbuttonsubscribe">Chat</a> 
@@ -821,10 +822,10 @@ class XploadWebinar{
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h2 class="modal-title" id="exampleModalLongTitle" style='font-weight: 600;font-color:#000;'>Please enter your username</h2>
+		        <h2 class="modal-title" id="exampleModalLongTitle" style='font-weight: 600;font-color:#000;'>Please enter your email used for registration</h2>
 		      </div>
 		      <div class="modal-body">
-		        <input type="text" id="modalUserNameInput" placeholder="Enter Username..." style="width: 100%;margin-bottom:10px;">
+		        <input type="text" id="modalUserNameInput" placeholder="Enter Email..." style="width: 100%;margin-bottom:10px;">
 		      </div>
 		      <div class="modal-footer">
 		        <button id="saveUserName" class="btn btn-success" type="button">Save</button>	        
