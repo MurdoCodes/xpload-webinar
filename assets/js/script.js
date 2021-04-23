@@ -4,7 +4,7 @@ jQuery(function($) {
 		* Page Loader
 		**
 	**/
-	jQuery(window).load(function () {
+	$(document).ready(function(){
 	    setTimeout(function () {
 	        $('.loader').fadeOut('slow');
 	    }, 1000);
@@ -876,16 +876,21 @@ jQuery(function($) {
 	}
 
 	function reportWindowSize() {
-		if(window.innerWidth <= 991){
+		if(window.innerWidth <= 1091){
+			
+			document.getElementById("videoContainer").style.cssText = "";			
+			document.getElementById("avatarcontainerow").style.cssText = "";
+			document.getElementById("avatar1").style.cssText = "";
+			document.getElementById("avatar2").style.cssText = "";
+			document.getElementById("avatar3").style.cssText = "";
+			document.getElementById("notification-container").style.cssText = "";
+			document.getElementById("chat-container").style.cssText = "";
+
 			document.getElementById("videocontainerrow").style.position = "relative";
-			document.getElementById("avatarcontainerow").style.position = "relative";
-			document.getElementById("avatarcontainerow").style.top = "unset";
-			document.getElementById("avatarcontainerow").style.width = "auto";			
+			document.getElementById("avatarcontainerow").style.position = "relative";	
 			document.getElementById("xprowebinar-subscriber").style.height = "100%";
 			document.getElementById("xprowebinarPublisherCamera").style.height = "100%";
-			document.getElementById("avatar1").style.position = "relative";
-			document.getElementById("avatar2").style.position = "relative";
-			document.getElementById("avatar3").style.position = "relative";
+			
 		}else{
 			// document.getElementById("avatar1").style.position = "absolute";
 			// document.getElementById("avatar2").style.position = "absolute";
