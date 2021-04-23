@@ -587,12 +587,7 @@ jQuery(function($) {
 		handle: "#header-image",
 		start: function( event, ui ) {
 			if(event.target.id == "videoContainer"){
-				videoContainer.style.zIndex = "2";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 		},
 		stop: function( event, ui ) {
@@ -605,12 +600,7 @@ jQuery(function($) {
 		handle: "h5",
 		start: function( event, ui ) {
 			if(event.target.id == "notification-container"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "2";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 		},
 		stop: function( event, ui ) {
@@ -622,12 +612,7 @@ jQuery(function($) {
 		handle: "h5",
 		start: function( event, ui ) {
 			if(event.target.id == "chat-container"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "2";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 		},
 		stop: function( event, ui ) {
@@ -639,12 +624,7 @@ jQuery(function($) {
 		handle: "h3",
 		start: function( event, ui ) {
 			if(event.target.id == "avatar1"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "2";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 		},
 		stop: function( event, ui ) {
@@ -656,12 +636,7 @@ jQuery(function($) {
 		handle: "h3",
 		start: function( event, ui ) {
 			if(event.target.id == "avatar2"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "2";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 		},
 		stop: function( event, ui ) {
@@ -673,12 +648,7 @@ jQuery(function($) {
 		handle: "h3",
 		start: function( event, ui ) {
 			if(event.target.id == "avatar3"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "2";
+				zindexFunction(this.id);
 			}
 		},
 		stop: function( event, ui ) {
@@ -722,12 +692,7 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "videoContainer"){
-				videoContainer.style.zIndex = "2";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 			// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
 			// $('#xprowebinar-subscriber').css('height', '100%');
@@ -772,12 +737,7 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "notification-container"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "2";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 			$('#notification-container').css('max-width', '100%');
 		},
@@ -793,12 +753,7 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "chat-container"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "2";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 			$('#chat-container').css('max-width', '100%');
 		},
@@ -814,12 +769,7 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar1"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "2";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}	
 		},
 	    stop: function (e, $el, opt) {	        
@@ -834,12 +784,7 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar2"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "2";
-				avatar3.style.zIndex = "1";
+				zindexFunction(this.id);
 			}
 			$('#xprowebinarPublisherCamera').css('height', '100%');
 		},
@@ -855,12 +800,7 @@ jQuery(function($) {
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar3"){
-				videoContainer.style.zIndex = "1";
-				notificationcontainer.style.zIndex = "1";
-				chatcontainer.style.zIndex = "1";
-				avatar1.style.zIndex = "1";
-				avatar2.style.zIndex = "1";
-				avatar3.style.zIndex = "2";
+				zindexFunction(this.id);
 			}
 		},
 	    stop: function (e, $el, opt) {
@@ -1019,63 +959,56 @@ jQuery(function($) {
 
 	$( "#avatar1" ).click(function() {
 		if(this.id == "avatar1"){
-			videoContainer.style.zIndex = "1";
-			notificationcontainer.style.zIndex = "1";
-			chatcontainer.style.zIndex = "1";
-			avatar1.style.zIndex = "2";
-			avatar2.style.zIndex = "1";
-			avatar3.style.zIndex = "1";
+			zindexFunction(this.id);
 		}
 	});
 	$( "#avatar2" ).click(function() {
 		if(this.id == "avatar2"){
-			videoContainer.style.zIndex = "1";
-			notificationcontainer.style.zIndex = "1";
-			chatcontainer.style.zIndex = "1";
-			avatar1.style.zIndex = "1";
-			avatar2.style.zIndex = "2";
-			avatar3.style.zIndex = "1";
+			zindexFunction(this.id);
 		}
 	});
 	$( "#avatar3" ).click(function() {
 		if(this.id == "avatar3"){
-			videoContainer.style.zIndex = "1";
-			notificationcontainer.style.zIndex = "1";
-			chatcontainer.style.zIndex = "1";
-			avatar1.style.zIndex = "1";
-			avatar2.style.zIndex = "1";
-			avatar3.style.zIndex = "2";
+			zindexFunction(this.id);
 		}
 	});
 	$( "#videoContainer" ).click(function() {
 		if(this.id == "videoContainer"){
-			videoContainer.style.zIndex = "2";
-			notificationcontainer.style.zIndex = "1";
-			chatcontainer.style.zIndex = "1";
-			avatar1.style.zIndex = "1";
-			avatar2.style.zIndex = "1";
-			avatar3.style.zIndex = "1";
+			zindexFunction(this.id);
 		}
 	});
 	$( "#notification-container" ).click(function() {
 		if(this.id == "notification-container"){
-			videoContainer.style.zIndex = "1";
-			notificationcontainer.style.zIndex = "2";
-			chatcontainer.style.zIndex = "1";
-			avatar1.style.zIndex = "1";
-			avatar2.style.zIndex = "1";
-			avatar3.style.zIndex = "1";
+			zindexFunction(this.id);
 		}
 	});
 	$( "#chat-container" ).click(function() {
 		if(this.id == "chat-container"){
-			videoContainer.style.zIndex = "1";
-			notificationcontainer.style.zIndex = "1";
-			chatcontainer.style.zIndex = "2";
-			avatar1.style.zIndex = "1";
-			avatar2.style.zIndex = "1";
-			avatar3.style.zIndex = "1";
+			zindexFunction(this.id);
 		}
 	});
+
+	// All elements array
+	var zAllElements = ['avatar1', 'avatar2', 'avatar3', 'videoContainer', 'notification-container', 'chat-container']; 
+	function zindexFunction(id){
+		// Number of elements in the array		
+		var noOfElements = zAllElements.length;
+		//New array to contain elemts ID info
+		var zIndexArray = new Array;
+		//Temp container for ID array build
+		var elidc;
+		//loop to store all the elements info
+		for (var i = 0; i < noOfElements; i++) {
+			elidc = document.getElementById(zAllElements[i]).style.zIndex;			
+			zIndexArray.push(elidc);			
+		}
+		var highestZ;
+		//find the highest element
+		highestZ = Math.max(...zIndexArray);
+		//set the element to be the topmost 
+		var t = document.getElementById(id).style.zIndex = highestZ + 1;
+	}
+
+	
 	
 });
