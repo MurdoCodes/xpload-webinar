@@ -7,7 +7,7 @@ jQuery(function($) {
 	$(document).ready(function(){
 	    setTimeout(function () {
 	        $('.loader').fadeOut('slow');
-	    }, 1000);
+	    }, 2500);
 	});
 	/**
 		* Pusher Declaration
@@ -631,29 +631,7 @@ jQuery(function($) {
 			}
 		},
 		stop: function( event, ui ) {
-			document.getElementById(event.target.id).style.position = 'absolute';
-			document.getElementById(event.target.id).style.height = 'inherit';
-
-			var curr_width = document.getElementById(event.target.id).style.width;
-
-			if(curr_width == ""){
-				document.getElementById(event.target.id).style.width = '50%';
-			}else{
-				document.getElementById(event.target.id).style.width = curr_width;
-			}
-			var top = event.target.offsetTop / window.innerWidth * 100;
-	        var left = event.target.offsetLeft / window.innerWidth * 100;
-
-	        document.getElementById(event.target.id).style.top = top + "vw";
-	        document.getElementById(event.target.id).style.left = left + "vw";
-	        var style = document.getElementById(event.target.id).style.cssText;
-
-	        if(window.innerWidth <= 991){
-	        	document.getElementById(event.target.id).style.cssText = "";
-	        }else{
-		        var style = document.getElementById(event.target.id).style.cssText;
-		        saveElementPosition(event.target, style);
-	        }
+			dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
 	// Avatar 1
@@ -709,20 +687,29 @@ jQuery(function($) {
 	});
 
 	function dragConvertToVw(id, top, left, target){
-		var top = top / window.innerWidth * 100;
-        var left = left / window.innerWidth * 100;
-
-        document.getElementById(id).style.top = top + "vw";
-        document.getElementById(id).style.left = left + "vw";
-        var style = document.getElementById(id).style.cssText;
-        saveElementPosition(target, style);
 
         if(window.innerWidth <= 991){
-        	document.getElementById(id).style.cssText = "";
+        	var style = document.getElementById(id).style.cssText;
+	        saveElementPosition(target, style);
         }else{
+        	var top = top / window.innerWidth * 100;
+	        var left = left / window.innerWidth * 100;
+
+	        document.getElementById(id).style.top = top + "vw";
+	        document.getElementById(id).style.left = left + "vw";	        
+	        if(id == "avatar2" || id == "avatar3" || id == "chat-container"){
+	        	document.getElementById(id).style.position = "absolute";
+	        	var width = document.getElementById(id).style.width;
+	        	var height = document.getElementById(id).style.height
+	        	if( width == '' || height == ''){
+	        		document.getElementById(id).style.width = "inherit";
+	        		document.getElementById(id).style.height = "inherit";
+	        	}
+	        }
 	        var style = document.getElementById(id).style.cssText;
 	        saveElementPosition(target, style);
         }
+
 	}
 
 	/**
@@ -876,8 +863,7 @@ jQuery(function($) {
 	}
 
 	function reportWindowSize() {
-		if(window.innerWidth <= 1091){
-			
+		if(window.innerWidth <= 991){
 			document.getElementById("videoContainer").style.cssText = "";			
 			document.getElementById("avatarcontainerow").style.cssText = "";
 			document.getElementById("avatar1").style.cssText = "";
@@ -889,12 +875,7 @@ jQuery(function($) {
 			document.getElementById("videocontainerrow").style.position = "relative";
 			document.getElementById("avatarcontainerow").style.position = "relative";	
 			document.getElementById("xprowebinar-subscriber").style.height = "100%";
-			document.getElementById("xprowebinarPublisherCamera").style.height = "100%";
-			
-		}else{
-			// document.getElementById("avatar1").style.position = "absolute";
-			// document.getElementById("avatar2").style.position = "absolute";
-			// document.getElementById("avatar3").style.position = "absolute";
+			document.getElementById("xprowebinarPublisherCamera").style.height = "100%";			
 		}
 	}
 	window.onresize = reportWindowSize;

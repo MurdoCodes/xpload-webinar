@@ -49,14 +49,14 @@ class XploadWebinar{
 					/** CHAT **/
 						// JQUERY
 						wp_enqueue_style( 'xpload-jquery-ui-css', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', __FILE__ );
-						// emoji
-						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.2.92' );
-						// Text color change
-						wp_enqueue_style( 'xpload-xpectrum', plugin_dir_url( __FILE__ ). 'assets/css/spectrum.css', __FILE__ );
 						// Bootstrap
 						wp_enqueue_style( 'xpload-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', __FILE__ );
 						// Font-Awesome
 						wp_enqueue_style( 'xpload-fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css', __FILE__ );
+						// emoji
+						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.2.96' );
+						// Text color change
+						wp_enqueue_style( 'xpload-xpectrum', plugin_dir_url( __FILE__ ). 'assets/css/spectrum.css', __FILE__ );
 					/** VIDEO **/
 						wp_enqueue_style( 'xpload-video-media', plugin_dir_url( __FILE__ ). 'lib/red5pro/red5pro-media.css', __FILE__ );
 					/** NOTIFICATION **/
@@ -64,14 +64,14 @@ class XploadWebinar{
 					/** CONFIRM **/
 						wp_enqueue_style( 'xpload-confirm', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css', __FILE__ );
 					/** PLUGIN STYLESHEET **/
-						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.2.92' );
-						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.2.92' );
+						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.2.96' );
+						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.2.96' );
 				
 				/** ENQUEUE JS  **/
 					// JQUERY
 						wp_deregister_script( 'jquery-ui-core' );
-					    wp_register_script('jquery-ui-2', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js',  array( 'jquery' ), '1.12.1', true); 
-					    wp_enqueue_script('jquery-ui-2');  
+					    wp_register_script('jquery-ui-2', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js',  array( 'jquery' ), '1.12.1', false); 
+					    wp_enqueue_script('jquery-ui-2'); 					
 					// NOTIFICATION PUSHER
 						wp_enqueue_script( 'xpload-pusher', 'https://js.pusher.com/7.0/pusher.min.js', array( 'jquery' ), null, true );
 					// TOASTR
@@ -84,11 +84,9 @@ class XploadWebinar{
 						wp_enqueue_script( 'xpload-spectrum', plugin_dir_url( __FILE__ ) . 'assets/js/spectrum.js', array( 'jquery' ), null, false );
 					// BOOSTRAP
 						wp_enqueue_script( 'xpload-bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array( 'jquery' ), null, false );
-
-						wp_enqueue_script( 'xpload-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array( 'jquery' ), null, false );
+						wp_enqueue_script( 'xpload-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array( 'jquery' ), null, false ); 
 					// FONT AWESOME
 						wp_enqueue_script( 'xpload-fontawesome', 'https://kit.fontawesome.com/a076d05399.js', __FILE__ );
-
 					// VIDEO				
 						wp_enqueue_script( 'xpload-adapt', 'https://webrtchacks.github.io/adapter/adapter-latest.js', __FILE__ );
 						wp_enqueue_script( 'xpload-red5pro-sdk', plugin_dir_url( __FILE__ ) . 'lib/red5pro/red5pro-sdk.min.js', __FILE__, null, true );
@@ -97,26 +95,26 @@ class XploadWebinar{
 
 						if ( current_user_can('administrator') && is_user_logged_in() ) :
 
-							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.2.92', true );
-							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.2.92', true );
+							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.2.96', true );
+							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.2.96', true );
 							wp_localize_script('xpload-publisher', 'pluginsURL', array(
 							    'pluginsURL' => plugins_url(),
 							));
 
 						else:
 							
-							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.2.92' );
-							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.2.92', true );
-							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.2.92', true );
+							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.2.96' );
+							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.2.96', true );
+							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.2.96', true );
 
 							if ( !is_user_logged_in() ) :
-								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.2.92', true );
+								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.2.96', true );
 							endif;
 
 						endif;
 						
 						// SITE
-						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.2.92', true );
+						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.2.96', true );
 						wp_localize_script('xpload-webinar-script', 'pluginsURL', array(
 						    'pluginsURL' => plugins_url(),
 						));
