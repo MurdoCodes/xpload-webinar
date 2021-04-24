@@ -9,7 +9,10 @@
 @media screen and (min-width: 1921px) {
   .messaging-container {height: 37.55vw;}
   .messaging-container .ui-resizable-se {bottom: -5.6vw;right: .2vw;}
-  .avatar .ui-resizable-se {bottom: -1.1vw;}    
+  .avatar .ui-resizable-se {bottom: -1.1vw;}
+  #message-notif{height: 40.4vw;}
+  #message-notif .ui-resizable-se {bottom: -2.8vw;right: 0.2vw;}
+  #videoContainer #header-image h2 {padding: .55vw;}
 }
 @media  screen and (max-width: 1920px) {  
   .messaging-container {height: 37.11vw;}
