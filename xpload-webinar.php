@@ -127,18 +127,82 @@ class XploadWebinar{
 
 	function xploadWebinarHTML(){
 		if(is_page( 'live-webinar' ) || is_page( 'free-live-trading-stream' ) || is_page( 'free-live-stream' )){
-		$host = 'livetraders-webinar-db.chptae1kylfw.us-east-2.rds.amazonaws.com';
-		$user = 'admin';
-		$pass = 'tBGaPAcdnPivUYQp2RVL';
-		$db_name = 'livetraders_webinar';
-		$conn = new mysqli($host, $user, $pass, $db_name);
-		if($conn->connect_error){
-			die('Connection Error : ' . $conn->connect_error);
-		}
-		$table_name = 'elementPosition';
+			$host = 'livetraders-webinar-db.chptae1kylfw.us-east-2.rds.amazonaws.com';
+			$user = 'admin';
+			$pass = 'tBGaPAcdnPivUYQp2RVL';
+			$db_name = 'livetraders_webinar';
+			$conn = new mysqli($host, $user, $pass, $db_name);
+			if($conn->connect_error){
+				die('Connection Error : ' . $conn->connect_error);
+			}
+			$table_name = 'elementPosition';
 	?>	
 		<div class="loader"></div>
-		<div class="xploadwebinar-container container-fluid">
+		<div class="navbar navbar-inverse navbar-fixed-left">
+		  <a class="navbar-brand" href="#">
+		  	<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/logo.png'; ?>" alt="Live Traders">
+		  </a>
+		  <ul class="nav navbar-nav">
+		  	<?php if (current_user_can('administrator')) : ?>
+		      <li>
+		      	<a href="#" class="startVideoCapture" id="xploadVideoCapture" title="Start Webinar">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/start-stream.png'; ?>" alt="Start Webinar">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id='xploadVideoCapturePause' class='pauseVideoCapture' title="Pause Webinar">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/pause-stream.png'; ?>" alt="Pause Webinar">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id='xploadVideoCaptureStop' class='stopVideoCapture' title="Stop Webinar">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/end-stream.png'; ?>" alt="Stop Webinar">
+		      	</a>
+		      </li>
+		    <?php endif; ?>
+		      <li>
+		      	<a href="#" id="ChatToggle" title="Chat">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chat.png'; ?>" alt="Chat Room">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="tradeAnnouncementToggle" title="Trade Announcements">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/trade-announcement.png'; ?>" alt="Trade Announcements">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="avatarToggle1" title="Open House Special">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/special-offer.png'; ?>" alt="Open House Special">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="avatarToggle3" title="PTS">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/PTS.png'; ?>" alt="PTS">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="avatarToggle2" title="Admin Camera">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/presenter-video.png'; ?>" alt="Admin Camera">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="screenShareToggle" title="Share Screen">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/main-screen.png'; ?>" alt="Share Screen">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="statisticsToggle" title="Statistics">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chart.png'; ?>" alt="Statistics">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="resetView" title="Reset Layout">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/reset.png'; ?>" alt="Reset">
+		      	</a>
+		      </li>
+		  </ul>
+		</div>
+		<div class="xploadwebinar-container container-fluid" id="xploadwebinar-container">
 	<?php
 			if (is_user_logged_in()) :
 				global $current_user;
@@ -150,32 +214,6 @@ class XploadWebinar{
 				$user_info = get_userdata($subscriberID);
 				echo "<input type='hidden'id='thisadmin' value='".implode(', ', $user_info->roles)."'>";
 			?>
-			<div class="row" id="webinarHead">
-				<div class="d-none d-sm-block col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">					
-				</div>
-				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-					<?php if (current_user_can('administrator')) : ?>
-								
-						<div class='right'>
-							<button id='xploadVideoCapture' class='startVideoCapture'>Start Stream</button>
-							<button id='xploadVideoCapturePause' class='pauseVideoCapture' style='display:none;'>Pause Stream</button>
-							<button id='xploadVideoCaptureStop' class='stopVideoCapture' style='display:none;'>Stop Stream</button>
-							<button id="resetView" data-toggle="tooltip" data-placement="top" title="Reset To Default Layout">
-								RESET
-							</button>
-						</div>
-
-					<?php else: ?>
-						<div class='right'>
-							<button id="resetView" data-toggle="tooltip" data-placement="top" title="Reset To Default Layout">
-								RESET
-							</button>
-						</div>	
-					<?php endif; ?>
-
-				</div>
-			</div>
-
 			<div class="webinar-container row nomargin">
 		    	<div class="xploadvideo-container col-12 col-sm-12 col-md-12 col-lg-7 paddingfive" id="xploadvideo-container">
 
@@ -209,9 +247,7 @@ class XploadWebinar{
 								
 								<div id="videoContainer" style="<?php echo $videoContainerstyle; ?>">
 									<div id="header-image" class="nopadding">
-									    <a href="<?php echo get_home_url(); ?>" rel="home" class="nopadding">
-									       <img class="nopadding" id="webinarLogo" src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/LT-logo.png'; ?>" alt="Live Traders Logo" />
-									    </a>
+										<h2>LIVE TRADERS</h2>
 									</div>
 									<video id="xprowebinar-subscriber" class="red5pro-media red5pro-media-background" controls autoplay></video>
 					        	</div>
@@ -239,7 +275,7 @@ class XploadWebinar{
 									<div id="avatar1" style="<?php echo $avatar1style ?>">
 										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Open House Special</h3>
-											<i class="fal fa-times-circle closeavatar" id="closeavatar1"></i>
+											<!-- <i class="fal fa-times-circle closeavatar" id="closeavatar1"></i> -->
 										</div>
 										
 										
@@ -265,7 +301,7 @@ class XploadWebinar{
 									<div id="avatar2" style="<?php echo $avatar2style; ?>">
 										<div id="presenter" style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Presenter</h3>
-											<i class="fal fa-times-circle closeavatar" id="closeavatar2"></i>
+											<!-- <i class="fal fa-times-circle closeavatar" id="closeavatar2"></i> -->
 										</div>
 										
 										<?php if (current_user_can('administrator')) : ?>
@@ -307,7 +343,7 @@ class XploadWebinar{
 									<div id="avatar3" style="<?php echo $avatar3style; ?>">							
 										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Professional Trading Strategies</h3>
-											<i class="fal fa-times-circle closeavatar" id="closeavatar3"></i>
+											<!-- <i class="fal fa-times-circle closeavatar" id="closeavatar3"></i> -->
 										</div>
 										<a href="https://livetraders.com/product/professional-trading-strategies/" target="_blank">
 										<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/pts.png'; ?>" alt="Professional Trading Strategies">
@@ -333,11 +369,11 @@ class XploadWebinar{
 				 ?>
 
 			    <div class="xploadchatnotif-container col-12 col-12 col-sm-12 col-md-12 col-lg-5 paddingfive" id="xploadchatnotif-container">
-			    	<div class="messaging-container">
+			    	<div class="messaging-container" id="message-notif">
 						<div class="notification-container" id="notification-container" style="<?php echo $notificationstyle ?>">
 							<div class="notification__title">
 						        <h5>Trade Announcements</h5>
-						        <div class="volume-control-notif" style="display: flex;">
+						        <div class="volume-control-notif" style="display: flex;justify-content: end;">
 						        	<?php if (current_user_can('administrator')) : ?>
 							        	<select name="notificationSound" id="notificationSound">
 											<option value="" disabled selected>Select Sound</option>
@@ -412,11 +448,7 @@ class XploadWebinar{
 						        	<?php if (current_user_can('administrator')) : ?>
 							        	<span class="horizontalBar">|</span>
 							        	<a href="" id="show_subscribers">Attendees</a>
-						        	<?php endif; ?>	
-						        	<?php if (!current_user_can('administrator')) : ?>
-							        		<span class="horizontalBar">|</span>
-							        		<a href="" id="join_chat">Join Chat</a>
-						        	<?php endif; ?>	
+						        	<?php endif; ?>
 						        </h5>
 						        <div class="fontSizeContainer" style="display: flex;">
 						        	<select name="fontSizeSelect" id="fontSizeSelect">
@@ -535,18 +567,76 @@ class XploadWebinar{
 
 	function xploadWebinarHTMLPublic(){
 		if(is_page( 'live-webinar' ) || is_page( 'free-live-trading-stream' ) || is_page( 'free-live-stream' )){
-		$host = 'livetraders-webinar-db.chptae1kylfw.us-east-2.rds.amazonaws.com';
-		$user = 'admin';
-		$pass = 'tBGaPAcdnPivUYQp2RVL';
-		$db_name = 'livetraders_webinar';
-		$conn = new mysqli($host, $user, $pass, $db_name);
-		if($conn->connect_error){
-			die('Connection Error : ' . $conn->connect_error);
-		}
-		$table_name = 'elementPosition';
-	?>
-		<div class="xploadwebinar-container container-fluid nopad">
-	<?php
+			$host = 'livetraders-webinar-db.chptae1kylfw.us-east-2.rds.amazonaws.com';
+			$user = 'admin';
+			$pass = 'tBGaPAcdnPivUYQp2RVL';
+			$db_name = 'livetraders_webinar';
+			$conn = new mysqli($host, $user, $pass, $db_name);
+			if($conn->connect_error){
+				die('Connection Error : ' . $conn->connect_error);
+			}
+			$table_name = 'elementPosition';
+	?>	
+		<div class="loader"></div>
+		<div class="navbar navbar-inverse navbar-fixed-left">
+		  <a class="navbar-brand" href="#">
+		  	<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/logo.png'; ?>" alt="Live Traders">
+		  </a>
+		  <ul class="nav navbar-nav">
+		      <li>
+		      	<a href="#" id="ChatToggle" title="Chat">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chat.png'; ?>" alt="Chat Room">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="tradeAnnouncementToggle" title="Trade Announcements">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/trade-announcement.png'; ?>" alt="Trade Announcements">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="avatarToggle1" title="Open House Special">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/special-offer.png'; ?>" alt="Open House Special">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="avatarToggle3" title="PTS">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/PTS.png'; ?>" alt="PTS">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="avatarToggle2" title="Admin Camera">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/presenter-video.png'; ?>" alt="Admin Camera">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="screenShareToggle" title="Share Screen">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/main-screen.png'; ?>" alt="Share Screen">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="statisticsToggle" title="Statistics">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chart.png'; ?>" alt="Statistics">
+		      	</a>
+		      </li>
+		      <li>
+		      	<a href="#" id="resetView" title="Reset Layout">
+		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/reset.png'; ?>" alt="Reset">
+		      	</a>
+		      </li>
+		  </ul>
+		</div>
+		<div class="xploadwebinar-container container-fluid" id="xploadwebinar-container">
+			<?php			
+				global $current_user;
+				wp_get_current_user();
+				$subscriberID = $current_user->ID;
+				$subscriberName = $current_user->user_login;
+				$userFullName = $current_user->user_firstname . " " . $current_user->user_lastname;
+				
+				$user_info = get_userdata($subscriberID);
+				echo "<input type='hidden'id='thisadmin' value='".implode(', ', $user_info->roles)."'>";
+
+
 				if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
 					$ip = $_SERVER['HTTP_CLIENT_IP'];
 				} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
@@ -554,31 +644,13 @@ class XploadWebinar{
 				} else {
 					$ip = $_SERVER['REMOTE_ADDR'];
 				}
-
 				$subscriberID = $ip;
-				// $userFullName = $current_user->user_firstname . " " . $current_user->user_lastname;
-				
-				// $user_info = get_userdata($subscriberID);
-				// echo "<input type='hidden'id='thisadmin' value='".implode(', ', $user_info->roles)."'>";
 			?>
-			<div class="row nopadding" id="webinarHead">
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 nopadding">
-					
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">					
-					<div class='right'>
-						<button id="resetView" data-toggle="tooltip" data-placement="top" title="Reset To Default Layout">
-							RESET
-						</button>
-					</div>	
-				</div>
-			</div>
-
-			<div class="webinar-container row">
-		    	<div class="xploadvideo-container col-sm-12 col-md-12 col-lg-7 full-widthtablet">
+			<div class="webinar-container row nomargin">
+		    	<div class="xploadvideo-container col-12 col-sm-12 col-md-12 col-lg-7 paddingfive" id="xploadvideo-container">
 
 		    		<div class="row" id="videocontainerrow">
-		    			<div class="col-sm-12 col-md-12 col-lg-12 nopadding videoContainer2">
+		    			<div class="col-sm-12 col-md-12 col-lg-12 nopadding videoContainer2" id="videoContainer2">
 				    		<?php 
 								$videoContainersql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='videoContainer'";
 								$videoContainerItem = $conn->query($videoContainersql);
@@ -590,14 +662,13 @@ class XploadWebinar{
 								}else{
 									$videoContainerstyle = "";						
 								}
-							 ?>
-								
+							 ?>								
 							<div id="videoContainer" style="<?php echo $videoContainerstyle; ?>">
 								<div id="header-image" class="nopadding">
 								    <a href="<?php echo get_home_url(); ?>" rel="home" class="nopadding">
 								       <img class="nopadding" id="webinarLogo" src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/LT-logo.png'; ?>" alt="Live Traders Logo" />
 								    </a>
-								</div>	
+								</div>
 								<video id="xprowebinar-subscriber" class="red5pro-media red5pro-media-background" controls autoplay></video>
 				        	</div>
 						</div>
@@ -618,16 +689,17 @@ class XploadWebinar{
 										$avatar1style = "";						
 									}
 								 ?>
-								<div id="avatar1" class="avatar" style="<?php echo $avatar1style ?>">
-									<div style="display: flex;justify-content: space-between;background-color: #3900ae;">
-										<h3>Ultimate Trading Starter Pack</h3>
-										<i class="fal fa-times-circle closeavatar" id="closeavatar1"></i>
+								<div class="avatar" id="avatar_1">
+									<div id="avatar1" style="<?php echo $avatar1style ?>">
+										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
+											<h3>Open House Special</h3>
+										</div>
+										
+										
+										<a href="https://livetraders.com/product/ultimate-traders-starter-pack-2/" target="_blank">
+											<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/Traders-pack.png'; ?>" alt="Ultimate Stock Trading Starter Pack">
+										</a>
 									</div>
-									
-									
-									<a href="https://livetraders.com/product/ultimate-traders-starter-pack-2/" target="_blank">
-										<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/Traders-pack.png'; ?>" alt="Ultimate Stock Trading Starter Pack">
-									</a>
 								</div>
 
 								<?php 
@@ -642,13 +714,34 @@ class XploadWebinar{
 										$avatar2style = "";					
 									}
 								 ?>
-								<div id="avatar2" class="avatar" style="<?php echo $avatar2style; ?>">
-									<div id="presenter" style="display: flex;justify-content: space-between;background-color: #3900ae;">
-										<h3>Presenter</h3>
-										<i class="fal fa-times-circle closeavatar" id="closeavatar2"></i>
+								<div class="avatar" id="avatar_2">
+									<div id="avatar2" style="<?php echo $avatar2style; ?>">
+										<div id="presenter" style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
+											<h3>Presenter</h3>
+										</div>
+										
+										<?php if (current_user_can('administrator')) : ?>
+											<div class="selectvidimage" style="display: flex;">
+												<div id="videoShow" style="margin-right: 5%;">
+													<input type="radio" id="video" name="showContentVidPic" value="video" checked>
+				  									<label for="video">Video</label>
+												</div>
+												<div id="imageshow">
+													<input type="radio" id="image" name="showContentVidPic" value="image">
+				  									<label for="image">Image</label>
+												</div>
+											</div>
+											<video id="xprowebinarPublisherCamera" class="red5pro-media red5pro-media-background" autoplay controls muted></video>
+											<video id="xprowebinarSubscriberCamera" class="red5pro-media red5pro-media-background" style="display:none;" autoplay controls muted></video>
+
+											<?php $current_user_id = get_current_user_id(); ?>						
+											<img src="<?php print get_avatar_url($current_user_id, ['size' => '150']); ?>" id="xprowebinarPublisherImage" style="display:none;"/>
+															
+										<?php else : ?>
+											<video id="xprowebinarSubscriberCamera" class="red5pro-media red5pro-media-background" autoplay controls muted style="width:100% !important;"></video>
+											<img src="" id="xprowebinarSubscriberImage"/>
+										<?php endif; ?>
 									</div>
-									<video id="xprowebinarSubscriberCamera" class="red5pro-media red5pro-media-background" autoplay controls muted style="width:100% !important;"></video>
-									<img src="" id="xprowebinarSubscriberImage"/>
 								</div>
 								<?php 
 									$avatar3sql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='avatar3'";
@@ -662,14 +755,15 @@ class XploadWebinar{
 										$avatar3style = "";						
 									}
 								 ?>
-								<div id="avatar3" class="avatar" style="<?php echo $avatar3style; ?>">							
-									<div style="display: flex;justify-content: space-between;background-color: #3900ae;">
-										<h3>Professional Trading Strategies</h3>
-										<i class="fal fa-times-circle closeavatar" id="closeavatar3"></i>
+								 <div class="avatar" id="avatar_3">
+									<div id="avatar3" style="<?php echo $avatar3style; ?>">							
+										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
+											<h3>Professional Trading Strategies</h3>
+										</div>
+										<a href="https://livetraders.com/product/professional-trading-strategies/" target="_blank">
+										<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/pts.png'; ?>" alt="Professional Trading Strategies">
+										</a>
 									</div>
-									<a href="https://livetraders.com/product/professional-trading-strategies/" target="_blank">
-									<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/pts.png'; ?>" alt="Professional Trading Strategies">
-									</a>
 								</div>
 							</div>
 						</div>
@@ -687,20 +781,55 @@ class XploadWebinar{
 					}else{
 						$notificationstyle = "";						
 					}
-				 ?>
+				?>
 
-			    <div class="xploadchatnotif-container col-sm-12 col-md-12 col-lg-5 full-widthtablet">
-					<div class="notification-container col-sm-12 col-md-6 col-lg-6" id="notification-container" style="<?php echo $notificationstyle ?>">
-						<div class="notification__title">
-					        <h5>Trade Announcements</h5>
-					        <div class="volume-control-notif" style="display: flex;">					        	
-								<i class="fas fa-search notifSound" id="notif-search"></i>
-								<i class='fas fa-volume-up notifSound' id="notif-volume-up" ></i>
-								<i class='fas fa-volume-mute notifSound xploadhide' id="notif-volume-mute"></i>								
-							</div>
-					    </div>
-						<ul class="notificationBox xploadscrollbar" id="xprowebinarNotificationMsgBox">								
-						</ul>					
+			    <div class="xploadchatnotif-container col-12 col-12 col-sm-12 col-md-12 col-lg-5 paddingfive" id="xploadchatnotif-container">
+			    	<div class="messaging-container" id="message-notif">
+						<div class="notification-container" id="notification-container" style="<?php echo $notificationstyle ?>">
+							<div class="notification__title">
+						        <h5>Trade Announcements</h5>
+						        <div class="volume-control-notif" style="display: flex;justify-content: end;">
+						        	<?php if (current_user_can('administrator')) : ?>
+							        	<select name="notificationSound" id="notificationSound">
+											<option value="" disabled selected>Select Sound</option>
+										    <optgroup label="Bell Notification Sound">
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 1.mp3'; ?>">Notification 1</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 2.mp3'; ?>">Notification 2</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 3.mp3'; ?>">Notification 3</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 4.mp3'; ?>">Notification 4</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 5.mp3'; ?>">Notification 5</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 6.mp3'; ?>">Notification 6</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 7.mp3'; ?>">Notification 7</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 8.mp3'; ?>">Notification 8</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 9.mp3'; ?>">Notification 9</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 10.mp3'; ?>">Notification 10</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 11.mp3'; ?>">Notification 11</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 12.mp3'; ?>">Notification 12</option>
+										    </optgroup>
+
+										    <optgroup label="Cash Register Sound">
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 1.mp3'; ?>">Cash Register 1</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 2.mp3'; ?>">Cash Register 2</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 3.mp3'; ?>">Cash Register 3</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 4.mp3'; ?>">Cash Register 4</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 5.mp3'; ?>">Cash Register 5</option>
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 6.mp3'; ?>">Cash Register 6</option>
+										    </optgroup>
+
+										    <optgroup label="Stock Market Sound">
+										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Stock Market/Stock Market.mp3'; ?>">Stock Market</option>
+										    </optgroup>
+										</select>
+									<?php endif; ?>
+									<!-- Button trigger modal -->
+									<i class="fas fa-search notifSound" id="notif-search"></i>
+									<i class='fas fa-volume-up notifSound' id="notif-volume-up" ></i>
+									<i class='fas fa-volume-mute notifSound xploadhide' id="notif-volume-mute"></i>								
+								</div>
+						    </div>
+							<ul class="notificationBox xploadscrollbar" id="xprowebinarNotificationMsgBox">								
+							</ul>					
+						</div>
 					</div>
 					<?php 
 						$chatsql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='chat-container'";
@@ -714,60 +843,60 @@ class XploadWebinar{
 							$chatstyle = "";						
 						}
 					 ?>
-					<div class="chat-container col-sm-12 col-md-6 col-lg-6" id="chat-container" style="<?php echo $chatstyle; ?>">							    	
-				    	<div class="chatbox__title">
-					        <h5>
-					        	<a href="" id="chatbuttonsubscribe">Chat</a> 
-				        		<span class="horizontalBar">|</span>
-				        		<a href="" id="join_chat">Join Chat</a>
-					        </h5>
-					        <div class="fontSizeContainer" style="display: flex;">
-					        	<select name="fontSizeSelect" id="fontSizeSelect">
-					        		<option value="16" disabled selected>Font Size</option>
-					        		<option value="8">8</option>
-					        		<option value="10">10</option>
-					        		<option value="12">12</option>
-					        		<option value="14">14</option>
-					        		<option value="16">16</option>
-					        		<option value="18">18</option>
-					        		<option value="20">20</option>
-					        		<option value="22">22</option>
-					        		<option value="24">24</option>
-					        		<option value="26">26</option>
-					        		<option value="28">28</option>
-					        		<option value="30">30</option>
-					        		<option value="32">32</option>
-					        		<option value="34">34</option>
-					        		<option value="36">36</option>
-					        		<option value="38">38</option>
-					        		<option value="40">40</option>
-					        	</select>
+					<div class="messaging-container">
+						<div class="chat-container" id="chat-container" style="<?php echo $chatstyle; ?>">							    	
+					    	<div class="chatbox__title">
+						        <h5>
+						        	<a href="" id="chatbuttonsubscribe">Chat</a>
+						        </h5>
+						        <div class="fontSizeContainer" style="display: flex;">
+						        	<select name="fontSizeSelect" id="fontSizeSelect">
+						        		<option value="16" disabled selected>Font Size</option>
+						        		<option value="8">8</option>
+						        		<option value="10">10</option>
+						        		<option value="12">12</option>
+						        		<option value="14">14</option>
+						        		<option value="16">16</option>
+						        		<option value="18">18</option>
+						        		<option value="20">20</option>
+						        		<option value="22">22</option>
+						        		<option value="24">24</option>
+						        		<option value="26">26</option>
+						        		<option value="28">28</option>
+						        		<option value="30">30</option>
+						        		<option value="32">32</option>
+						        		<option value="34">34</option>
+						        		<option value="36">36</option>
+						        		<option value="38">38</option>
+						        		<option value="40">40</option>
+						        	</select>
 
-					        	<div class="volume-control-chat" style="display: flex;">
-					        		<!-- Button trigger modal -->
-									<i class="fas fa-search chatSound" id="chat-search"></i>	
-									<i class='fas fa-volume-up chatSound' id="chat-volume-up"></i>
-									<i class='fas fa-volume-mute chatSound xploadhide' id="chat-volume-mute"></i>
-								</div>
-					        </div>
-					    </div>
-				    	<ul class="chatbox xploadscrollbar" id="chatbox">
-				    		<!-- Display all the chat -->
-				    	</ul>
-					    <div id="name-group" class="chatboxsubscriber">
-					    	<input type="hidden" id="chatUserID" value="<?php echo $subscriberID; ?>">
-							<input type="hidden" id="chatUserName">
-					        <textarea class="form-control msg_box xploadscrollbar" id="chatMsgBox" placeholder="Type your message here..."></textarea>
-					    </div>
+						        	<div class="volume-control-chat" style="display: flex;">
+						        		<!-- Button trigger modal -->
+										<i class="fas fa-search chatSound" id="chat-search"></i>	
+										<i class='fas fa-volume-up chatSound' id="chat-volume-up"></i>
+										<i class='fas fa-volume-mute chatSound xploadhide' id="chat-volume-mute"></i>
+									</div>
+						        </div>
+						    </div>
+					    	<ul class="chatbox xploadscrollbar" id="chatbox">
+					    		<!-- Display all the chat -->
+					    	</ul>
+						    <div id="name-group" class="chatboxsubscriber">
+						    	<input type="hidden" id="chatUserID" value="<?php echo $subscriberID; ?>">
+								<input type="hidden" id="chatUserName" value="<?php echo $userFullName; ?>">
+						        <textarea class="form-control msg_box xploadscrollbar" id="chatMsgBox" placeholder="Type your message here..."></textarea>
+						    </div>
 
-					    
-						<div id='member-list'>
-							<div class="user-info-in xploadscrollbar">
-								<div class="cc"><i class="fa fa-window-close" aria-hidden="true"></i></div>
-								<div class="list">									
-								</div>						
-							</div>							
-						</div>
+						    
+							<div id='member-list'>
+								<div class="user-info-in xploadscrollbar">
+									<div class="cc"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+									<div class="list">									
+									</div>						
+								</div>							
+							</div>
+					    </div>
 				    </div>
 				</div>
 			</div>
@@ -843,7 +972,6 @@ class XploadWebinar{
 		    </div>
 		  </div>
 		</div>
-		<!-- Modal Get Username-->
 		<?php
 		}
 	}

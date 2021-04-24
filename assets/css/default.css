@@ -1,91 +1,148 @@
 /*Chrome/Safari Responsive*/
+@media screen and (min-width: 1921px) {
+  .messaging-container {height: 37.55vw;}
+  .messaging-container .ui-resizable-se {bottom: -5.6vw;right: .2vw;}
+  .avatar .ui-resizable-se {bottom: -1.1vw;}    
+}
 @media  screen and (max-width: 1920px) {
-  .messaging-container {height: 36.99vw;}
-  .messaging-container .ui-resizable-se {bottom: -6.4vw;}
-  .avatar .ui-resizable-se {bottom: -1.44vw;}
+  .messaging-container {height: 37.11vw;}
+  .messaging-container .ui-resizable-se {bottom: -6.55vw;right: 0.2vw;}
+  #videoContainer #header-image h2 {padding: .55vw;}
 }
 @media  screen and (max-width: 1680px) {
-  .messaging-container {height: 36.96vw;}
+  .messaging-container {height: 37.2vw;}
+  .avatar .ui-resizable-se {bottom: -1.7vw;}
   .messaging-container .ui-resizable-se {bottom: -7vw;}
-  #videoContainer #header-image h2 {padding: 0.4vw;}
 }
 @media  screen and (max-width: 1600px) {
-  .messaging-container {height: 36.55vw;}
+  .messaging-container {height: 37.1vw;}
   .messaging-container .ui-resizable-se {bottom: -7.2vw;}
 }
 @media  screen and (max-width: 1440px) {
-  .messaging-container {height: 36.59vw;}
+  .messaging-container {height: 37.22vw;}
   .messaging-container .ui-resizable-se {bottom: -7.7vw;}
-  #videoContainer #header-image h2 {font-size: 1.5em;padding: 0.27vw;}
+  .avatar .ui-resizable-se {bottom: -2vw;}
 }
 @media  screen and (max-width: 1366px) {
-  .messaging-container {height: 36.44vw;}
+  .messaging-container {height: 37.1vw;}
   .messaging-container .ui-resizable-se {bottom: -7.9vw;}
 }
 @media  screen and (max-width: 1329px) {
-  .messaging-container {height: 36.2vw;}
+  .messaging-container {height: 37.1vw;}
   .messaging-container .ui-resizable-se {bottom: -7.999vw;}
 } 
 @media  screen and (max-width: 1280px) {
-  .messaging-container {height: 36.2vw;}
+  .messaging-container {height: 37vw;}
   .messaging-container .ui-resizable-se {bottom: -8.2vw;}
 }
 @media  screen and (max-width: 1200px) {
-  .messaging-container {height: 36vw;}
+  .messaging-container {height: 37vw;}
   .messaging-container .ui-resizable-se {bottom: -8.6vw;}
 }
 @media  screen and (max-width: 1180px) {
-  .messaging-container {height: 35.88vw;}
-  .messaging-container .ui-resizable-se {bottom: -8.8vw;}
+  .messaging-container {height: 38.6vw;}
+  .messaging-container .ui-resizable-se {bottom: -8.99vw;}
+  .navbar-fixed-left {width: 100%;height: 8vw;flex-direction: row;flex-wrap: nowrap;}
+  .navbar-fixed-left .navbar-nav {flex-direction: row;flex-wrap: nowrap;margin-top: 1vw;}
+  .navbar-brand img{width: 50%;}
+  .navbar-fixed-left .navbar-nav li a img {width: 50%;}
+  .xploadwebinar-container {left: 0;right: 0;width: 100%;padding-right: 0px !important;padding-left: 15px !important;}
 }
 @media  screen and (max-width: 1139px) {
-  .messaging-container {height: 35.7vw;}
+  .messaging-container {height: 38.6vw;}
   .messaging-container .ui-resizable-se {bottom: -9vw;}
+  .avatar-container .avatar {height: 11.33vw;}
+  .avatar .ui-resizable-se {bottom: -2.44vw;}
 }
-@media(max-width: 1091px){
-  .avatar-container .avatar{height: auto;}
-  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;}
-  .messaging-container {height: 39.11vw;}
+@media  screen and (max-width: 1024px) {
+  .messaging-container {height: 38.3vw;}
+  .messaging-container .ui-resizable-se {bottom: -9vw;}
+  .avatar-container .avatar {height: 11.33vw;}
+  .avatar .ui-resizable-se {bottom: -2.44vw;}
 }
-@media (max-width: 991px){
-  /*.xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 4%;padding-left: 0;padding-right: 0;}*/
+@media (max-width: 992px){
+  .avatar-container .avatar {height: 12vw;}
+  .messaging-container {height: 38.77vw;}
+  .messaging-container .ui-resizable-se {bottom: -10.2vw;}
+  .paddingfive {padding-left: 8px;padding-right: 10px;}
+}
+@media (max-width: 835px){
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
-  .avatar-container .avatar {height: auto;}
-  .messaging-container {height: 35.11vw;}
-  .messaging-container .ui-resizable-se {bottom: -10vw;}
+  .avatar-container .avatar {height: 14vw;}
+  .ui-resizable-se {opacity: 1 !important;}
+  .avatar .ui-resizable-se {bottom: -3.5vw;right: 0vw;}
+  .avatar-container .avatar h3 {font-size: 1.5vw;}
+  .notification-container .notification__title h5{font-size: 1.5vw !important;}
+  .chat-container h5 a{font-size: 1vw;}
+  .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+  .chat-container .chatbox__title h5 {padding-left: 2vw;}
+  .messaging-container .ui-resizable-se {bottom: -13.3vw;}
+  .messaging-container {height: 39.3vw;}
 }
 @media (max-width: 768px) {
-  /*.xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 0;padding-right: 0;}*/
+  .xploadwebinar-container {padding-right: 10px !important;padding-left: 10px !important;top: 50%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
-  .avatar-container .avatar {height: auto;}
-  .messaging-container .ui-resizable-se {bottom: -17.6vw;}
+  .avatar-container .avatar {height: 14vw;}
+  .ui-resizable-se {opacity: 1 !important;}
+  .avatar .ui-resizable-se {bottom: -3.5vw;}
+  .avatar-container .avatar h3 {font-size: 1.5vw;}
+  .notification-container .notification__title h5{font-size: 1.5vw !important;}
+  .chat-container h5 a{font-size: 1vw;}
+  .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+  .chat-container .chatbox__title h5 {padding-left: 2vw;}
+  .messaging-container .ui-resizable-se {bottom: -13.3vw;}
+  .messaging-container {height: 38.66vw;}
 }
 @media (max-width: 575px) {
-  /*.xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 7%;padding-left: 0;padding-right: 0;}*/
+  .xploadwebinar-container {padding-right: 10px;padding-left: 10px;}
+  .xploadwebinar-container{top: 45%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 0%;padding-left: 0;padding-right: 9vw;top: 89vw;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
-  .avatar-container .avatar {height: auto;}
+  .avatar-container .avatar {height: 18vw;}
   .messaging-container .ui-resizable-se {bottom: -17.6vw;}
+  .avatar .ui-resizable-se {bottom: -5vw;}
+  .avatar-container .avatar h3 {font-size: 1.5vw;}
+  .notification-container .notification__title h5{font-size: 1.5vw !important;}
+  .chat-container h5 a{font-size: 1.5vw !important;}
+  .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+  .chat-container .chatbox__title h5 {padding-left: 2vw;}
+  #xprowebinar-subscriber {height: auto;}
 }
 @media (max-width: 425px) {
-  /*.xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 7%;padding-left: 0;padding-right: 0;}*/
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 97vw;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
-  .avatar-container .avatar {height: auto;}
+  .avatar-container .avatar {height: 18vw;}
   .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+  .avatar .ui-resizable-se {bottom: -6.5vw;}
+  .avatar-container .avatar h3 {font-size: 1.5vw;}
+  .notification-container .notification__title h5{font-size: 1.5vw !important;}
+  .chat-container h5 a{font-size: 1.5vw !important;}
+  .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+  .chat-container .chatbox__title h5 {padding-left: 2vw;}
+  .navbar-fixed-left {height: 10vw;}
 }
 @media (max-width: 375px) {
-  /*.xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 7%;padding-left: 0;padding-right: 0;}*/
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 101vw;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
-  .avatar-container .avatar {height: auto;}
+  .avatar-container .avatar {height: 18vw;}
   .messaging-container .ui-resizable-se {bottom: -26.6vw;}
+  .avatar .ui-resizable-se {bottom: -7.5vw;}
+  .avatar-container .avatar h3 {font-size: 1.5vw;}
+  .notification-container .notification__title h5{font-size: 1.5vw !important;}
+  .chat-container h5 a{font-size: 1.5vw !important;}
+  .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+  .chat-container .chatbox__title h5{padding-left: 2vw;}
 }
 
 
 /*Mozilla Responsive*/
 @-moz-document url-prefix() {  
   @media screen and (min-width: 1921px) {
-    .messaging-container {height: 37vw;}
+    .messaging-container {height: 37.55vw;}
     .messaging-container .ui-resizable-se {bottom: -6.6vw;right: .1vw;}
-    .avatar .ui-resizable-se {bottom: -1.5vw;}    
+    .avatar .ui-resizable-se {bottom: -6.5vw;}    
   }
   @media  screen and (max-width: 1920px) {
     .messaging-container {height: 37.11vw;}
@@ -93,70 +150,97 @@
     #videoContainer #header-image h2 {padding: .55vw;}
   }
   @media  screen and (max-width: 1680px) {
-    .messaging-container {height: 36.88vw;}
+    .messaging-container {height: 37vw;}
     .messaging-container .ui-resizable-se {bottom: -7vw;}
   }
   @media  screen and (max-width: 1600px) {
-    .messaging-container {height: 36.77vw;}
+    .messaging-container {height: 37.1vw;}
     .messaging-container .ui-resizable-se {bottom: -7.2vw;}
   }
   @media  screen and (max-width: 1440px) {
-    .messaging-container {height: 36.5vw;}
+    .messaging-container {height: 37.1vw;}
     .messaging-container .ui-resizable-se {bottom: -7.7vw;}
   }
   @media  screen and (max-width: 1366px) {
-    .messaging-container {height: 36.33vw;}
+    .messaging-container {height: 37.1vw;}
     .messaging-container .ui-resizable-se {bottom: -7.9vw;}
   }
   @media  screen and (max-width: 1329px) {
-    .messaging-container {height: 36.2vw;}
+    .messaging-container {height: 37.1vw;}
     .messaging-container .ui-resizable-se {bottom: -7.999vw;}
   } 
   @media  screen and (max-width: 1280px) {
-    .messaging-container {height: 36.22vw;}
+    .messaging-container {height: 37vw;}
     .messaging-container .ui-resizable-se {bottom: -8.2vw;}
   }
   @media  screen and (max-width: 1200px) {
-    .messaging-container {height: 36vw;}
+    .messaging-container {height: 37vw;}
     .messaging-container .ui-resizable-se {bottom: -8.6vw;}
   }
   @media  screen and (max-width: 1180px) {
-    .messaging-container {height: 35.88vw;}
-    .messaging-container .ui-resizable-se {bottom: -8.8vw;}
+    .messaging-container {height: 38.6vw;}
+    .messaging-container .ui-resizable-se {bottom: -8.99vw;}
+    .navbar-fixed-left {width: 100%;height: 8vw;flex-direction: row;flex-wrap: nowrap;}
+    .navbar-fixed-left .navbar-nav {flex-direction: row;flex-wrap: nowrap;margin-top: 1vw;}
+    .navbar-brand img{width: 50%;}
+    .navbar-fixed-left .navbar-nav li a img {width: 50%;}
+    .xploadwebinar-container {left: 0;right: 0;width: 100%;padding-right: 0px !important;padding-left: 15px !important;}
   }
   @media  screen and (max-width: 1139px) {
-    .messaging-container {height: 35.9vw;}
+    .messaging-container {height: 38.6vw;}
     .messaging-container .ui-resizable-se {bottom: -9vw;}
     .avatar-container .avatar {height: 11.33vw;}
+    .avatar .ui-resizable-se {bottom: -2.44vw;}
+  }
+  @media  screen and (max-width: 1024px) {
+    .messaging-container {height: 38.3vw;}
+    .messaging-container .ui-resizable-se {bottom: -9vw;}
+    .avatar-container .avatar {height: 11.33vw;}
+    .avatar .ui-resizable-se {bottom: -2.44vw;}
   }
   @media (max-width: 992px){
-    .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 12vw;}
-    .messaging-container {height: 35.11vw;}
-    .messaging-container .ui-resizable-se {bottom: -10vw;}
+    .messaging-container {height: 38.77vw;}
+    .messaging-container .ui-resizable-se {bottom: -10.2vw;}
     .paddingfive {padding-left: 8px;padding-right: 10px;}
-    .messaging-container {height: 35.88vw;}
+  }
+  @media (max-width: 835px){
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
+    .paddingfive {padding-left: 15px;padding-right: 15px;}
+    .avatar-container .avatar {height: 14vw;}
+    .ui-resizable-se {opacity: 1 !important;}
+    .avatar .ui-resizable-se {bottom: -3.5vw;right: 0vw;}
+    .avatar-container .avatar h3 {font-size: 1.5vw;}
+    .notification-container .notification__title h5{font-size: 1.5vw !important;}
+    .chat-container h5 a{font-size: 1vw;}
+    .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+    .chat-container .chatbox__title h5 {padding-left: 2vw;}
+    .messaging-container .ui-resizable-se {bottom: -13.3vw;}
+    .messaging-container {height: 39.3vw;}
   }
   @media (max-width: 768px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 0;padding-right: 0;}
+    .xploadwebinar-container {padding-right: 10px !important;padding-left: 10px !important;top: 50%;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
-    .avatar-container .avatar {height: 17vw;}
-    .messaging-container .ui-resizable-se {bottom: -17.6vw;}
+    .avatar-container .avatar {height: 14vw;}
     .ui-resizable-se {opacity: 1 !important;}
     .avatar .ui-resizable-se {bottom: -3.5vw;}
     .avatar-container .avatar h3 {font-size: 1.5vw;}
     .notification-container .notification__title h5{font-size: 1.5vw !important;}
-    .chat-container h5 a{font-size: 1.5vw !important;}
+    .chat-container h5 a{font-size: 1vw;}
     .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
     .messaging-container .ui-resizable-se {bottom: -13.3vw;}
+    .messaging-container {height: 38.66vw;}
   }
   @media (max-width: 575px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 0 !important;padding-left: 0;padding-right: 9vw;top: 95vw;}
+    .xploadwebinar-container {padding-right: 10px;padding-left: 10px;}
+    .xploadwebinar-container{top: 45%;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 0%;padding-left: 0;padding-right: 9vw;top: 89vw;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 18vw;}
-    .messaging-container .ui-resizable-se {bottom: -22.4vw;}
-    .avatar .ui-resizable-se {bottom: -6.3vw;}
+    .messaging-container .ui-resizable-se {bottom: -17.6vw;}
+    .avatar .ui-resizable-se {bottom: -5vw;}
     .avatar-container .avatar h3 {font-size: 1.5vw;}
     .notification-container .notification__title h5{font-size: 1.5vw !important;}
     .chat-container h5 a{font-size: 1.5vw !important;}
@@ -165,21 +249,24 @@
     #xprowebinar-subscriber {height: auto;}
   }
   @media (max-width: 425px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 10%;padding-left: 0;padding-right: 0;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 97vw;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 18vw;}
     .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+    .avatar .ui-resizable-se {bottom: -6.5vw;}
     .avatar-container .avatar h3 {font-size: 1.5vw;}
     .notification-container .notification__title h5{font-size: 1.5vw !important;}
     .chat-container h5 a{font-size: 1.5vw !important;}
     .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
+    .navbar-fixed-left {height: 10vw;}
   }
   @media (max-width: 375px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 10%;padding-left: 0;padding-right: 0;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 101vw;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 18vw;}
     .messaging-container .ui-resizable-se {bottom: -26.6vw;}
+    .avatar .ui-resizable-se {bottom: -7.5vw;}
     .avatar-container .avatar h3 {font-size: 1.5vw;}
     .notification-container .notification__title h5{font-size: 1.5vw !important;}
     .chat-container h5 a{font-size: 1.5vw !important;}

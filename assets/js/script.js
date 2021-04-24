@@ -834,6 +834,10 @@ jQuery(function($) {
 	}
 
 	function reportWindowSize() {
+		console.log(window.innerWidth);
+		if(window.innerWidth >= 991){
+			document.getElementById("xploadchatnotif-container").style.paddingLeft = "12px";
+		}
 		if(window.innerWidth <= 991){
 			var xploadvideocontainer = document.getElementById("xploadvideo-container");
 			var xploadchatnotifcontainer = document.getElementById("xploadchatnotif-container");
@@ -844,18 +848,37 @@ jQuery(function($) {
 			xploadchatnotifcontainer.classList.remove("col-12","col-sm-12","col-md-12");
 			xploadchatnotifcontainer.classList.add("col-5","col-sm-5","col-md-5");
 
-			 document.getElementById("xploadchatnotif-container").style.marginTop  = "0%";    		
+			document.getElementById("xploadchatnotif-container").style.marginTop  = "0%";
+			document.getElementById("xploadchatnotif-container").style.position  = "relative";
+			document.getElementById("xploadchatnotif-container").style.paddingLeft = "8px";
+			document.getElementById("xploadchatnotif-container").style.paddingRight = "10px";  		
+		}
+		if(window.innerWidth <= 835){
+			$(".avatar-container .avatar h3").css("font-size", "1vw");
+			document.getElementById("xploadchatnotif-container").style.marginTop  = "0%";
+			document.getElementById("xploadchatnotif-container").style.position  = "relative";
+			document.getElementById("xploadchatnotif-container").style.paddingLeft = "3px";
+			document.getElementById("xploadchatnotif-container").style.paddingRight = "10px";
 		}
 		if(window.innerWidth <= 575){
+			document.getElementById("xploadchatnotif-container").style.marginTop  = "7%";
+			document.getElementById("xploadchatnotif-container").style.position  = "relative";
+			document.getElementById("xploadchatnotif-container").style.paddingLeft = "0";
+			document.getElementById("xploadchatnotif-container").style.paddingRight = "0";
+			document.getElementById("xploadchatnotif-container").style.top = "0vw";
+
 			xploadvideocontainer.classList.add("col-12","col-sm-12","col-md-12");
 			xploadvideocontainer.classList.remove("col-7","col-sm-7","col-md-7");
 
 			xploadchatnotifcontainer.classList.add("col-12","col-sm-12","col-md-12");
 			xploadchatnotifcontainer.classList.remove("col-5","col-sm-5","col-md-5");		
 		}
+		if(window.innerWidth <= 500){
+			document.getElementById("xploadchatnotif-container").style.marginTop  = "9%";	
+		}
 	}
 	window.onresize = reportWindowSize;
-	
+	// Reset Layout View
 	$( "#resetView" ).click(function() {
 	  	$.confirm({
 		    title: 'Reset View!',
@@ -874,6 +897,7 @@ jQuery(function($) {
 
 		            document.getElementById("videocontainerrow").style.cssText = style2;
 		            document.getElementById("avatarcontainerow").style.cssText = style2;
+		            document.getElementById("videoContainer2").style.cssText = style2;		            
 
 		            if(window.innerWidth == 1920){
 						$('#avatarcontainerow').css('top', '30.85vw').css("margin-left", '-15px');
@@ -916,36 +940,7 @@ jQuery(function($) {
 		});
 	});
 
-	function saveElementPosition(element, style){
-		var userId = $("#chatUserID").val();
-		var userName = $("#chatUserName").val();
-			jQuery.ajax({            
-				type: "POST",
-				url: pluginsURL.pluginsURL + '/xpload-webinar/php/elementPosition.php',
-				data: ({ userId:userId, userName:userName, elementId:element.id, style:style }),
-				cache: false,
-				success: function(response) {
-					// console.log("SUCCESS RESPONSE " + response);
-				},
-				error: function(response) {
-					// console.log("ERROR RESPONSE " + response);
-				}
-			});
-	}
-
-
-	$( "#closeavatar1" ).click(function() {
-		$( "#avatar1" ).css("display", "none");
-	});
-
-	$( "#closeavatar2" ).click(function() {
-		$( "#avatar2" ).css("display", "none");
-	});
-
-	$( "#closeavatar3" ).click(function() {
-		$( "#avatar3" ).css("display", "none");
-	});
-
+	// Z-index for all elements
 	$( "#avatar1" ).click(function() {
 		if(this.id == "avatar1"){
 			zindexFunction(this.id);
@@ -996,6 +991,123 @@ jQuery(function($) {
 		highestZ = Math.max(...zIndexArray);
 		//set the element to be the topmost 
 		var t = document.getElementById(id).style.zIndex = highestZ + 1;
-	}	
+
+		var style = document.getElementById(id).style.cssText;
+	    saveElementPosition(id, style);
+	}
+
+
+	// Show Hide Elements
+	$( "#avatarToggle1" ).click(function() {     
+	    if($('#avatar1:visible').length){
+	        $('#avatar1').hide("slide", { direction: "left" }, 1000);
+	        var avatar1 = document.getElementById("avatar1");
+	        var style = document.getElementById("avatar1").style.cssText;
+	        saveElementPosition(avatar1, style);
+	    }else{
+	        $('#avatar1').show("slide", { direction: "left" }, 1000);
+	        var avatar1 = document.getElementById("avatar1");
+	        var style = document.getElementById("avatar1").style.cssText;
+	        saveElementPosition(avatar1, style);      
+	    }
+	});
+	$( "#avatarToggle2" ).click(function() {     
+	    if($('#avatar2:visible').length){
+	        $('#avatar2').hide("slide", { direction: "left" }, 1000);
+	        var avatar2 = document.getElementById("avatar2");
+	        var style = document.getElementById("avatar2").style.cssText;
+	        saveElementPosition(avatar2, style);
+	    }else{
+	        $('#avatar2').show("slide", { direction: "left" }, 1000);
+	        var avatar2 = document.getElementById("avatar2");
+	        var style = document.getElementById("avatar2").style.cssText;
+	        saveElementPosition(avatar2, style);      
+	    }
+	});
+	$( "#avatarToggle3" ).click(function() {     
+	    if($('#avatar3:visible').length){
+	        $('#avatar3').hide("slide", { direction: "left" }, 1000);
+	    	var avatar3 = document.getElementById("avatar3");
+	        var style = document.getElementById("avatar3").style.cssText;
+	        saveElementPosition(avatar3, style);;
+	    }else{
+	        $('#avatar3').show("slide", { direction: "left" }, 1000);
+	        var avatar3 = document.getElementById("avatar3");
+	        var style = document.getElementById("avatar3").style.cssText;
+	        saveElementPosition(avatar3, style);
+	    }
+	});
+	$( "#tradeAnnouncementToggle" ).click(function() {     
+	    if($('#notification-container:visible').length){
+	        $('#notification-container').hide("slide", { direction: "left" }, 1000);
+	        var notificationcontainer = document.getElementById("notification-container");
+	        var style = document.getElementById("notification-container").style.cssText;
+	        saveElementPosition(notificationcontainer, style);
+	    }else{
+	        $('#notification-container').show("slide", { direction: "left" }, 1000);
+	        var notificationcontainer = document.getElementById("notification-container");
+	        var style = document.getElementById("notification-container").style.cssText;
+	        saveElementPosition(notificationcontainer, style);     
+	    }
+	});	
+	$( "#ChatToggle" ).click(function() {     
+	    if($('#chat-container:visible').length){
+	        $('#chat-container').hide("slide", { direction: "left" }, 1000);
+	    	var chatcontainer = document.getElementById("chat-container");
+	        var style = document.getElementById("chat-container").style.cssText;
+	        saveElementPosition(chatcontainer, style); 
+	    }else{
+	        $('#chat-container').show("slide", { direction: "left" }, 1000);
+	        var chatcontainer = document.getElementById("chat-container");
+	        var style = document.getElementById("chat-container").style.cssText;
+	        saveElementPosition(chatcontainer, style);        
+	    }
+	});
+	$( "#screenShareToggle" ).click(function() {     
+	    if($('#videoContainer:visible').length){
+	        $('#videoContainer').hide("slide", { direction: "left" }, 1000);	    
+	    	$('#videoContainer2').css("height", "592.117px");
+	    	var videoContainer = document.getElementById("videoContainer");
+	        var style = document.getElementById("videoContainer").style.cssText;
+	        saveElementPosition(videoContainer, style);  
+	    }else{
+	        $('#videoContainer').show("slide", { direction: "left" }, 1000);
+	        $('#videoContainer2').css("height", "auto");
+	        var videoContainer = document.getElementById("videoContainer");
+	        var style = document.getElementById("videoContainer").style.cssText;
+	        saveElementPosition(videoContainer, style);
+	    }
+	});
+
+	$( "#statisticsToggle" ).click(function() {     
+	    if($('#videoContainer2:visible').length){
+	        $('#videoContainer2').hide("slide", { direction: "left" }, 1000);
+	        var videoContainer2 = document.getElementById("videoContainer2").style.cssText;
+	        saveElementPosition(videoContainer2, style1); 
+	    }else{
+	        $('#videoContainer2').show("slide", { direction: "left" }, 1000);
+	        var videoContainer2 = document.getElementById("videoContainer2").style.cssText;
+	        saveElementPosition(videoContainer2, style1);       
+	    }
+	});
+
+	// Save element size and position to database
+	function saveElementPosition(element, style){
+		var userId = $("#chatUserID").val();
+		var userName = $("#chatUserName").val();
+		jQuery.ajax({            
+			type: "POST",
+			url: pluginsURL.pluginsURL + '/xpload-webinar/php/elementPosition.php',
+			data: ({ userId:userId, userName:userName, elementId:element.id, style:style }),
+			cache: false,
+			success: function(response) {
+				// console.log("SUCCESS RESPONSE " + response);
+			},
+			error: function(response) {
+				// console.log("ERROR RESPONSE " + response);
+			}
+		});
+	}
+
 	
 });
