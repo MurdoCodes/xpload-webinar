@@ -54,7 +54,7 @@ class XploadWebinar{
 						// Font-Awesome
 						wp_enqueue_style( 'xpload-fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css', __FILE__ );
 						// emoji
-						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.3.9' );
+						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.3.13' );
 						// Text color change
 						wp_enqueue_style( 'xpload-xpectrum', plugin_dir_url( __FILE__ ). 'assets/css/spectrum.css', __FILE__ );
 					/** VIDEO **/
@@ -64,8 +64,8 @@ class XploadWebinar{
 					/** CONFIRM **/
 						wp_enqueue_style( 'xpload-confirm', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css', __FILE__ );
 					/** PLUGIN STYLESHEET **/
-						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.3.9' );
-						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.3.9' );
+						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.3.13' );
+						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.3.13' );
 				
 				/** ENQUEUE JS  **/
 					// JQUERY
@@ -98,17 +98,17 @@ class XploadWebinar{
 
 						if ( current_user_can('administrator') && is_user_logged_in() ) :
 
-							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.3.9', true );
-							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.3.9', true );
+							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.3.13', true );
+							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.3.13', true );
 							wp_localize_script('xpload-publisher', 'pluginsURL', array(
 							    'pluginsURL' => plugins_url(),
 							));
 
 						else:
 							
-							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.3.9' );
-							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.3.9', true );
-							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.3.6', true );
+							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.3.13' );
+							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.3.13', true );
+							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.3.13', true );
 
 							if ( !is_user_logged_in() ) :
 								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.3.5', true );
@@ -117,7 +117,7 @@ class XploadWebinar{
 						endif;
 						
 						// SITE
-						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.3.9', true );
+						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.3.13', true );
 						wp_localize_script('xpload-webinar-script', 'pluginsURL', array(
 						    'pluginsURL' => plugins_url(),
 						));
@@ -198,11 +198,10 @@ class XploadWebinar{
 					        	<input type="hidden" id="adminId" value="<?php echo $subscriberName; ?>">
 					        	<input type="hidden" id="currentAdminId" value="<?php echo $subscriberName; ?>">
 					        	<div id="videoContainer" style="<?php echo $videoContainerstyle; ?>">
+									
 									<div id="header-image" class="nopadding">
-									    <a href="<?php echo get_home_url(); ?>" rel="home" class="nopadding">
-									       <img class="nopadding" id="webinarLogo" src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/LT-logo.png'; ?>" alt="Live Traders Logo" />
-									    </a>
-									</div>	
+										<h2>LIVE TRADERS</h2>
+									</div>
 									<video id="xprowebinar-subscriber" class="red5pro-media red5pro-media-background" controls autoplay muted></video>
 					        	</div>
 								
@@ -238,7 +237,7 @@ class XploadWebinar{
 								 ?>
 								<div class="avatar" id="avatar_1">
 									<div id="avatar1" style="<?php echo $avatar1style ?>">
-										<div style="display: flex;justify-content: space-between;background-color: #3900ae;">
+										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Open House Special</h3>
 											<i class="fal fa-times-circle closeavatar" id="closeavatar1"></i>
 										</div>
@@ -264,7 +263,7 @@ class XploadWebinar{
 								 ?>
 								<div class="avatar" id="avatar_2">
 									<div id="avatar2" style="<?php echo $avatar2style; ?>">
-										<div id="presenter" style="display: flex;justify-content: space-between;background-color: #3900ae;">
+										<div id="presenter" style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Presenter</h3>
 											<i class="fal fa-times-circle closeavatar" id="closeavatar2"></i>
 										</div>
@@ -306,7 +305,7 @@ class XploadWebinar{
 								 ?>
 								 <div class="avatar" id="avatar_3">
 									<div id="avatar3" style="<?php echo $avatar3style; ?>">							
-										<div style="display: flex;justify-content: space-between;background-color: #3900ae;">
+										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Professional Trading Strategies</h3>
 											<i class="fal fa-times-circle closeavatar" id="closeavatar3"></i>
 										</div>

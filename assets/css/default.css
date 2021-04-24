@@ -7,6 +7,7 @@
 @media  screen and (max-width: 1680px) {
   .messaging-container {height: 36.96vw;}
   .messaging-container .ui-resizable-se {bottom: -7vw;}
+  #videoContainer #header-image h2 {padding: 0.4vw;}
 }
 @media  screen and (max-width: 1600px) {
   .messaging-container {height: 36.55vw;}
@@ -15,6 +16,7 @@
 @media  screen and (max-width: 1440px) {
   .messaging-container {height: 36.59vw;}
   .messaging-container .ui-resizable-se {bottom: -7.7vw;}
+  #videoContainer #header-image h2 {font-size: 1.5em;padding: 0.27vw;}
 }
 @media  screen and (max-width: 1366px) {
   .messaging-container {height: 36.44vw;}
@@ -83,11 +85,12 @@
   @media screen and (min-width: 1921px) {
     .messaging-container {height: 37vw;}
     .messaging-container .ui-resizable-se {bottom: -6.6vw;right: .1vw;}
-    .avatar .ui-resizable-se {bottom: -1.5vw;}
+    .avatar .ui-resizable-se {bottom: -1.5vw;}    
   }
   @media  screen and (max-width: 1920px) {
     .messaging-container {height: 37.11vw;}
-    .messaging-container .ui-resizable-se {bottom: -6.4vw;}
+    .messaging-container .ui-resizable-se {bottom: -6.55vw;right: 0.2vw;}
+    #videoContainer #header-image h2 {padding: .55vw;}
   }
   @media  screen and (max-width: 1680px) {
     .messaging-container {height: 36.88vw;}
@@ -149,16 +152,17 @@
     .messaging-container .ui-resizable-se {bottom: -13.3vw;}
   }
   @media (max-width: 575px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 9% !important;padding-left: 0;padding-right: 0;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 0 !important;padding-left: 0;padding-right: 9vw;top: 95vw;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 18vw;}
     .messaging-container .ui-resizable-se {bottom: -22.4vw;}
-    .avatar .ui-resizable-se {bottom: -6vw;}
+    .avatar .ui-resizable-se {bottom: -6.3vw;}
     .avatar-container .avatar h3 {font-size: 1.5vw;}
     .notification-container .notification__title h5{font-size: 1.5vw !important;}
     .chat-container h5 a{font-size: 1.5vw !important;}
     .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
+    #xprowebinar-subscriber {height: auto;}
   }
   @media (max-width: 425px) {
     .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 10%;padding-left: 0;padding-right: 0;}

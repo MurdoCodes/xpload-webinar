@@ -85,16 +85,6 @@ jQuery(function($) {
         $videoContainer = $('.xploadvideo-container'),
         $chatbox2 = $('#chatbox');
 
-    // $chatboxTitle.on('click', function() {
-    //     $chatbox.toggleClass('chatbox--tray');
-    //     $videoContainer.toggleClass('xploadvideomaxwidth-container');
-    //     $chatbox2.toggleClass('chatboxmaxheight');
-    // });
-
-    // $chatbox.on('transitionend', function() {
-    //     if ($chatbox.hasClass('chatbox--closed')) $chatbox.remove();
-    // });
-
     /** Mute/Unmute Chat Sound **/
     var chatSoundIcon = $('.chatSound');
 	chatSoundIcon.on('click', function() {
@@ -594,7 +584,6 @@ jQuery(function($) {
 		    dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
-
 	// Notification Container
 	$( "#notification-container" ).draggable({ 
 		handle: "h5",
@@ -655,7 +644,7 @@ jQuery(function($) {
 			dragConvertToVw(event.target.id, event.target.offsetTop, event.target.offsetLeft, event.target);
 		}
 	});
-
+	// Convert px to vw unit
 	function dragConvertToVw(id, top, left, target){
 
         if(window.innerWidth <= 991){
@@ -681,7 +670,6 @@ jQuery(function($) {
         }
 
 	}
-
 	/**
 		**
 		* Resizing of containers
@@ -690,38 +678,52 @@ jQuery(function($) {
 	/** Change made recent **/
 	$("#videoContainer").resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		resize: function( e, $el, opt ) {
-			if(e.target.id == "videoContainer"){
-				zindexFunction(this.id);
-			}
-			// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-			// $('#xprowebinar-subscriber').css('height', '100%');
-			if(window.innerWidth <= 1920){
+		resize: function( e, $el, opt ) {			
+			if(window.innerWidth <= 1920 && window.innerWidth >= 1681){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.85vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1680){				
+			}else if(window.innerWidth <= 1680 && window.innerWidth >= 1601){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');			
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.8vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1600){
+			}else if(window.innerWidth <= 1600 && window.innerWidth >= 1441){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.85vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1440){
+			}else if(window.innerWidth <= 1440 && window.innerWidth >= 1367){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.88vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1366){
+			}else if(window.innerWidth <= 1366 && window.innerWidth >= 1330){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.9vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1329){
+			}else if(window.innerWidth <= 1329 && window.innerWidth >= 1281){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.9vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1280){
+			}else if(window.innerWidth <= 1280 && window.innerWidth >= 1181){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1180){
+			}else if(window.innerWidth <= 1180 && window.innerWidth >= 992){
+				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
+				$('#xprowebinar-subscriber').css('height', '100%');
 				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 991){
+				$('#avatarcontainerow').css('position', 'absolute').css('top', '55vw').css('margin-right', '0');
 				var style = document.getElementById(e.target.id).style.cssText;
 			}
 		},
-	    stop: function (e, $el, opt) {	   
+	    stop: function (e, $el, opt) {
+	    	if(e.target.id == "videoContainer"){
+				zindexFunction(this.id);
+			}
 	        if(window.innerWidth <= 991){
 	        	document.getElementById(e.target.id).style.width = e.target.offsetHeight;
 		        document.getElementById(e.target.id).style.height = e.target.clientHeight;
 	        	var style = document.getElementById(e.target.id).style.cssText;
-	        	console.log(style);
 		        saveElementPosition(e.target, style);
 	        }else{
 	        	var vw = e.target.clientWidth / window.innerWidth * 100;
@@ -730,18 +732,18 @@ jQuery(function($) {
 		        document.getElementById(e.target.id).style.height = vh + "vw";
 		        var style = document.getElementById(e.target.id).style.cssText;
 		        saveElementPosition(e.target, style);
-	        }
+	        }	        
 	    }
 	});
 	$( "#notification-container" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
-			if(e.target.id == "notification-container"){
-				zindexFunction(this.id);
-			}
 			$('#notification-container').css('max-width', '100%');
 		},
-	    stop: function (e, $el, opt) {		        
+	    stop: function (e, $el, opt) {
+	    	if(e.target.id == "videoContainer"){
+				zindexFunction(this.id);
+			}	        
 	        if(window.innerWidth <= 991){
 	    		convertToVW( e.target.id, e.target.offsetWidth, e.target.offsetHeight, e.target );
 	    	}else{
@@ -752,12 +754,9 @@ jQuery(function($) {
 	$( "#chat-container" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
-			if(e.target.id == "chat-container"){
-				zindexFunction(this.id);
-			}
 			$('#chat-container').css('max-width', '100%');
 		},
-	    stop: function (e, $el, opt) {		        
+	    stop: function (e, $el, opt) {	        
 	        if(window.innerWidth <= 991){
 	    		convertToVW( e.target.id, e.target.offsetWidth, e.target.offsetHeight, e.target );
 	    	}else{
@@ -772,7 +771,10 @@ jQuery(function($) {
 				zindexFunction(this.id);
 			}	
 		},
-	    stop: function (e, $el, opt) {	        
+	    stop: function (e, $el, opt) {
+	    	if(e.target.id == "videoContainer"){
+				zindexFunction(this.id);
+			}        
 	        if(window.innerWidth <= 991){
 	    		convertToVW( e.target.id, e.target.offsetWidth, e.target.offsetHeight, e.target );
 	    	}else{
@@ -783,12 +785,12 @@ jQuery(function($) {
 	$( "#avatar2" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
-			if(e.target.id == "avatar2"){
-				zindexFunction(this.id);
-			}
 			$('#xprowebinarPublisherCamera').css('height', '100%');
 		},
-	    stop: function (e, $el, opt) {		        
+	    stop: function (e, $el, opt) {
+	    	if(e.target.id == "videoContainer"){
+				zindexFunction(this.id);
+			}	        
 	        if(window.innerWidth <= 991){
 	    		convertToVW( e.target.id, e.target.offsetWidth, e.target.offsetHeight, e.target );
 	    	}else{
@@ -799,11 +801,11 @@ jQuery(function($) {
 	$( "#avatar3" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
 		resize: function( e, $el, opt ) {
-			if(e.target.id == "avatar3"){
-				zindexFunction(this.id);
-			}
 		},
 	    stop: function (e, $el, opt) {
+	    	if(e.target.id == "videoContainer"){
+				zindexFunction(this.id);
+			}
 	    	if(window.innerWidth <= 991){
 	    		convertToVW( e.target.id, e.target.offsetWidth, e.target.offsetHeight, e.target );
 	    	}else{
@@ -812,7 +814,7 @@ jQuery(function($) {
 	        
 	    }
 	});
-
+	// convert px to vw
 	function convertToVW( id, width, height, target ){
         if(window.innerWidth <= 991){
         	var vw = width / window.innerWidth * 100;
@@ -845,19 +847,6 @@ jQuery(function($) {
 			 document.getElementById("xploadchatnotif-container").style.marginTop  = "0%";    		
 		}
 		if(window.innerWidth <= 575){
-			document.getElementById("videoContainer").style.cssText = "";			
-			document.getElementById("avatarcontainerow").style.cssText = "";
-			document.getElementById("avatar1").style.cssText = "";
-			document.getElementById("avatar2").style.cssText = "";
-			document.getElementById("avatar3").style.cssText = "";
-			document.getElementById("notification-container").style.cssText = "";
-			document.getElementById("chat-container").style.cssText = "";
-
-			document.getElementById("videocontainerrow").style.position = "relative";
-			document.getElementById("avatarcontainerow").style.position = "relative";	
-			document.getElementById("xprowebinar-subscriber").style.height = "100%";
-			document.getElementById("xprowebinarPublisherCamera").style.height = "100%";
-
 			xploadvideocontainer.classList.add("col-12","col-sm-12","col-md-12");
 			xploadvideocontainer.classList.remove("col-7","col-sm-7","col-md-7");
 
@@ -1007,8 +996,6 @@ jQuery(function($) {
 		highestZ = Math.max(...zIndexArray);
 		//set the element to be the topmost 
 		var t = document.getElementById(id).style.zIndex = highestZ + 1;
-	}
-
-	
+	}	
 	
 });
