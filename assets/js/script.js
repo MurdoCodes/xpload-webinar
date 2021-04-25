@@ -575,6 +575,7 @@ jQuery(function($) {
 	**/
 	$( "#videoContainer" ).draggable({ 
 		handle: "#header-image",
+		containment: "document",
 		start: function( event, ui ) {
 			if(event.target.id == "videoContainer"){
 				zindexFunction(this.id);
@@ -587,6 +588,7 @@ jQuery(function($) {
 	// Notification Container
 	$( "#notification-container" ).draggable({ 
 		handle: "h5",
+		containment: "document",
 		start: function( event, ui ) {
 			if(event.target.id == "notification-container"){
 				zindexFunction(this.id);
@@ -599,6 +601,7 @@ jQuery(function($) {
 	// Chat Contianer
 	$( "#chat-container" ).draggable({ 
 		handle: "h5",
+		containment: "document",
 		start: function( event, ui ) {
 			if(event.target.id == "chat-container"){
 				zindexFunction(this.id);
@@ -611,6 +614,7 @@ jQuery(function($) {
 	// Avatar 1
 	$( "#avatar1" ).draggable({ 
 		handle: "h3",
+		containment: "document",
 		start: function( event, ui ) {
 			if(event.target.id == "avatar1"){
 				zindexFunction(this.id);
@@ -623,6 +627,7 @@ jQuery(function($) {
 	// Avatar 2
 	$( "#avatar2" ).draggable({ 
 		handle: "h3",
+		containment: "document",
 		start: function( event, ui ) {
 			if(event.target.id == "avatar2"){
 				zindexFunction(this.id);
@@ -635,6 +640,7 @@ jQuery(function($) {
 	// Avatar 3
 	$( "#avatar3" ).draggable({ 
 		handle: "h3",
+		containment: "document",
 		start: function( event, ui ) {
 			if(event.target.id == "avatar3"){
 				zindexFunction(this.id);
@@ -1096,6 +1102,5 @@ jQuery(function($) {
 			}
 		});
 	}
-
 	
 });

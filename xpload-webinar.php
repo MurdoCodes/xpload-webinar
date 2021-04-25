@@ -273,8 +273,19 @@ class XploadWebinar{
 									}else{
 										$avatar1style = "";						
 									}
+
+									$avatar1sql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='avatar_1'";
+									$avatar1Item = $conn->query($avatar1sql);
+									$avatar1num = $avatar1Item->num_rows;
+									if($avatar1num > 0){
+										while($row = mysqli_fetch_assoc($avatar1Item)) {
+									    	$avatar_1style = $row['element_style'];
+										}
+									}else{
+										$avatar_1style = "";						
+									}
 								 ?>
-								<div class="avatar" id="avatar_1">
+								<div class="avatar" id="avatar_1" style="<?php echo $avatar_1style ?>">
 									<div id="avatar1" style="<?php echo $avatar1style ?>">
 										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Open House Special</h3>
@@ -299,8 +310,19 @@ class XploadWebinar{
 									}else{
 										$avatar2style = "";					
 									}
+
+									$avatar2sql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='avatar_2'";
+									$avatar2Item = $conn->query($avatar2sql);
+									$avatar2num = $avatar2Item->num_rows;
+									if($avatar2num > 0){
+										while($row = mysqli_fetch_assoc($avatar2Item)) {
+									    	$avatar_2style = $row['element_style'];
+										}
+									}else{
+										$avatar_2style = "";					
+									}
 								 ?>
-								<div class="avatar" id="avatar_2">
+								<div class="avatar" id="avatar_2" style="<?php echo $avatar_2style; ?>">
 									<div id="avatar2" style="<?php echo $avatar2style; ?>">
 										<div id="presenter" style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Presenter</h3>
@@ -341,8 +363,19 @@ class XploadWebinar{
 									}else{
 										$avatar3style = "";						
 									}
+
+									$avatar3sql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='avatar_3'";
+									$avatar3Item = $conn->query($avatar3sql);
+									$avatar3num = $avatar3Item->num_rows;
+									if($avatar3num > 0){
+										while($row = mysqli_fetch_assoc($avatar3Item)) {
+									    	$avatar_3style = $row['element_style'];
+										}
+									}else{
+										$avatar_3style = "";						
+									}
 								 ?>
-								 <div class="avatar" id="avatar_3">
+								 <div class="avatar" id="avatar_3" style="<?php echo $avatar_3; ?>">
 									<div id="avatar3" style="<?php echo $avatar3style; ?>">							
 										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
 											<h3>Professional Trading Strategies</h3>
@@ -369,10 +402,21 @@ class XploadWebinar{
 					}else{
 						$notificationstyle = "";						
 					}
+
+					$notificationsql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='message-notif'";
+					$notificationItem = $conn->query($notificationsql);
+					$notificationnum = $notificationItem->num_rows;
+					if($notificationnum > 0){
+						while($row = mysqli_fetch_assoc($notificationItem)) {
+					    	$messagenotifstyle = $row['element_style'];
+						}
+					}else{
+						$messagenotifstyle = "";						
+					}
 				 ?>
 
 			    <div class="xploadchatnotif-container col-12 col-12 col-sm-12 col-md-12 col-lg-5 paddingfive" id="xploadchatnotif-container">
-			    	<div class="messaging-container" id="message-notif">
+			    	<div class="messaging-container" id="message-notif" style="<?php echo $messagenotifstyle ?>">
 						<div class="notification-container" id="notification-container" style="<?php echo $notificationstyle ?>">
 							<div class="notification__title">
 						        <h5>Trade Announcements</h5>
@@ -442,8 +486,19 @@ class XploadWebinar{
 						}else{
 							$chatstyle = "";						
 						}
+
+						$chatsql = "SELECT element_style FROM $table_name WHERE user_id='$subscriberID' AND element_name='message-chat'";
+						$chatItem = $conn->query($chatsql);
+						$chatnum = $chatItem->num_rows;
+						if($chatnum > 0){
+							while($row = mysqli_fetch_assoc($chatItem)) {
+						    	$messagechatstyle = $row['element_style'];
+							}
+						}else{
+							$messagechatstyle = "";						
+						}
 					 ?>
-					<div class="messaging-container" id="message-chat">
+					<div class="messaging-container" id="message-chat" style="<?php echo $messagechatstyle; ?>">
 						<div class="chat-container" id="chat-container" style="<?php echo $chatstyle; ?>">							    	
 					    	<div class="chatbox__title">
 						        <h5>
