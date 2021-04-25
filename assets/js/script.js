@@ -997,74 +997,62 @@ jQuery(function($) {
 	}
 
 
+	// SHow Hide Elements
+	function GetThisHidden(id){
+		$("#"+id).hide("slide", { direction: "left" }, 1500,function(){
+			$("#avatar_1").css("display", "none");
+			var element = document.getElementById(id);
+			var style = element.style.cssText;
+			saveElementPosition(element, style);
+		});	    
+	}
+	function GetThisDisplayed(id){
+		$("#"+id).show("slide", { direction: "left" }, 1500).css("display", "block");
+		var element = document.getElementById(id);  
+        var style = element.style.cssText;
+        saveElementPosition(element, style);
+	    
+	}
+
 	// Show Hide Elements
-	$( "#avatarToggle1" ).click(function() {     
-	    if($('#avatar1:visible').length){
-	        $('#avatar1').hide("slide", { direction: "left" }, 1000);
-	        var avatar1 = document.getElementById("avatar1");
-	        var style = document.getElementById("avatar1").style.cssText;
-	        saveElementPosition(avatar1, style);
+	$( "#avatarToggle1" ).click(function() {  
+	    if($( '#avatar_1' ).is(":visible")){
+	    	GetThisHidden("avatar_1")
 	    }else{
-	        $('#avatar1').show("slide", { direction: "left" }, 1000);
-	        var avatar1 = document.getElementById("avatar1");
-	        var style = document.getElementById("avatar1").style.cssText;
-	        saveElementPosition(avatar1, style);      
+	    	GetThisDisplayed("avatar_1");
 	    }
 	});
 	$( "#avatarToggle2" ).click(function() {     
-	    if($('#avatar2:visible').length){
-	        $('#avatar2').hide("slide", { direction: "left" }, 1000);
-	        var avatar2 = document.getElementById("avatar2");
-	        var style = document.getElementById("avatar2").style.cssText;
-	        saveElementPosition(avatar2, style);
+	    if($( '#avatar_2' ).is(":visible")){    	
+	    	GetThisHidden("avatar_2");
 	    }else{
-	        $('#avatar2').show("slide", { direction: "left" }, 1000);
-	        var avatar2 = document.getElementById("avatar2");
-	        var style = document.getElementById("avatar2").style.cssText;
-	        saveElementPosition(avatar2, style);      
+	    	GetThisDisplayed("avatar_2");
 	    }
 	});
 	$( "#avatarToggle3" ).click(function() {     
-	    if($('#avatar3:visible').length){
-	        $('#avatar3').hide("slide", { direction: "left" }, 1000);
-	    	var avatar3 = document.getElementById("avatar3");
-	        var style = document.getElementById("avatar3").style.cssText;
-	        saveElementPosition(avatar3, style);;
+	    if($( '#avatar_3' ).is(":visible")){    	
+	    	GetThisHidden("avatar_3");
 	    }else{
-	        $('#avatar3').show("slide", { direction: "left" }, 1000);
-	        var avatar3 = document.getElementById("avatar3");
-	        var style = document.getElementById("avatar3").style.cssText;
-	        saveElementPosition(avatar3, style);
+	    	GetThisDisplayed("avatar_3");
 	    }
 	});
-	$( "#tradeAnnouncementToggle" ).click(function() {     
-	    if($('#notification-container:visible').length){
-	        $('#notification-container').hide("slide", { direction: "left" }, 1000);
-	        var notificationcontainer = document.getElementById("notification-container");
-	        var style = document.getElementById("notification-container").style.cssText;
-	        saveElementPosition(notificationcontainer, style);
+
+	$( "#tradeAnnouncementToggle" ).click(function() {
+	    if($( '#message-notif' ).is(":visible")){    	
+	    	GetThisHidden("message-notif");
 	    }else{
-	        $('#notification-container').show("slide", { direction: "left" }, 1000);
-	        var notificationcontainer = document.getElementById("notification-container");
-	        var style = document.getElementById("notification-container").style.cssText;
-	        saveElementPosition(notificationcontainer, style);     
-	    }
+	    	GetThisDisplayed("message-notif");
+	    } 
 	});	
 	$( "#ChatToggle" ).click(function() {     
-	    if($('#chat-container:visible').length){
-	        $('#chat-container').hide("slide", { direction: "left" }, 1000);
-	    	var chatcontainer = document.getElementById("chat-container");
-	        var style = document.getElementById("chat-container").style.cssText;
-	        saveElementPosition(chatcontainer, style); 
+	    if($( '#message-chat:visible' ).is(":visible")){    	
+	    	GetThisHidden("message-chat");
 	    }else{
-	        $('#chat-container').show("slide", { direction: "left" }, 1000);
-	        var chatcontainer = document.getElementById("chat-container");
-	        var style = document.getElementById("chat-container").style.cssText;
-	        saveElementPosition(chatcontainer, style);        
+	    	GetThisDisplayed("message-chat");
 	    }
 	});
 	$( "#screenShareToggle" ).click(function() {     
-	    if($('#videoContainer:visible').length){
+	    if($( '#videoContainer:visible' ).is(":visible")){
 	        $('#videoContainer').hide("slide", { direction: "left" }, 1000);	    
 	    	$('#videoContainer2').css("height", "592.117px");
 	    	var videoContainer = document.getElementById("videoContainer");
@@ -1080,7 +1068,7 @@ jQuery(function($) {
 	});
 
 	$( "#statisticsToggle" ).click(function() {     
-	    if($('#videoContainer2:visible').length){
+	    if($( '#videoContainer2:visible' ).is(":visible")){
 	        $('#videoContainer2').hide("slide", { direction: "left" }, 1000);
 	        var videoContainer2 = document.getElementById("videoContainer2").style.cssText;
 	        saveElementPosition(videoContainer2, style1); 

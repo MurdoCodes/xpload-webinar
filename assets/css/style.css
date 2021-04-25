@@ -45,7 +45,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 /*Avatar*/
 /** Change made recent **/
 #avatar_2{padding-left: .5%;padding-right: .5%;}
-.avatar-container{display: flex;}
+.avatar-container{display: flex;height: 15.5em;}
 .avatar-container .avatar{flex-grow: 1;height: 11.33vw;width: 33%;padding-top:.1%;padding-bottom:0%;}
 .avatar-container .avatar h3{margin:0;color:#01c3b6;font-size: .8vw;padding-left:1em;width: 100%;}
 .avatar-container .avatar img{width: 100%;height:100%;box-shadow:0px 3px 3px rgb(41 41 41 / 73%);}
@@ -97,7 +97,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 .date{font-size: 9px !important;margin-top: 10px !important;}
 .emojionearea .emojionearea-editor{word-break: break-word;min-height: 5em !important;max-height: 0 !important;overflow-y: scroll !important;word-break: break-all;}
 .emojionearea, .emojionearea.form-control{width: 100% !important; height: 100% !important;box-shadow: 0px 3px 3px rgb(41 41 41 / 73%);}
-.horizontalBar{color: #fff;position: relative;padding-left: 1%;padding-right: 1%;}
+.horizontalBar{color: #fff;position: relative;padding-left: 1%;padding-right: 1%;margin-left: 1.5%;margin-right: 1.5%;}
 /**
     * Subscribers List
 **/
@@ -209,7 +209,7 @@ select{
     }
 /** Change made recent **/
 #videoContainer{position: relative;display: inline-block;width:100%;}
-#videoContainer .ui-resizable-se {opacity: 0;}
+#videoContainer .ui-resizable-se {opacity: 1;}
 #videoContainer:hover .ui-resizable-se{opacity: 1;}
 /** Change made recent **/
 #videoContainer #header-image{background-color:rgba(0,0,0,0.7);}
@@ -217,13 +217,15 @@ select{
 #videoContainer #header-image h2{margin: 0 !important;font-size: 2em;padding: .744vw;color:#01c3b6;}
 #videoContainer #header-image:hover{cursor: move;}
 /** Change made recent **/
+#notification-container .ui-resizable-se{opacity: 1;}
 #notification-container:hover .ui-resizable-se{opacity: 1;}
 #notification-container h5:hover{cursor: move;}
 /** Change made recent **/
+#chat-container .ui-resizable-se{opacity: 1;}
 #chat-container:hover .ui-resizable-se{opacity: 1;}
 #chat-container h5:hover{cursor: move;}
 /** Change made recent **/
-.avatar .ui-resizable-se{bottom: -1.1vw;}
+.avatar .ui-resizable-se{bottom: -1.1vw;opacity:1;}
 .avatar .ui-resizable-s {bottom: 0;position: inherit;}
 .avatar-container #avatar1:hover .ui-resizable-se{opacity: 1;}
 .avatar-container #avatar2:hover .ui-resizable-se{opacity: 1;}
@@ -232,6 +234,7 @@ select{
 .avatar-container #avatar2 h3:hover{cursor: move;}
 .avatar-container #avatar3 h3:hover{cursor: move;}
 
+.ui-icon, .ui-widget-content .ui-icon{background-color:transparent !important;}
 /*.xploadvideo-container h1{font-size: 2.5em;}*/
 .deleteChat{display: none !important;font-variant: all-small-caps !important;color:red;}
 .deleteChat:hover{cursor: pointer;}
