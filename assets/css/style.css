@@ -61,7 +61,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 /*Notification*/
 /** Change made recent **/
 .notification-container{padding-right:1%;height: 100%;}
-.notification-container .notificationBox{height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(146, 121, 110, 0.26);border: solid 1px #BDBDBD;padding:2%;margin: 0px !important;background-image:url("../images/chat%20box.jpg");background-size: 100% 100%;background-repeat: no-repeat;}
+.notification-container .notificationBox{height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(26, 26, 26, 0.6);padding:2%;margin: 0px !important;background-size: 100% 100%;}
 .actual_msg p{font-size:.7vw;}
 .notification-container .notificationBox .actual_msg img{float:none !important;}
 .notification-container #notificationSound {font-size: .6vw;font-weight: bold;height: 30px;padding: 0 .5vw;width: 100%;background: rgba(79,79,79,0.7);background-image: none;color: #01c3b6;border: none;}
@@ -78,7 +78,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 /** Change made recent **/
 .chat-container{padding-left:1%;height: 100%;}
 .chat-container #fontSizeSelect {font-size: .6vw;font-weight: bold;height: 30px;padding: 0 .5vw;width: 100%;background: rgba(79,79,79,0.7);background-image: none;color: #01c3b6;border: none}
-.chat-container .chatbox{width: 100%;height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(146, 121, 110, 0.26);border-radius: 0px;border: solid 1px #BDBDBD;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;margin: 0px !important;background-image:url("../images/chat box.jpg");background-size:cover;}
+.chat-container .chatbox{height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(26, 26, 26, 0.6);padding:2%;margin: 0px !important;background-size: 100% 100%;}
 .chatboxmaxheight{height:90% !important;}
 .chat-container .chatbox__title {height:auto;padding-right: 3%;padding-left:3%;background-color: rgba(0,0,0,0.7);border-top-left-radius: 4px;border-top-right-radius: 4px;display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;justify-content: space-between;}
 .chat-container .chatbox__title h5 {margin: 0;line-height: 2.777vw;position: relative;padding-left: 20px;display:flex;-webkit-flex-grow: 1;flex-grow: 1;color: #fff;text-decoration: none;overflow: hidden;cursor: default;font-size: .8vw;white-space: nowrap;}

@@ -684,6 +684,7 @@ jQuery(function($) {
 	/** Change made recent **/
 	$("#videoContainer").resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
+		containment: "document",
 		resize: function( e, $el, opt ) {			
 			if(window.innerWidth <= 1920 && window.innerWidth >= 1681){
 				$('#videocontainerrow').css('position', 'absolute').css('top', '0');
@@ -743,6 +744,7 @@ jQuery(function($) {
 	});
 	$( "#notification-container" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
+		containment: "document",
 		resize: function( e, $el, opt ) {
 			$('#notification-container').css('max-width', '100%');
 		},
@@ -759,6 +761,7 @@ jQuery(function($) {
 	});
 	$( "#chat-container" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
+		containment: "document",
 		resize: function( e, $el, opt ) {
 			$('#chat-container').css('max-width', '100%');
 		},
@@ -772,6 +775,7 @@ jQuery(function($) {
 	});
 	$( "#avatar1" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
+		containment: "document",
 		resize: function( e, $el, opt ) {
 			if(e.target.id == "avatar1"){
 				zindexFunction(this.id);
@@ -790,6 +794,7 @@ jQuery(function($) {
 	});
 	$( "#avatar2" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
+		containment: "document",
 		resize: function( e, $el, opt ) {
 			$('#xprowebinarPublisherCamera').css('height', '100%');
 		},
@@ -806,6 +811,7 @@ jQuery(function($) {
 	});
 	$( "#avatar3" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
+		containment: "document",
 		resize: function( e, $el, opt ) {
 		},
 	    stop: function (e, $el, opt) {
