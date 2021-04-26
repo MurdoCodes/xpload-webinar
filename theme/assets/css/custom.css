@@ -1,0 +1,514 @@
+/*--------------------------------------------------------------
+This is your custom stylesheet.
+
+Add your own styles here to make theme updates easier.
+To override any styles from other stylesheets, simply copy them into here and edit away.
+
+Make sure to respect the media queries! Otherwise you may
+accidentally add desktop styles to the mobile layout.
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+--------------------------------------------------------------*/
+/*=============================================
+=                 Home Page                 =
+=============================================*/
+
+.elementor-133070 .elementor-element.elementor-element-50674f42 .header-aside-inner > *:not(.bb-separator) {padding: 0px !important;}
+.elementor-invisible{visibility:visbile;}
+.better-way-to-trade-container #image-box-text-1 .elementor-widget-container{width:100%;margin:0 auto;height: 50em;}
+.better-way-to-trade-container #image-box-text-2 .elementor-widget-container{width:100%;margin:0 auto;height: 50em;}
+.better-way-to-trade-container #image-box-text-3 .elementor-widget-container{width:100%;margin:0 auto;height: 50em;}
+.better-way-to-trade-container .way-to-trade {list-style-type: none;padding: 0;margin: 0;}
+.better-way-to-trade-container .way-to-trade li {display: table;color: #6A6A6A;font-weight: 900;text-align: left;font-size: 25px;line-height: 1;padding: 0px 0px 0px 18%;text-transform: uppercase;background: url(/wp-content/uploads/2020/11/green-check-mark.png) no-repeat left top;margin-top: 10%;}
+.better-way-to-trade-container .elementor-image-box-img{display:none;}
+.better-way-to-trade-container .call-to-action-button{color: #fff;font-weight: 600;background-color: #16A6FC;font-size: 20px;padding: 6%;border-radius: 15px;border: 1px solid;position:absolute;bottom:5%;left:20%;right:20%;}
+.sd-sharing-enabled{display:none;}
+.elementor-53 .elementor-element.elementor-element-3c3eaa6c > .elementor-element-populated{padding:0px !important;}
+.elementor-53 .elementor-element.elementor-element-792bd35 > .elementor-element-populated{padding:0px !important;}
+.elementor-53 .elementor-element.elementor-element-161a655 > .elementor-element-populated{padding:0px !important;}
+#schedule-home-page .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{padding: 10px 10px 0px 10px;}
+#sub-header-home-page-guide{margin:0px;}
+#header-link:hover{cursor: pointer;}
+@media (min-width: 768px) and (max-width: 1024px)  { 
+    .shrink-image img{width:60% !important;margin:0 auto;}
+    .better-way-to-trade-container #image-box-text-1 .elementor-widget-container{height: 40em;padding: 5%;}
+    .better-way-to-trade-container #image-box-text-2 .elementor-widget-container{height: 40em;padding: 5%;}
+    .better-way-to-trade-container #image-box-text-3 .elementor-widget-container{height: 40em;padding: 5%;}
+    .elementor-98 .elementor-element.elementor-element-12776b24 .elementor-heading-title{margin-bottom: -40%;font-size: 42px;}
+    .elementor-98 .elementor-element.elementor-element-2c5a6935{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-e8d952d .elementor-image-box-content .elementor-image-box-title{font-size: 42px;margin-bottom: 5%;margin-top: 5%;}
+    .elementor-98 .elementor-element.elementor-element-f62502b .elementor-image-box-content .elementor-image-box-title{font-size: 42px;margin-bottom: 5%;margin-top: 5%;}
+    .elementor-98 .elementor-element.elementor-element-9245ee4 .elementor-image-box-content .elementor-image-box-title{font-size: 42px;margin-bottom: 5%;margin-top: 5%;}
+    .better-way-to-trade-container .way-to-trade{margin-bottom: 10%;}
+    .better-way-to-trade-container .way-to-trade li{font-size: 18px;line-height: 1.1;padding: 0px 0px 0px 25%;height: 2.5em;margin-top: 12%;}
+    .better-way-to-trade-container .call-to-action-button{font-size:14px !important;}
+    .better-way-to-trade-container .way-to-trade li:first-child{margin-top:0;}
+    .elementor-98 .elementor-element.elementor-element-1a1d9e23 > .elementor-element-populated{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-499e862d > .elementor-widget-container{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-314eb443 > .elementor-widget-container{padding:0px;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .shrink-image img{width:60% !important;margin:0 auto;}
+    .better-way-to-trade-container #image-box-text-1 .elementor-widget-container{height: 40em;padding: 5%;}
+    .better-way-to-trade-container #image-box-text-2 .elementor-widget-container{height: 40em;padding: 5%;}
+    .better-way-to-trade-container #image-box-text-2 {margin-top:0px;}
+    .better-way-to-trade-container #image-box-text-3 .elementor-widget-container{height: 40em;padding: 5%;}
+    .elementor-98 .elementor-element.elementor-element-12776b24 .elementor-heading-title{margin-bottom: -40%;font-size: 42px;}
+    .elementor-98 .elementor-element.elementor-element-2c5a6935{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-e8d952d .elementor-image-box-content .elementor-image-box-title{font-size: 42px;margin-bottom: 5%;margin-top: 5%;}
+    .elementor-98 .elementor-element.elementor-element-f62502b .elementor-image-box-content .elementor-image-box-title{font-size: 42px;margin-bottom: 5%;margin-top: 5%;}
+    .elementor-98 .elementor-element.elementor-element-9245ee4 .elementor-image-box-content .elementor-image-box-title{font-size: 42px;margin-bottom: 5%;margin-top: 5%;}
+    .better-way-to-trade-container .way-to-trade{margin-bottom: 10%;}
+    .better-way-to-trade-container .way-to-trade li{font-size: 18px;line-height: 1.1;padding: 0px 0px 0px 25%;height: 2.5em;margin-top: 12%;}
+    .better-way-to-trade-container .call-to-action-button{font-size:14px !important;}
+    .elementor-98 .elementor-element.elementor-element-1a1d9e23 > .elementor-element-populated{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-499e862d > .elementor-widget-container{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-314eb443 > .elementor-widget-container{padding:0px;}
+}
+@media (min-width: 481px) and (max-width: 767px) { 
+    .shrink-image img{width:60% !important;margin:0 auto;}
+    .better-way-to-trade-container #image-box-text-1 .elementor-widget-container{width: 80%;margin: 0 auto;height: auto; padding:2%;}
+    .better-way-to-trade-container #image-box-text-2 .elementor-widget-container{width: 80%;margin: 0 auto;height: auto;padding:2%;}
+    .better-way-to-trade-container #image-box-text-3 .elementor-widget-container{width: 80%;margin: 0 auto;height: auto;padding:2%;}
+    .elementor-98 .elementor-element.elementor-element-12776b24 .elementor-heading-title{margin-bottom: -40%;font-size: 35px;}
+    .elementor-98 .elementor-element.elementor-element-2c5a6935{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-e8d952d .elementor-image-box-content .elementor-image-box-title{font-size: 36px;margin-bottom: 0%;margin-top: 0%;}
+    .elementor-98 .elementor-element.elementor-element-f62502b .elementor-image-box-content .elementor-image-box-title{font-size: 36px;margin-bottom: 0%;margin-top: 0%;}
+    .elementor-98 .elementor-element.elementor-element-9245ee4 .elementor-image-box-content .elementor-image-box-title{font-size: 36px;margin-bottom: 0%;margin-top: 0%;}
+    .better-way-to-trade-container .way-to-trade{margin-bottom: 0%;margin-left:10%;}
+    .better-way-to-trade-container .way-to-trade li{font-size: 16px;line-height: 1.1;padding: 0px 0px 0px 20%;margin-top: 10%;height: 3em;}
+    .better-way-to-trade-container .call-to-action-button {font-size:14px !important;padding: 1%;bottom: 3%;}
+    .better-way-to-trade-container .way-to-trade li:first-child{margin-top:0;}
+    .elementor-98 .elementor-element.elementor-element-1a1d9e23 > .elementor-element-populated{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-499e862d > .elementor-widget-container{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-314eb443 > .elementor-widget-container{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-73b246e7{padding:0px;}
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .shrink-image img{width:60% !important;margin:0 auto;}
+    .better-way-to-trade-container #image-box-text-1 .elementor-widget-container{width: 80%;margin: 0 auto;height: auto;padding:2%;}
+    .better-way-to-trade-container #image-box-text-2 .elementor-widget-container{width: 80%;margin: 0 auto;height: auto;padding:2%;}
+    .better-way-to-trade-container #image-box-text-3 .elementor-widget-container{width: 80%;margin: 0 auto;height: auto;padding:2%;}
+    .elementor-98 .elementor-element.elementor-element-12776b24 .elementor-heading-title{margin-bottom: -20%;font-size: 35px;}
+    .elementor-98 .elementor-element.elementor-element-2c5a6935{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-e8d952d .elementor-image-box-content .elementor-image-box-title{font-size: 36px;margin-bottom: 0%;margin-top: 0%;}
+    .elementor-98 .elementor-element.elementor-element-f62502b .elementor-image-box-content .elementor-image-box-title{font-size: 36px;margin-bottom: 0%;margin-top: 0%;}
+    .elementor-98 .elementor-element.elementor-element-9245ee4 .elementor-image-box-content .elementor-image-box-title{font-size: 36px;margin-bottom: 0%;margin-top: 0%;}
+    .better-way-to-trade-container .way-to-trade{margin-bottom: 0%;margin-left:10%;}
+    .better-way-to-trade-container .way-to-trade li{font-size: 16px;line-height: 1.1;padding: 0px 0px 0px 20%;margin-top: 10%;height: 3em;}
+    .better-way-to-trade-container .call-to-action-button {font-size:14px !important;padding: 1%;bottom: 3%;}
+    .better-way-to-trade-container .way-to-trade li:first-child{margin-top:0;}
+    .elementor-98 .elementor-element.elementor-element-1a1d9e23 > .elementor-element-populated{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-499e862d > .elementor-widget-container{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-314eb443 > .elementor-widget-container{padding:0px;}
+    .elementor-98 .elementor-element.elementor-element-73b246e7{padding:0px;}
+}
+/* Animation */
+.elementor-53 .elementor-element.elementor-element-c6da979{animation-iteration-count:infinite;}
+.elementor-col-25 .elementor-widget-wrap>.elementor-element{animation-iteration-count:infinite;}
+/* On Hover */
+.pulse{animation: pulse 1s infinite;animation-timing-function: linear;}
+@keyframes pulse {0% { transform: scale(1); }50% { transform: scale(1.1);100% { transform: scale(1); }}}
+/* Header */
+/*Whole site header menu with logo and navigation*/
+.elementor-544 .elementor-element.elementor-element-8b4fb4c{padding:0;}
+/*.100percentbg{background-size:100% 100%;}*/
+/** HEADER MENU **/
+#header-menu-tablet #burger-menu-tablet{padding-right:5%;}
+.cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item{padding:0 5px 0 5px !important;}
+/** POP UP **/
+#elementor-popup-modal-138167 .dialog-close-button{top:3% !important;right:3% !important;}
+/** HEADER CAROUSEL **/
+.carousel-content-container{padding:0 5%;}
+.carousel-content-container #kickstart-1 img{width:55%;}
+.carousel-content-container #kickstart-1-button{background-color: #ff9800;color: #000000;padding: .51em 1em .5em 1em;border-radius: 50px;font-family: poppins;font-weight: 900;font-size: xx-large;}
+.carousel-content-container #kickstart-2 img{width: 65%;}
+.carousel-content-container #kickstart-2-button{background-color: rgba(53, 53, 247, 100);color: #ffffff;padding: .51em 1em .5em 1em;border-radius: 50px;font-family: poppins;font-weight: 500;font-size: xx-large;}
+.carousel-content-container #kickstart-3 img{width:100%;}
+.carousel-content-container #kickstart-3-button{color: #ffffff;padding: .51em 1em .5em 1em;border-radius: 50px;font-family: poppins;font-weight: 500;font-size: xx-large;}
+#carousel-container-3{padding-left: 20%;padding-right: 10%;}
+/*FREE TRADERS FORM*/
+.claim-free-traders-form {display:flex;width: 100%;}
+.claim-free-traders-form p{color: #153A7B;font-family: 'Poppins', Sans-serif;font-size: 1.8rem;font-weight: 400;padding:.1em;width: 100%;}
+.claim-free-traders-form input{background-color: #ffffff;border-width: 2px 2px 2px 2px;width:100%}
+#button-container{padding:.1em;width: 100%;}
+#button-container #pop-up-button-submit {font-size: 1.5rem;background-color: #153A7B;font-weight: bold;width: 100%;margin:0 auto;padding: 0px;}
+.free-traders-guide-home .mc4wp-form-fields p:first-child{display:none;}
+/*FREE TRADERS FORM POP UP*/
+#elementor-popup-modal-138167 .claim-free-traders-form {display:block;}
+#elementor-popup-modal-138167 .claim-free-traders-form p{padding:0;}
+#elementor-popup-modal-138167  #pop-up-button-submit{font-size: .9rem;background-color: #153A7B;font-weight: bold;width: 100%;}
+/** HEADER CAROUSEL **/
+/*HEADER CAROUSEL mobile responsive*/
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .carousel-content-container #kickstart-1 img{width:35%;}
+    .carousel-content-container #kickstart-2 img{width:50%;}
+    .carousel-content-container #kickstart-3 img{width:100%;}
+    .carousel-content-container #kickstart-1-button{font-size:x-small;}
+    .carousel-content-container #kickstart-2-button{font-size:large;}
+    .carousel-content-container #kickstart-3-button{font-size:large;}
+    #carousel-container-3 {padding-left: 0%;padding-right: 50%;}
+    .elementor-544 .elementor-element.elementor-element-e530614 {padding: 0px !important}
+    .elementor-544 .elementor-element.elementor-element-5d8f8dc{width:50% !important;}
+}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    .carousel-content-container #kickstart-1 img{width:35%;}
+    .carousel-content-container #kickstart-2 img{width:50%;}
+    .carousel-content-container #kickstart-3 img{width:100%;}
+    .carousel-content-container #kickstart-1-button{font-size:x-small;}
+    .carousel-content-container #kickstart-2-button{font-size:large;}
+    .carousel-content-container #kickstart-3-button{font-size:large;}
+    #carousel-container-3 {padding-left: 0%;padding-right: 50%;}
+    .elementor-544 .elementor-element.elementor-element-e530614 {padding: 0px !important}
+    .elementor-544 .elementor-element.elementor-element-5d8f8dc{width:50% !important;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .carousel-content-container #kickstart-1 img{width:35%;}
+    .carousel-content-container #kickstart-2 img{width:50%;}
+    .carousel-content-container #kickstart-3 img{width:100%;}
+    .carousel-content-container #kickstart-1-button{font-size:x-small;}
+    .carousel-content-container #kickstart-2-button{font-size:large;}
+    .carousel-content-container #kickstart-3-button{font-size:large;}
+     #carousel-container-3 {padding-left: 0%;padding-right: 50%;}
+    .elementor-544 .elementor-element.elementor-element-e530614 {padding: 0px !important}
+    .elementor-544 .elementor-element.elementor-element-5d8f8dc{width:50% !important;}
+}
+@media (min-width: 481px) and (max-width: 767px) { 
+    .carousel-content-container #kickstart-1 img{width:35%;}
+    .carousel-content-container #kickstart-2 img{width:50%;}
+    .carousel-content-container #kickstart-3 img{width:100%;}
+    .carousel-content-container #kickstart-1-button{font-size:x-small;}
+    .carousel-content-container #kickstart-2-button{font-size:large;}
+    .carousel-content-container #kickstart-3-button{font-size:large;}
+    #carousel-container-3 {padding-left: 0%;padding-right: 50%;}
+    .elementor-544 .elementor-element.elementor-element-d1c75a7 {padding: 0 15px 0 15px;}
+    #elementor-popup-modal-138167 #pop-up-button-submit {font-size: .7rem;background-color: #153A7B;font-weight: bold;width: 100%;}
+    .claim-free-traders-form p{font-size: 1rem;}
+    .claim-free-traders-form {display: inline-block;width: 100%;}
+    #button-container #pop-up-button-submit {font-size: .7rem;}
+    .elementor-544 .elementor-element.elementor-element-5d8f8dc{width:100% !important;}
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .elementor-544 .elementor-element.elementor-element-5836b45 .elementor-menu-toggle{margin-left:10%;}
+    .carousel-content-container #kickstart-1 img{width: 60%;margin-top: 30%;}
+    .carousel-content-container #kickstart-2 img{width:50%;}
+    .carousel-content-container #kickstart-3 img{width:100%;}
+    .carousel-content-container #kickstart-1-button{font-size:x-small;}
+    .carousel-content-container #kickstart-2-button{font-size: smaller;padding: 1em;}
+    .carousel-content-container #kickstart-3-button{font-size: smaller;padding: 1em;}
+    #carousel-container-3 {padding-left: 0%;padding-right: 50%;}
+    .elementor-822 .elementor-element.elementor-element-fa7e097 .elementor-repeater-item-3bcfeac .swiper-slide-bg{background-position: 60%;}
+    .elementor-822 .elementor-element.elementor-element-fa7e097 .elementor-repeater-item-45a4e51 .swiper-slide-bg{background-position: 75%;}
+    .elementor-822 .elementor-element.elementor-element-ae281ec > .elementor-element-populated{padding:0;}
+    .elementor-822 .elementor-element.elementor-element-53f4f1e > .elementor-element-populated{padding:0;}
+    .elementor-822 .elementor-element.elementor-element-7c6b265 > .elementor-element-populated{padding:0;}
+    .elementor-element-30e11b83{top:0 !important;}
+    .elementor-544 .elementor-element.elementor-element-d1c75a7 {padding: 0 15px 0 15px;}
+    #elementor-popup-modal-138167 #pop-up-button-submit {font-size: .7rem;background-color: #153A7B;font-weight: bold;width: 100%;}
+    .claim-free-traders-form p{font-size: 1rem;}
+    .claim-free-traders-form {display: inline-block;width: 100%;}
+    #button-container #pop-up-button-submit {font-size: .7rem;}
+    .elementor-544 .elementor-element.elementor-element-5d8f8dc{width:100% !important;}
+}
+/*==============  Home Page  ================*/
+/*=============================================
+=                 DEFAULT CSS                 =
+=============================================*/
+#image-carousel-widget .swiper-container-3d .swiper-slide-shadow-left{background-image: none;}
+#image-carousel-widget .swiper-container-3d .swiper-slide-shadow-right {background-image: none;}
+@media (min-width: 320px) and (max-width: 480px)  {#footer-pages{background-color:#021c38;}}
+.elementor-133070 .elementor-element.elementor-element-3f8a64b2 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-133070 .elementor-element.elementor-element-3f8a64b2 .elementor-nav-menu__container.elementor-nav-menu--dropdown{display:none;}
+@media (max-width: 767px){.elementor-133070 .elementor-element.elementor-element-3f8a64b2 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-133070 .elementor-element.elementor-element-3f8a64b2 .elementor-nav-menu__container.elementor-nav-menu--dropdown {display:none;}}
+/*=============  DEFAULT CSS  ===============*/
+/*=============================================
+=             TRADERS EDUCATION               =
+=============================================*/
+.elementor-post__excerpt{display:none;}
+.carousel-slider__product h3{text-align: center;}
+#id-138260 .carousel-slider__product{background: #fff;}
+#id-138260 .carousel-slider__product a.add_to_cart_button, #id-138260 .carousel-slider__product a.added_to_cart, #id-138260 .carousel-slider__product a.quick_view, #id-138260 .carousel-slider__product .onsale{box-shadow: 0px 0px 7px #888888b3;}
+#id-138260 .carousel-slider__item .carousel-slider__caption .title{font-family:poppins;font-weight:300;color:#005ec1;font-size:1vw;}
+#id-138260 .carousel-slider__item .carousel-slider__caption .caption{font-family: poppins;font-weight: 200;color: #005ec1;padding: .2em;width: 50%;margin: 0 auto;margin-top: 5%;border-radius: 25px;box-shadow: 0px 0px 10px 0px #888888;}
+#id-138256 .carousel-slider__item .carousel-slider__caption .caption::after{content: ">";}
+.owl-item:hover .carousel-slider__item .carousel-slider__caption .title{font-weight: 500;}
+.owl-item:hover .carousel-slider__item .carousel-slider__caption .caption{font-weight: 500;}
+.carousel-slider .owl-stage-outer{padding-top:5%;padding-bottom:5%;}
+.elementor-604 .elementor-element.elementor-element-3c38254 .elementor-post__text{margin-top: 0px !important;padding: .9vw;}
+.elementor-posts--thumbnail-top .elementor-post__thumbnail__link{margin-bottom:0px !important;}
+.elementor-posts--thumbnail-top .elementor-post__thumbnail__link:hover{margin-bottom:0px !important;}
+#id-138260 .carousel-slider .carousel-slider__item{box-shadow: 1px 1px 20px #888888;}
+#id-138260 .carousel-slider .owl-stage-outer{padding-left: 0.5%;padding-right: 0.5%;}
+.elementor-posts--thumbnail-top .elementor-post{display:grid;}
+#id-138260 .carousel-slider__item{background-color: #fff;border-radius: 10px;-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);padding-bottom: 6%;}
+#id-138260 .carousel-slider__item .carousel-slider__caption .title{font-family:poppins;font-weight:300;color:#005ec1;font-size:1vw;}
+#id-138260 .carousel-slider__item .carousel-slider__caption .caption{font-family: poppins;font-weight: 200;color: #005ec1;padding: .2em;width: 50%;margin: 0 auto;margin-top: 5%;border-radius: 25px;box-shadow: 0px 0px 10px 0px #888888;}
+#id-138260 .carousel-slider__item .carousel-slider__caption .caption::after{content: ">";}
+#education-header-sub-content{color:#232d6c;font-weight:200;font-size:1.4vw;}
+/*Traders Education mobile responsive*/
+@media  screen and (min-width: 1920px) {
+    .elementor-604 .elementor-element.elementor-element-e722f44:not(.elementor-motion-effects-element-type-background), .elementor-604 .elementor-element.elementor-element-e722f44 > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-size: 100% 100%;}
+}
+@media (min-width: 768px) and (max-width: 1024px)  {
+    #education-header-sub-content{font-size:2.4vw;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .title {font-size: 3vw;text-align: center;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .title {font-size: 3vw;text-align: center;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #education-header-sub-content{font-size:2.4vw;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .title {font-size: 2vw;text-align: center;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .title {font-size: 2vw;text-align: center;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+}
+@media (min-width: 481px) and (max-width: 767px) { 
+    #education-header-sub-content{font-size:2.4vw;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .title {font-size: 5vw;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .title {font-size: 5vw;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+    #id-138256.arrows-outside .owl-prev{left: -10px !important;}
+    #id-138256.arrows-outside .owl-next {right: -5px !important;}
+
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    #education-header-sub-content{font-size:2.4vw;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .title {font-size: 5vw;}
+    #id-138256 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .title {font-size: 5vw;}
+    #id-138260 .carousel-slider__item .carousel-slider__caption .caption {font-weight: 500;}
+    #id-138256.arrows-outside .owl-prev{left: -10px !important;}
+    #id-138256.arrows-outside .owl-next {right: -5px !important;}
+}
+/*=========== TRADERS EDUCATION =============*/
+/*=============================================
+=           Swing Trading Newsletter          =
+=============================================*/
+.typical-subscriber-container h2{font-family:Poppins;color: #6A6A6A;font-size: 2em;font-weight: 600;margin-bottom: .2vw;}
+.typical-subscriber-container ul{list-style-type: none;padding:0;margin:0;}
+.typical-subscriber-container ul li{display: table;color: #6a6a6a;font-family: Poppins;font-weight: 200;font-size: 1.4rem;text-align: left;line-height: 1;padding: 2% 0% 2% 10%;background: url(/wp-content/uploads/2020/11/check-icon_03-e1603068764535.png) no-repeat left center;margin-top:.5%;}
+.payment-signup ul{list-style-type: none;padding:0;margin:0;}
+.payment-signup ul li{display: table;color: #6a6a6a;font-family: Poppins;font-weight: 200;font-size: 1.3rem;text-align: left;line-height: 1;padding: 2% 0% 2% 13%;background: url(/wp-content/uploads/2020/11/check-icon_03-e1603068764535.png) no-repeat left center;
+    margin-top:.5%;}
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .typical-subscriber-container{margin-bottom:-10%;}
+    .typical-subscriber-container ul li{font-size: 2vw;padding: 4% 0% 4% 15%;margin-top: .8%;}
+    .elementor-1004 .elementor-element.elementor-element-34c2cd6 > .elementor-widget-container{padding:0px;margin:0;}
+    .elementor-1004 .elementor-element.elementor-element-582a46e > .elementor-widget-container{padding:0px;margin:0;}
+    .payment-signup ul li {font-size: 2vw;padding: 0% 0% 2% 13%;}    
+}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    .typical-subscriber-container{margin-bottom:-10%;}
+    .typical-subscriber-container ul li{font-size: 1.5vw;padding: 4% 0% 4% 15%;margin-top: .8%;}
+    .elementor-1004 .elementor-element.elementor-element-34c2cd6 > .elementor-widget-container{padding:0px;margin:0;}
+    .elementor-1004 .elementor-element.elementor-element-582a46e > .elementor-widget-container{padding:0px;margin:0;}
+    .payment-signup ul li {font-size: 2vw;padding: 0% 0% 2% 13%;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .typical-subscriber-container{margin-bottom:-10%;}
+    .typical-subscriber-container ul li{font-size: 1.5vw;padding: 4% 0% 4% 15%;margin-top: .8%;}
+    .elementor-1004 .elementor-element.elementor-element-34c2cd6 > .elementor-widget-container{padding:0px;margin:0;}
+    .elementor-1004 .elementor-element.elementor-element-582a46e > .elementor-widget-container{padding:0px;margin:0;}
+    .payment-signup ul li {font-size: 2vw;padding: 0% 0% 2% 13%;}
+}
+@media (min-width: 481px) and (max-width: 767px) { 
+    .typical-subscriber-container h2{font-size: 4vw;}
+    .typical-subscriber-container ul li {font-size: 4vw;padding: 3% 0% 3% 15%;}
+    .payment-signup ul li {font-size: 4vw;padding: 2% 0% 2% 17%;}
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+  .typical-subscriber-container h2{font-size: 4vw;}
+  .typical-subscriber-container ul li {font-size: 4vw;padding: 3% 0% 3% 15%;}
+  .payment-signup ul li {font-size: 4vw;padding: 2% 0% 2% 17%;}
+}
+/*=======   Swing Trading Newsletter  =======*/
+/*=============================================
+=            Live Trading Room Page           =
+=============================================*/
+.chat-room-feature-container .elementor-widget-container{border-bottom-left-radius:15px;border-bottom-right-radius:15px;height: 30vh;}
+.chatroom-features-imagebox{padding: 2% 3% 2% 3%;color: #fff;font-family: 'Poppins';font-size: .6vw;}
+.calendar-legend{background-color: #1b65c1;text-align: center;color: #fff;padding:1%;border:1px solid #000;}
+.calendar-legend h1{color:#fff;}
+.calendar{display: flex;border:1px solid #000;}
+.calendar-day{border:1px solid #000;}
+.legend-container{background-color: #1b65c1;text-align: center;}
+.legend-container h3{color:#fff;}
+.calendar-day p{padding:1%;text-align:center;font-style: italic;}
+.calendar-day p b{color: #1b65c1;font-weight: 900;font-style: normal;}
+.chatroom-container{font-family: poppins;font-weight: lighter;width: 100%;margin: 0 auto;}
+.chatroom-container .container{}
+.chatroom-container .row{display: flex;}
+.chatroom-container .item{padding:1.5%;border-radius: 15px;width: 100%;}
+.chatroom-container .item .img-container img{width:90%;height: 6.5vw;margin:0 auto;border-radius: 10px 10px 0px 0px;}
+.chatroom-container .item .content-container{background-color:#172c41;color:#fff;padding: 10%;border-radius: 0px 0px 10px 10px;height: 8vw;width:90%;}
+.chatroom-container .item .content-container h3{color: #fff;font-size: .899em;text-align: center;line-height: 1;margin-bottom: 5%;}
+.chatroom-container .item .content-container p{color: #fff;font-size: .8em;text-align: center;line-height: 1;margin-bottom: 5%;}
+/*Traders Education mobile responsive*/
+@media (min-width: 768px) and (max-width: 1024px)  {
+  .chatroomfeatures-container img{width: 100%;}
+  .chatroom-features-imagebox {font-size: 1.6vw;}
+  .chatroom-container {width: 100%;}
+  .chatroom-container .item .content-container {height: 24vw;}
+  .calendar {flex-flow: column wrap;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .chat-room-feature-container .elementor-widget-container {height: 45vh;}
+  .chatroomfeatures-container img{width: 100%;}
+  .chatroom-features-imagebox {font-size: 1.6vw;}
+  .chatroom-container {width: 100%;}
+  .chatroom-container .item .content-container {height: 24vw;}
+  .calendar {flex-flow: column wrap;}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .chat-room-feature-container .elementor-widget-container {height: 43vh;}
+    .chatroomfeatures-container img{width: 100%;}
+    .chatroom-container .item .img-container img{width: 100%;height: auto;}
+    .chatroom-features-imagebox {font-size: 4vw;}
+    .content-image-LTR{float:none;}
+    .chatroom-container {width: 100%;margin: 0 auto;padding: 3%;}
+    .chatroom-container .row {flex-wrap: wrap;}
+    .chatroom-container .item {width: 50%;}
+    .chatroom-container .item .content-container {height: 45vw;margin-bottom: 5%;width: 100%;}
+    .calendar {flex-wrap: wrap;}
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .chat-room-feature-container .elementor-widget-container {height: 43vh;}
+    .chatroomfeatures-container img{width: 100%;}
+    .chatroom-container .item .img-container img{width: 100%;height: auto;}
+    .chatroom-features-imagebox {font-size: 4vw;}
+    .content-image-LTR{float:none;}
+    .chatroom-container {width: 100%;margin: 0 auto;padding: 3%;}
+    .chatroom-container .row {flex-wrap: wrap;}
+    .chatroom-container .item {width: 50%;}
+    .chatroom-container .item .content-container {height: 45vw;margin-bottom: 5%;width: 100%;}
+    .calendar {flex-wrap: wrap;}
+}
+/*=========  Live Trading Room Page  ======= */
+/*=============================================
+=             OPTIONS TRADING  CSS            =
+=============================================*/
+@media (min-width: 768px) and (max-width: 1024px)  {    
+    .elementor-1374 .elementor-element.elementor-element-e68db82 > .elementor-widget-container {background-image: url(/wp-content/uploads/2020/10/Forex-Trading-button.png);background-position: center center;background-repeat: no-repeat;width: 100%;margin: 0 auto;background-size: cover;}
+}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    .elementor-1374 .elementor-element.elementor-element-e68db82 > .elementor-widget-container {background-image: url(/wp-content/uploads/2020/10/Forex-Trading-button.png);background-position: center center;background-repeat: no-repeat;width: 100%;margin: 0 auto;background-size: cover;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .elementor-1374 .elementor-element.elementor-element-e68db82 > .elementor-widget-container {background-image: url(/wp-content/uploads/2020/10/Forex-Trading-button.png);background-position: center center;background-repeat: no-repeat;width: 100%;margin: 0 auto;background-size: cover;}
+}
+@media (min-width: 481px) and (max-width: 767px) { 
+    .elementor-1374 .elementor-element.elementor-element-e68db82 > .elementor-widget-container {background-image: url(/wp-content/uploads/2020/10/Forex-Trading-button.png);background-position: center center;background-repeat: no-repeat;background-size: cover;} 
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .elementor-1374 .elementor-element.elementor-element-e68db82 > .elementor-widget-container {background-image: url(/wp-content/uploads/2020/10/Forex-Trading-button.png);background-position: center center;background-repeat: no-repeat;background-size: cover;}
+}
+/*==========  OPTIONS TRADING  CSS  ======== */
+/*=============================================
+=            DROPDOWN NAVIGATION CSS          =
+=============================================*/
+.header-aside-inner .bb-header-buttons {padding: 0 !important;}
+.cmm4e.cmm4e-theme-default-menu-skin-461836.cmm4e-horizontal.cmm4e-horizontal-align-right {justify-content: center !important;}
+.logged-in .cmm4e.cmm4e-theme-default-menu-skin-461836.cmm4e-horizontal.cmm4e-horizontal-align-right{justify-content: flex-start !important;}
+.logged-in .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle{font-size: 13px !important;}
+.cmm4e.cmm4e-theme-default-menu-skin-461836.cmm4e-menu-fade-up > .cmm4e-menu-item > .cmm4e-sub-panel {top: 0px !important;}
+.cmm4e.cmm4e-theme-default-menu-skin-461836 .cmm4e-menu-item.menu-item-has-children .cmm4e-sub-panel {transition: all 1s ease-in-out !important;}
+.elementor-584 .elementor-element.elementor-element-19724604 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:before, .elementor-584 .elementor-element.elementor-element-19724604 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:after{display: none;}
+.drop-down-items .elementor-item{transition: padding-left 3s ease-in-out !important;}
+.drop-down-items .elementor-item:hover{padding-left: 3% !important;}
+.elementor-nav-menu__align-left .elementor-nav-menu{flex-flow: column;}
+.elementor-584 .elementor-element.elementor-element-33a564c3{border: none !important;}
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle {font-size: 12px;}
+    .logged-in .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle{font-size: 10px !important;}
+    .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu__container.elementor-nav-menu--dropdown{display: none;}
+    .elementor-584 .elementor-element.elementor-element-843c135 .elementor-menu-toggle{display:none;}
+    .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display: inline-block;}
+    .cmm4e-container.cmm4e-active .cmm4e.cmm4e-theme-default-menu-skin-461836{background-color: #fff;z-index: 9999;}
+}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle {font-size: 12px;}
+    .logged-in .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle{font-size: 10px !important;}
+    .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu__container.elementor-nav-menu--dropdown{display: none;}
+    .elementor-584 .elementor-element.elementor-element-843c135 .elementor-menu-toggle{display:none;}
+    .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display: inline-block;}
+    .cmm4e-container.cmm4e-active .cmm4e.cmm4e-theme-default-menu-skin-461836{background-color: #fff;z-index: 9999;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle {font-size: 12px;}
+    .logged-in .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .cmm4e-nav-link, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item > .menu-item-arrow, .cmm4e.cmm4e-theme-default-menu-skin-461836 > .cmm4e-menu-item .cmm4e-item-toggle{font-size: 10px !important;}
+    .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu__container.elementor-nav-menu--dropdown{display: none;}
+    .elementor-584 .elementor-element.elementor-element-843c135 .elementor-menu-toggle{display:none;}
+    .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display: inline-block;}
+    .cmm4e-container.cmm4e-active .cmm4e.cmm4e-theme-default-menu-skin-461836{background-color: #fff;z-index: 9999;}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu__container.elementor-nav-menu--dropdown{display: none;}
+    .elementor-544 .elementor-element.elementor-element-e9b092a div.elementor-menu-toggle {display: none;}
+    .elementor-138048 .elementor-element.elementor-element-708f2e0c .elementor-nav-menu--dropdown{display: none;}
+   .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display: inline-block;}
+   .cmm4e-container.cmm4e-active .cmm4e.cmm4e-theme-default-menu-skin-461836{background-color: #fff;z-index: 9999;}
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-584 .elementor-element.elementor-element-3fdc1f4 .elementor-nav-menu__container.elementor-nav-menu--dropdown{display: none;}
+    .elementor-544 .elementor-element.elementor-element-e9b092a div.elementor-menu-toggle {display: none;}
+    .elementor-138048 .elementor-element.elementor-element-708f2e0c .elementor-nav-menu--dropdown{display: none;}
+    .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main{display: inline-block;}
+    .cmm4e-container.cmm4e-active .cmm4e.cmm4e-theme-default-menu-skin-461836{background-color: #fff;z-index: 9999;}
+}
+/*=========  DROPDOWN NAVIGATION CSS  ====== */
+/*=============================================
+=                 BLOG PAGE                   =
+=============================================*/
+.blog-page-bg{background-size: 100% 100% !important;}
+/*=============   BLOG PAGE  =============== */
+/*=============================================
+=                 FOOTER CSS                 =
+=============================================*/
+#footer-claim-free .form-item, form {margin-bottom: 0rem;background-color: #fff;padding: 1em;}
+#footer-claim-free .claim-free-traders-form {display: block;width: 100%;}
+#footer-claim-free .claim-free-traders-form p {color: #153A7B;font-family: 'Poppins', Sans-serif;font-size: 1rem;font-weight: 400;padding: .1em;width: 100%;}
+#footer-claim-free #button-container #pop-up-button-submit {font-size: .6rem;background-color: #153A7B;font-weight: bold;width: 100%;margin: 0 auto;padding: 0px;border-radius: 0px;}
+#footer-claim-free #button-container {padding: 0px;}
+#footer-claim-free #header-text{color: #153A7B;font-family: 'Poppins', Sans-serif;font-size: 1.5rem;font-weight: 600;padding: .1em;width: 100%;text-align: center;margin-bottom: -5%;}
+.newsletter-form-2 .form-item, form {margin-bottom: 0rem;background-color: transparent;padding: 1em;}
+.free-traders-guide-home .form-item, form {margin-bottom: 0rem;background-color: transparent;padding: 1em;}
+/*=============  FOOTER CSS  =============== */
+/*=============================================
+=               TRADING LINGO                 =
+=============================================*/
+.min-height-icon .elementor-widget-container {padding: 10% 10% 10% 10%;border-style: solid;border-width: 2px 2px 2px 2px;border-color: #3266AF;min-height: 25em;}
+.tradinglingo-button{background-color:#fff;border: 2px solid #3167ad;padding:2% 5%;color:#3167ad;font-weight:800;}
+/*============= TRADING LINGO =============== */
+/*=============================================
+=                   Forex                     =
+=============================================*/
+#forex-button a{background: rgb(255,171,0);background: linear-gradient(5deg, rgba(255,171,0,1) 0%, rgba(255,207,51,1) 46%, rgba(255,240,168,1) 100%);width: 90%;margin: 0 auto;}
+.yellow-font{color:#fee162;font-style: italic;}
+.forex-list ul{margin:0;list-style:none;}
+.forex-list ul li{display: table;color: #6a6a6a;font-family: Poppins;font-weight: 200;font-size: 1vw;text-align: left;line-height: 1;padding: 2% 0% 2% 10%;background: url(/wp-content/uploads/2020/11/check-icon_03-e1603068764535.png) no-repeat left center;margin-top:.5%;}
+#forex-trading-button-bg a{width:100%;padding: 10%;}
+.forex-list ul li:nth-child(n+6) {display: none;}
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .forex-list ul li{font-size: 1.6vw;padding: 3% 0% 3% 13%;}
+    .elementor-1287 .elementor-element.elementor-element-0d4a6ba > .elementor-widget-container {width: 80%;margin: 0 auto;}
+}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    .forex-list ul li{font-size: 1.6vw;padding: 3% 0% 3% 13%;}
+    .elementor-1287 .elementor-element.elementor-element-0d4a6ba > .elementor-widget-container {width: 80%;margin: 0 auto;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .payment-signup ul li{font-size: 1.6vw;padding: 3% 0% 3% 13%;}
+    .elementor-1287 .elementor-element.elementor-element-0d4a6ba > .elementor-widget-container {width: 80%;margin: 0 auto;}
+}
+@media (min-width: 481px) and (max-width: 767px) { 
+    .forex-list ul li {font-size: 4vw;padding: 3% 0% 3% 15%;}
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .forex-list ul li {font-size: 4vw;padding: 3% 0% 3% 15%;}
+}
+/*================  Forex  ================= */
+/*=============================================
+=               Buddy Boss CSS                 =
+=============================================*/
+.bb-media-length-1 .bb-activity-media-elem .entry-img{padding-top: 0 !important;}
+/*============  Buddy Boss CSS  ============= */

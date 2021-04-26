@@ -1,30 +1,36 @@
 /*Chrome/Safari Responsive*/
-@media screen and (min-width: 1921px) {
-  .messaging-container {height: 37.55vw;}
-  .messaging-container .ui-resizable-se {bottom: -5.6vw;right: .2vw;}
-  .avatar .ui-resizable-se {bottom: -1.1vw;}    
+@media (min-width: 1920px) and (max-width: 2560px)  {
+  .messaging-container {height: 37.6vw;}
+  .messaging-container .ui-resizable-se {bottom: -5.6vw;right: .1vw;}
+  .avatar .ui-resizable-se {bottom: -1.1vw;}
+  .navbar-brand img{width: 90%;}
+  .navbar-fixed-left .navbar-nav li a img {width: 60%;}
+  .navbar-fixed-left .navbar-nav > li {padding-bottom: 10%;}
+  #chartcontainer {margin-top: 3.5%;}
 }
 @media  screen and (max-width: 1920px) {
-  .messaging-container {height: 37.11vw;}
-  .messaging-container .ui-resizable-se {bottom: -6.55vw;right: 0.2vw;}
+  .messaging-container {height: 37.16vw;}
+  .messaging-container .ui-resizable-se {bottom: -6.5vw;right: 0.2vw;}
   #videoContainer #header-image h2 {padding: .55vw;}
+  #chartcontainer {margin-top: 0.5%;}
 }
 @media  screen and (max-width: 1680px) {
-  .messaging-container {height: 37.2vw;}
-  .avatar .ui-resizable-se {bottom: -1.7vw;}
+  .messaging-container {height: 37.1vw;}
   .messaging-container .ui-resizable-se {bottom: -7vw;}
+  #chartcontainer {margin-top: -1.5%;}
 }
 @media  screen and (max-width: 1600px) {
   .messaging-container {height: 37.1vw;}
   .messaging-container .ui-resizable-se {bottom: -7.2vw;}
 }
 @media  screen and (max-width: 1440px) {
-  .messaging-container {height: 37.22vw;}
+  .messaging-container {height: 37.15vw;}
   .messaging-container .ui-resizable-se {bottom: -7.7vw;}
-  .avatar .ui-resizable-se {bottom: -2vw;}
+  #chartcontainer {margin-top: -3%;}
+  .avatar .ui-resizable-se {bottom: -1.9vw;opacity: 1;}
 }
 @media  screen and (max-width: 1366px) {
-  .messaging-container {height: 37.1vw;}
+  .messaging-container {height: 37.15vw;}
   .messaging-container .ui-resizable-se {bottom: -7.9vw;}
 }
 @media  screen and (max-width: 1329px) {
@@ -32,7 +38,7 @@
   .messaging-container .ui-resizable-se {bottom: -7.999vw;}
 } 
 @media  screen and (max-width: 1280px) {
-  .messaging-container {height: 37vw;}
+  .messaging-container {height: 37.1vw;}
   .messaging-container .ui-resizable-se {bottom: -8.2vw;}
 }
 @media  screen and (max-width: 1200px) {
@@ -56,9 +62,12 @@
 }
 @media  screen and (max-width: 1024px) {
   .messaging-container {height: 38.3vw;}
-  .messaging-container .ui-resizable-se {bottom: -9vw;}
+  .messaging-container .ui-resizable-se {bottom: -10vw;}
   .avatar-container .avatar {height: 11.33vw;}
   .avatar .ui-resizable-se {bottom: -2.44vw;}
+  .xploadwebinar-container {top: 42%;}
+  #chartcontainer {margin-top: -8%;}
+
 }
 @media (max-width: 992px){
   .avatar-container .avatar {height: 12vw;}
@@ -67,7 +76,7 @@
   .paddingfive {padding-left: 8px;padding-right: 10px;}
 }
 @media (max-width: 835px){
-  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: -11%;padding-left: 3px;padding-right: 0;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
   .avatar-container .avatar {height: 14vw;}
   .ui-resizable-se {opacity: 1 !important;}
@@ -79,10 +88,11 @@
   .chat-container .chatbox__title h5 {padding-left: 2vw;}
   .messaging-container .ui-resizable-se {bottom: -13.3vw;}
   .messaging-container {height: 39.3vw;}
+  .xploadwebinar-container{top: 60%;padding-right: 1em !important;}
 }
 @media (max-width: 768px) {
-  .xploadwebinar-container {padding-right: 10px !important;padding-left: 10px !important;top: 50%;}
-  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
+  .xploadwebinar-container {padding-right: 10px !important;padding-left: 10px !important;top:50%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: -14%;padding-left: 3px;padding-right: 0;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
   .avatar-container .avatar {height: 14vw;}
   .ui-resizable-se {opacity: 1 !important;}
@@ -110,48 +120,79 @@
   .chat-container .chatbox__title h5 {padding-left: 2vw;}
   #xprowebinar-subscriber {height: auto;}
 }
-@media (max-width: 425px) {
-  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 97vw;}
+@media (max-width: 480px) {
+  .xploadwebinar-container{top: 50%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 5vw;top: 85vw;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
   .avatar-container .avatar {height: 18vw;}
   .messaging-container .ui-resizable-se {bottom: -23.6vw;}
   .avatar .ui-resizable-se {bottom: -6.5vw;}
-  .avatar-container .avatar h3 {font-size: 1.5vw;}
-  .notification-container .notification__title h5{font-size: 1.5vw !important;}
-  .chat-container h5 a{font-size: 1.5vw !important;}
+  .avatar-container .avatar h3 {font-size: 2vw;}
+  .notification-container .notification__title h5 {font-size: 2vw !important;}
+  .chat-container h5 a {font-size: 2vw !important;}
   .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
   .chat-container .chatbox__title h5 {padding-left: 2vw;}
   .navbar-fixed-left {height: 10vw;}
+  .chat-container #fontSizeSelect{font-size: 2vw;}
+  .notification-container #notificationSound {font-size: 2vw;}
+  .navbar-fixed-left {height: 11vw;}
+  .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+}
+@media (max-width: 425px) {
+  .xploadwebinar-container{top: 50%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 5vw;top: 78vw;}
+  .paddingfive {padding-left: 15px;padding-right: 15px;}
+  .avatar-container .avatar {height: 18vw;}
+  .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+  .avatar .ui-resizable-se {bottom: -6.5vw;}
+  .avatar-container .avatar h3 {font-size: 2vw;}
+  .notification-container .notification__title h5 {font-size: 2vw !important;}
+  .chat-container h5 a {font-size: 2vw !important;}
+  .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+  .chat-container .chatbox__title h5 {padding-left: 2vw;}
+  .navbar-fixed-left {height: 10vw;}
+  .chat-container #fontSizeSelect{font-size: 2vw;}
+  .notification-container #notificationSound {font-size: 2vw;}
 }
 @media (max-width: 375px) {
-  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 101vw;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 5vw;top: 79vw;}
   .paddingfive {padding-left: 15px;padding-right: 15px;}
   .avatar-container .avatar {height: 18vw;}
   .messaging-container .ui-resizable-se {bottom: -26.6vw;}
   .avatar .ui-resizable-se {bottom: -7.5vw;}
-  .avatar-container .avatar h3 {font-size: 1.5vw;}
+  .avatar-container .avatar h3 {font-size: 2vw;}
   .notification-container .notification__title h5{font-size: 1.5vw !important;}
-  .chat-container h5 a{font-size: 1.5vw !important;}
+  .chat-container h5 a {font-size: 2vw !important;}
   .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
   .chat-container .chatbox__title h5{padding-left: 2vw;}
+  #videoContainer #header-image h2{font-size: 1em;}
+  .chat-container #fontSizeSelect{font-size: 2vw;}
+  .notification-container #notificationSound {font-size: 2vw;}
+  #chartcontainer {margin-top: 30%;}
 }
 
 
 /*Mozilla Responsive*/
 @-moz-document url-prefix() {  
-  @media screen and (min-width: 1921px) {
+  @media (min-width: 1920px) and (max-width: 2560px)  {
     .messaging-container {height: 37.55vw;}
-    .messaging-container .ui-resizable-se {bottom: -6.6vw;right: .1vw;}
-    .avatar .ui-resizable-se {bottom: -6.5vw;}    
+    .messaging-container .ui-resizable-se {bottom: -5.6vw;right: .1vw;}
+    .avatar .ui-resizable-se {bottom: -1.1vw;}
+    .navbar-brand img{width: 90%;}
+    .navbar-fixed-left .navbar-nav li a img {width: 60%;}
+    .navbar-fixed-left .navbar-nav > li {padding-bottom: 10%;}
+    #chartcontainer {margin-top: 3.5%;}
   }
   @media  screen and (max-width: 1920px) {
-    .messaging-container {height: 37.11vw;}
-    .messaging-container .ui-resizable-se {bottom: -6.55vw;right: 0.2vw;}
+    .messaging-container {height: 36.9vw;}
+    .messaging-container .ui-resizable-se {bottom: -6.5vw;right: 0.2vw;}
     #videoContainer #header-image h2 {padding: .55vw;}
+    #chartcontainer {margin-top: 0.5%;}
   }
   @media  screen and (max-width: 1680px) {
     .messaging-container {height: 37vw;}
     .messaging-container .ui-resizable-se {bottom: -7vw;}
+    .notification-container{padding-right: 3%;}
   }
   @media  screen and (max-width: 1600px) {
     .messaging-container {height: 37.1vw;}
@@ -160,6 +201,7 @@
   @media  screen and (max-width: 1440px) {
     .messaging-container {height: 37.1vw;}
     .messaging-container .ui-resizable-se {bottom: -7.7vw;}
+    #chartcontainer {margin-top: -3%;}
   }
   @media  screen and (max-width: 1366px) {
     .messaging-container {height: 37.1vw;}
@@ -172,6 +214,8 @@
   @media  screen and (max-width: 1280px) {
     .messaging-container {height: 37vw;}
     .messaging-container .ui-resizable-se {bottom: -8.2vw;}
+    #chartcontainer { margin-top: -5%;
+}
   }
   @media  screen and (max-width: 1200px) {
     .messaging-container {height: 37vw;}
@@ -194,9 +238,11 @@
   }
   @media  screen and (max-width: 1024px) {
     .messaging-container {height: 38.3vw;}
-    .messaging-container .ui-resizable-se {bottom: -9vw;}
+    .messaging-container .ui-resizable-se {bottom: -10vw;}
     .avatar-container .avatar {height: 11.33vw;}
     .avatar .ui-resizable-se {bottom: -2.44vw;}
+    .xploadwebinar-container {top: 42%;}
+    #chartcontainer {margin-top: -8%;}
   }
   @media (max-width: 992px){
     .avatar-container .avatar {height: 12vw;}
@@ -205,7 +251,7 @@
     .paddingfive {padding-left: 8px;padding-right: 10px;}
   }
   @media (max-width: 835px){
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: -11%;padding-left: 3px;padding-right: 0;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 14vw;}
     .ui-resizable-se {opacity: 1 !important;}
@@ -217,10 +263,12 @@
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
     .messaging-container .ui-resizable-se {bottom: -13.3vw;}
     .messaging-container {height: 39.3vw;}
+    .xploadwebinar-container{top: 68%;padding-right: 1em !important;}
+    #chartcontainer{margin-top: 43%;}
   }
   @media (max-width: 768px) {
-    .xploadwebinar-container {padding-right: 10px !important;padding-left: 10px !important;top: 50%;}
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: 5%;padding-left: 3px;padding-right: 0;}
+    .xploadwebinar-container {padding-right: 10px !important;padding-left: 10px !important;top:50%;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: relative;margin-top: -14%;padding-left: 3px;padding-right: 0;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 14vw;}
     .ui-resizable-se {opacity: 1 !important;}
@@ -232,6 +280,9 @@
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
     .messaging-container .ui-resizable-se {bottom: -13.3vw;}
     .messaging-container {height: 38.66vw;}
+    .chat-container #fontSizeSelect {font-size: 1.5vw;}
+    .notification-container #notificationSound {font-size: 1.5vw;}
+
   }
   @media (max-width: 575px) {
     .xploadwebinar-container {padding-right: 10px;padding-left: 10px;}
@@ -248,29 +299,61 @@
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
     #xprowebinar-subscriber {height: auto;}
   }
-  @media (max-width: 425px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 97vw;}
+  @media (max-width: 480px) {
+    .xploadwebinar-container{top: 50%;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 5vw;top: 85vw;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 18vw;}
     .messaging-container .ui-resizable-se {bottom: -23.6vw;}
     .avatar .ui-resizable-se {bottom: -6.5vw;}
-    .avatar-container .avatar h3 {font-size: 1.5vw;}
-    .notification-container .notification__title h5{font-size: 1.5vw !important;}
-    .chat-container h5 a{font-size: 1.5vw !important;}
+    .avatar-container .avatar h3 {font-size: 2vw;}
+    .notification-container .notification__title h5 {font-size: 2vw !important;}
+    .chat-container h5 a {font-size: 2vw !important;}
     .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
     .chat-container .chatbox__title h5 {padding-left: 2vw;}
     .navbar-fixed-left {height: 10vw;}
+    .chat-container #fontSizeSelect{font-size: 2vw;}
+    .notification-container #notificationSound {font-size: 2vw;}
+    .navbar-fixed-left {height: 11vw;}
+    .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+    .notification-container{padding-right: 3%;}
+    #videoContainer #header-image h2{font-size: 1em;}
+    .chat-container #fontSizeSelect{font-size: 2vw;}
+  }
+  @media (max-width: 425px) {
+    .xploadwebinar-container{top: 50%;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 5vw;top: 78vw;}
+    .paddingfive {padding-left: 15px;padding-right: 15px;}
+    .avatar-container .avatar {height: 18vw;}
+    .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+    .avatar .ui-resizable-se {bottom: -6.5vw;}
+    .avatar-container .avatar h3 {font-size: 2vw;}
+    .notification-container .notification__title h5 {font-size: 2vw !important;}
+    .chat-container h5 a {font-size: 2vw !important;}
+    .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
+    .chat-container .chatbox__title h5 {padding-left: 2vw;}
+    .navbar-fixed-left {height: 10vw;}
+    .chat-container #fontSizeSelect{font-size: 2vw;}
+    .notification-container #notificationSound {font-size: 2vw;}
+    #chartcontainer{margin-top: 33vw;padding-left: 3vw;padding-right: 3vw;}
+    .chat-container {padding-left: 1%;height: 100%;padding-right: 7%;}
   }
   @media (max-width: 375px) {
-    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 9vw;top: 101vw;}
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;margin-top: 8vw !important;padding-left: 0;padding-right: 5vw;top: 79vw;}
     .paddingfive {padding-left: 15px;padding-right: 15px;}
     .avatar-container .avatar {height: 18vw;}
     .messaging-container .ui-resizable-se {bottom: -26.6vw;}
     .avatar .ui-resizable-se {bottom: -7.5vw;}
-    .avatar-container .avatar h3 {font-size: 1.5vw;}
+    .avatar-container .avatar h3 {font-size: 2vw;}
     .notification-container .notification__title h5{font-size: 1.5vw !important;}
-    .chat-container h5 a{font-size: 1.5vw !important;}
+    #videoContainer #header-image h2{font-size: 1em;}
+    .chat-container #fontSizeSelect{font-size: 2vw;}
+    .chat-container h5 a {font-size: 2vw !important;}
     .chat-container .chatbox__title h5::before {width: .9vw;height: .9vw;}
-    .chat-container .chatbox__title h5{padding-left: 2vw;}
+    .chat-container .chatbox__title h5{padding-left: 2vw;}    
+    .notification-container #notificationSound {font-size: 2vw;}
+    .xploadwebinar-container{top:60%;}
+    #chartcontainer {margin-top: 30%;}
+
   }
 }

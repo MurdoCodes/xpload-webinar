@@ -1,0 +1,144 @@
+/*Chrome/Safari Responsive*/
+@media  screen and (max-width: 1920px) {
+  .messaging-container {height: 37.1vw;}
+  .messaging-container .ui-resizable-se {bottom: -6.4vw;}
+}
+@media  screen and (max-width: 1680px) {
+  .messaging-container {height: 36.96vw;}
+  .messaging-container .ui-resizable-se {bottom: -7vw;}
+}
+@media  screen and (max-width: 1600px) {
+  .messaging-container {height: 36.77vw;}
+  .messaging-container .ui-resizable-se {bottom: -7.2vw;}
+}
+@media  screen and (max-width: 1440px) {
+  .messaging-container {height: 36.59vw;}
+  .messaging-container .ui-resizable-se {bottom: -7.7vw;}
+}
+@media  screen and (max-width: 1366px) {
+  .messaging-container {height: 36.44vw;}
+  .messaging-container .ui-resizable-se {bottom: -7.9vw;}
+}
+@media  screen and (max-width: 1329px) {
+  .messaging-container {height: 36.2vw;}
+  .messaging-container .ui-resizable-se {bottom: -7.999vw;}
+} 
+@media  screen and (max-width: 1280px) {
+  .messaging-container {height: 36.2vw;}
+  .messaging-container .ui-resizable-se {bottom: -8.2vw;}
+}
+@media  screen and (max-width: 1200px) {
+  .messaging-container {height: 36vw;}
+  .messaging-container .ui-resizable-se {bottom: -8.6vw;}
+}
+@media  screen and (max-width: 1180px) {
+  .messaging-container {height: 35.88vw;}
+  .messaging-container .ui-resizable-se {bottom: -8.8vw;}
+}
+@media  screen and (max-width: 1139px) {
+  .messaging-container {height: 35.7vw;}
+  .messaging-container .ui-resizable-se {bottom: -9vw;}
+}
+@media(max-width: 1091px){
+  .avatar-container .avatar{height: auto;}
+  .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 4.5%;}
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;bottom: 0;left: 0;right: 0;padding: 3vw;}
+}
+@media (max-width: 992px){
+  .messaging-container {height: 35.11vw;}
+  .messaging-container .ui-resizable-se {bottom: -10vw;}
+}
+@media (max-width: 767px) {
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;bottom: 0;left: 0;right: 0;padding: 3vw;}
+  .xploadwebinar-container .webinar-container .xploadvideo-container{margin-bottom: -12.5%;}
+  .avatar-container .avatar {height: auto;}
+  .messaging-container .ui-resizable-se {bottom: -13vw;}
+}
+@media (max-width: 575px) {
+  .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;bottom: 0;left: 0;right: 0;padding: 3vw;}
+  .xploadwebinar-container .webinar-container .xploadvideo-container{margin-bottom: 18.5%;}
+  .avatar-container .avatar {height: auto;}
+  .messaging-container .ui-resizable-se {bottom: -17.6vw;}
+}
+@media (max-width: 425px) {
+  .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 62.5%;}
+  .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+}
+@media (max-width: 375px) {
+  .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 84.5%;}
+  .messaging-container .ui-resizable-se {bottom: -26.6vw;}
+}
+
+
+/*Mozilla Responsive*/
+@-moz-document url-prefix() {  
+  
+  @media  screen and (min-width: 1921px) {
+    .messaging-container {height: 37.36vw;}
+    .messaging-container .ui-resizable-se {bottom: -6.4vw;}
+  }
+  @media  screen and (max-width: 1920px) {
+    .messaging-container {height: 37.1vw;}
+    .messaging-container .ui-resizable-se {bottom: -6.4vw;}
+  }
+  @media  screen and (max-width: 1680px) {
+    .messaging-container {height: 36.8vw;}
+    .messaging-container .ui-resizable-se {bottom: -7vw;}
+  }
+  @media  screen and (max-width: 1600px) {
+    .messaging-container {height: 36.77vw;}
+    .messaging-container .ui-resizable-se {bottom: -7.2vw;}
+  }
+  @media  screen and (max-width: 1440px) {
+    .messaging-container {height: 36.5vw;}
+    .messaging-container .ui-resizable-se {bottom: -7.7vw;}
+  }
+  @media  screen and (max-width: 1366px) {
+    .messaging-container {height: 36.33vw;}
+    .messaging-container .ui-resizable-se {bottom: -7.9vw;}
+  }
+  @media  screen and (max-width: 1329px) {
+    .messaging-container {height: 36.2vw;}
+    .messaging-container .ui-resizable-se {bottom: -7.999vw;}
+  } 
+  @media  screen and (max-width: 1280px) {
+    .messaging-container {flex-grow: 1;height: 36.1vw;width: 50%;}
+    .messaging-container .ui-resizable-se {bottom: -8.2vw;}
+  }
+  @media  screen and (max-width: 1200px) {
+    .messaging-container {height: 36vw;}
+    .messaging-container .ui-resizable-se {bottom: -8.6vw;}
+  }
+  @media  screen and (max-width: 1180px) {
+    .messaging-container {height: 35.88vw;}
+    .messaging-container .ui-resizable-se {bottom: -8.8vw;}
+  }
+  @media  screen and (max-width: 1139px) {
+    .messaging-container {height: 35.7vw;}
+    .messaging-container .ui-resizable-se {bottom: -9vw;}
+  }
+  @media (max-width: 992px){
+    .messaging-container {height: 35.11vw;}
+    .messaging-container .ui-resizable-se {bottom: -10vw;}
+  }
+  @media (max-width: 767px) {
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;bottom: 0;left: 0;right: 0;padding: 3vw;}
+    .xploadwebinar-container .webinar-container .xploadvideo-container{margin-bottom: -12.5%;}
+    .avatar-container .avatar {height: auto;}
+    .messaging-container .ui-resizable-se {bottom: -13vw;}
+  }
+  @media (max-width: 575px) {
+    .xploadwebinar-container .webinar-container .xploadchatnotif-container {position: absolute;bottom: 0;left: 0;right: 0;padding: 3vw;}
+    .xploadwebinar-container .webinar-container .xploadvideo-container{margin-bottom: 18.5%;}
+    .avatar-container .avatar {height: auto;}
+    .messaging-container .ui-resizable-se {bottom: -17.6vw;}
+  }
+  @media (max-width: 425px) {
+    .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 62.5%;}
+    .messaging-container .ui-resizable-se {bottom: -23.6vw;}
+  }
+  @media (max-width: 375px) {
+    .xploadwebinar-container .webinar-container .xploadvideo-container {margin-bottom: 84.5%;}
+    .messaging-container .ui-resizable-se {bottom: -26.6vw;}
+  }
+}

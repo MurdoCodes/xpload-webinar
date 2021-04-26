@@ -169,10 +169,6 @@ jQuery(function($) {
       content: 'Webinar is shutting down!',
     });
     shutdown();
-    // document.getElementById("presenter").style.display = "flex";
-    captureButton.css('display','initial');
-    pauseCaptureButton.css("display", "none");
-    stopCaptureButton.css("display", "none");
     
   });
 
@@ -194,9 +190,6 @@ jQuery(function($) {
             content: 'Subsribers are connecting!',
           });
           $('.xploadchatnotif-container').css("height", "49.5vw");
-          captureButton.css('display','none');
-          pauseCaptureButton.css("display", "initial");
-          stopCaptureButton.css("display", "initial");
         },
         error: function (msg) {
           $.alert({
@@ -238,9 +231,6 @@ jQuery(function($) {
     }
 
     if(data != currentAdminId){ 
-      captureButton.css('display','none');
-      pauseCaptureButton.css("display", "none");
-      stopCaptureButton.css("display", "none");
 
       $( "#xprowebinarPublisherCamera" ).remove();
       
@@ -269,9 +259,6 @@ jQuery(function($) {
     if(data != currentAdminId){
       $('#xprowebinar-subscriber').trigger('pause');
       $('#xprowebinarSubscriberCamera').trigger('pause');
-      captureButton.css('display','initial');
-      pauseCaptureButton.css("display", "none");
-      stopCaptureButton.css("display", "initial");
     }
   });
 
@@ -284,10 +271,6 @@ jQuery(function($) {
         success: function (response) {
           $('#xprowebinar-subscriber').trigger('pause');
           $('#xprowebinarPublisherCamera').trigger('pause');
-          captureButton.css('display','initial');
-          pauseCaptureButton.css("display", "none");
-          stopCaptureButton.css("display", "initial");
-          // document.getElementById("presenter").style.display = "flex";
         },
         error: function (msg) {
           $.alert({

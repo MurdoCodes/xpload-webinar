@@ -7,7 +7,7 @@
     * REMOVE ADMIN BAR
 **/
 #wpadminbar{display:none !important;}
-html{height: 0 !important;background-image: none !important;background-repeat: no-repeat !important;background-attachment: unset !important;min-height: -webkit-fill-available !important;}
+html{background-image: none !important;background-repeat: no-repeat !important;background-attachment: unset !important;min-height: -webkit-fill-available !important;}
 /*REMOVE SIDEBAR BB PRESS*/
 body{min-height: -webkit-fill-available !important;background-image: url(../images/bg.jpg);background-size: cover;background-position: center;}
 body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-boxed[style*=width], body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-full_width[style*=width], body.bb-buddypanel.buddypanel-open:not(.elementor-template-canvas) .elementor-section-stretched[style*=width]{padding-left:0px !important;}
@@ -39,7 +39,8 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
     * Xpload Webinar Video, Chat and Notification Container
 **/
 .xploadwebinar-container .webinar-container .xploadchatnotif-container{display:flex;padding-left: 12px;}
-.messaging-container{flex-grow: 1;height: 37.6vw;width: 50%;}
+.messaging-container{flex-grow: 1;height: 37.6vw;position: absolute;width: 49%;}
+#message-chat{left: 50%;}
 .messaging-container .ui-resizable-se {right: 0vw;bottom: -5.6vw;}
 .messaging-container .ui-resizable-s {position: inherit;}
 /*Avatar*/
@@ -60,7 +61,7 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
 #xprowebinarPublisherImage{width:100% !important;height: 22vh !important;}
 /*Notification*/
 /** Change made recent **/
-.notification-container{padding-right:1%;height: 100%;}
+.notification-container{padding-right:2%;height: 100%;}
 .notification-container .notificationBox{height: 100%;max-height: 100%;overflow-y:scroll;background: rgba(26, 26, 26, 0.6);padding:2%;margin: 0px !important;background-size: 100% 100%;}
 .actual_msg p{font-size:.7vw;}
 .notification-container .notificationBox .actual_msg img{float:none !important;}
@@ -150,9 +151,9 @@ body.bb-buddypanel:not(.elementor-template-canvas) .elementor-section-boxed[styl
     padding-left: 15px;
     padding-bottom: 15px;
     margin: 0px !important;
-    background-image: url(../images/chat%20box.jpg);
     background-size: cover;
     display:none;
+    background: rgba(26, 26, 26, 0.6);
 }
 .cc i{
     color:#fff;
@@ -209,23 +210,26 @@ select{
     }
 /** Change made recent **/
 #videoContainer{position: relative;display: inline-block;width:100%;}
-#videoContainer .ui-resizable-se {opacity: 1;}
-#videoContainer:hover .ui-resizable-se{opacity: 1;}
+/*#videocontainerrow .ui-resizable-s{bottom: 0vw;}*/
+#videocontainerrow .ui-resizable-se {opacity: 1;}
+#videocontainerrow:hover .ui-resizable-se{opacity: 1;}
 /** Change made recent **/
-#videoContainer #header-image{background-color:rgba(0,0,0,0.7);}
+#videoContainer #header-image{background-color:rgba(0,0,0,0.7);position: absolute;}
 /*#videoContainer #header-image #webinarLogo{width: 20%;}*/
 #videoContainer #header-image h2{margin: 0 !important;font-size: 2em;padding: .744vw;color:#01c3b6;}
 #videoContainer #header-image:hover{cursor: move;}
 /** Change made recent **/
 #notification-container .ui-resizable-se{opacity: 1;}
+#notification-container .ui-resizable-e {right: 0vw;}
 #notification-container:hover .ui-resizable-se{opacity: 1;}
 #notification-container h5:hover{cursor: move;}
 /** Change made recent **/
 #chat-container .ui-resizable-se{opacity: 1;}
+#chat-container .ui-resizable-w {left: 0.5vw;}
 #chat-container:hover .ui-resizable-se{opacity: 1;}
 #chat-container h5:hover{cursor: move;}
 /** Change made recent **/
-.avatar .ui-resizable-se{bottom: -1.1vw;opacity:1;}
+.avatar .ui-resizable-se{bottom: -1.5vw;opacity:1;}
 .avatar .ui-resizable-s {bottom: 0;position: inherit;}
 .avatar-container #avatar1:hover .ui-resizable-se{opacity: 1;}
 .avatar-container #avatar2:hover .ui-resizable-se{opacity: 1;}
@@ -282,7 +286,14 @@ select{
         margin-right: 0px;
         margin-left: 0px;
     position: absolute;
-    top: 50%;
+    top: 85%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.clearBoth{
+    clear:both; 
+}
+
+#chartcontainer{display: flex;}
+#chartcontainer iframe{width: 100% !important;height: 30vw !important;}
