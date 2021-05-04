@@ -54,7 +54,7 @@ class XploadWebinar{
 						// Font-Awesome
 						wp_enqueue_style( 'xpload-fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css', __FILE__ );
 						// emoji
-						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.3.34' );
+						wp_enqueue_style( 'xpload-xpload-emoji', plugin_dir_url( __FILE__ ). 'assets/css/emojionearea.css', __FILE__, '1.3.39' );
 						// Text color change
 						wp_enqueue_style( 'xpload-xpectrum', plugin_dir_url( __FILE__ ). 'assets/css/spectrum.css', __FILE__ );
 					/** VIDEO **/
@@ -64,8 +64,8 @@ class XploadWebinar{
 					/** CONFIRM **/
 						wp_enqueue_style( 'xpload-confirm', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css', __FILE__ );
 					/** PLUGIN STYLESHEET **/
-						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.3.34' );
-						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.3.34' );
+						wp_enqueue_style( 'xpload-webinar-styles', plugin_dir_url( __FILE__ ). 'assets/css/style.css', __FILE__, '1.3.39' );
+						wp_enqueue_style( 'xpload-webinar-default', plugin_dir_url( __FILE__ ). 'assets/css/default.css', __FILE__, '1.3.39' );
 				
 				/** ENQUEUE JS  **/
 					// JQUERY
@@ -98,29 +98,29 @@ class XploadWebinar{
 
 						if ( current_user_can('administrator') && is_user_logged_in() ) :
 
-							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.3.34', true );
-							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.3.34', true );
+							wp_enqueue_script( 'xpload-publishers', plugin_dir_url( __FILE__ ) . 'assets/js/publishers.js', __FILE__, '1.3.39', true );
+							wp_enqueue_script( 'xpload-publisher', plugin_dir_url( __FILE__ ) . 'script/publisher.js', __FILE__, '1.3.39', true );
 							wp_localize_script('xpload-publisher', 'pluginsURL', array(
 							    'pluginsURL' => plugins_url(),
 							));
 
 						else:
 							
-							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.3.34' );
-							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.3.35', true );
-							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.3.35', true );
+							wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.3.39' );
+							wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.3.39', true );
+							wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.3.39', true );
 
 							if ( !is_user_logged_in() ) :
-								wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.3.35' );
-								wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.3.35', true );
-								wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.3.35', true );
-								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.3.5', true );
+								wp_enqueue_style( 'xpload-webinar-user', plugin_dir_url( __FILE__ ). 'assets/css/user.css', __FILE__, '1.3.39' );
+								wp_enqueue_script( 'xpload-subscribers', plugin_dir_url( __FILE__ ) . 'assets/js/subscribers.js', __FILE__, '1.3.39', true );
+								wp_enqueue_script( 'xpload-subscriber', plugin_dir_url( __FILE__ ) . 'script/subscriber.js', __FILE__, '1.3.39', true );
+								wp_enqueue_script( 'xpload-free-subscriber', plugin_dir_url( __FILE__ ) . 'assets/js/freesubscriber.js', __FILE__, '1.3.39', true );
 							endif;
 
 						endif;
 						
 						// SITE
-						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.3.35', true );
+						wp_enqueue_script( 'xpload-webinar-script', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), '1.3.39', true );
 						wp_localize_script('xpload-webinar-script', 'pluginsURL', array(
 						    'pluginsURL' => plugins_url(),
 						));
@@ -193,22 +193,91 @@ class XploadWebinar{
 		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/main-screen.png'; ?>" alt="Share Screen">
 		      	</a>
 		      </li>
-		      <li>
+		      <!-- <li>
 		      	<a href="#" id="chartToggle" title="Statistics">
-		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chart.png'; ?>" alt="Statistics">
+		      		<img src="<?php //echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chart.png'; ?>" alt="Statistics">
 		      	</a>
-		      </li>
-		      <li>
+		      </li> -->
+		      <!-- <li>
 		      	<a href="#" id="statisticsToggle" title="Statistics">
-		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chart.png'; ?>" alt="Statistics">
+		      		<img src="<?php //echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/chart.png'; ?>" alt="Statistics">
 		      	</a>
-		      </li>
+		      </li> -->
 		      <li>
 		      	<a href="#" id="resetView" title="Reset Layout">
 		      		<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/icons/reset.png'; ?>" alt="Reset">
 		      	</a>
 		      </li>
 		  </ul>
+		</div>
+
+		<div class="sound_font_select" id="sound_font_select">
+			<div class="soundfontContainer">
+				<div class="left">
+					<?php if (current_user_can('administrator')) : ?>
+		        	<select name="notificationSound" id="notificationSound">
+						<option value="" disabled selected>Select Sound</option>
+					    <optgroup label="Bell Notification Sound">
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 1.mp3'; ?>">Notification 1</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 2.mp3'; ?>">Notification 2</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 3.mp3'; ?>">Notification 3</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 4.mp3'; ?>">Notification 4</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 5.mp3'; ?>">Notification 5</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 6.mp3'; ?>">Notification 6</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 7.mp3'; ?>">Notification 7</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 8.mp3'; ?>">Notification 8</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 9.mp3'; ?>">Notification 9</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 10.mp3'; ?>">Notification 10</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 11.mp3'; ?>">Notification 11</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 12.mp3'; ?>">Notification 12</option>
+					    </optgroup>
+
+					    <optgroup label="Cash Register Sound">
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 1.mp3'; ?>">Cash Register 1</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 2.mp3'; ?>">Cash Register 2</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 3.mp3'; ?>">Cash Register 3</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 4.mp3'; ?>">Cash Register 4</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 5.mp3'; ?>">Cash Register 5</option>
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 6.mp3'; ?>">Cash Register 6</option>
+					    </optgroup>
+
+					    <optgroup label="Stock Market Sound">
+					      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Stock Market/Stock Market.mp3'; ?>">Stock Market</option>
+					    </optgroup>
+					</select>
+					<?php endif; ?>
+				</div>
+				<div class="right">
+					<select name="fontSizeSelect" id="fontSizeSelect">
+		        		<option value="16" disabled selected>Font Size</option>
+		        		<option value="8">8</option>
+		        		<option value="10">10</option>
+		        		<option value="12">12</option>
+		        		<option value="14">14</option>
+		        		<option value="16">16</option>
+		        		<option value="18">18</option>
+		        		<option value="20">20</option>
+		        		<option value="22">22</option>
+		        		<option value="24">24</option>
+		        		<option value="26">26</option>
+		        		<option value="28">28</option>
+		        		<option value="30">30</option>
+		        		<option value="32">32</option>
+		        		<option value="34">34</option>
+		        		<option value="36">36</option>
+		        		<option value="38">38</option>
+		        		<option value="40">40</option>
+		        	</select>
+				</div>
+				<!-- <div>
+					<select name="presets" id="presets">
+		        		<option value="1" disabled selected>Presets</option>
+		        		<option value="1">1</option>
+		        		<option value="2">2</option>
+		        		<option value="3">3</option>
+		        	</select>
+				</div> -->
+			</div>
 		</div>
 		<div class="xploadwebinar-container container-fluid" id="xploadwebinar-container">
 	<?php
@@ -291,9 +360,8 @@ class XploadWebinar{
 								 ?>
 								<div class="avatar" id="avatar_1" style="<?php echo $avatar_1style ?>">
 									<div id="avatar1" style="<?php echo $avatar1style ?>">
-										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
+										<div class="avatart_text">
 											<h3>Open House Special</h3>
-											<!-- <i class="fal fa-times-circle closeavatar" id="closeavatar1"></i> -->
 										</div>
 										
 										
@@ -328,9 +396,8 @@ class XploadWebinar{
 								 ?>
 								<div class="avatar" id="avatar_2" style="<?php echo $avatar_2style; ?>">
 									<div id="avatar2" style="<?php echo $avatar2style; ?>">
-										<div id="presenter" style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
+										<div id="presenter" class="avatart_text">
 											<h3>Presenter</h3>
-											<!-- <i class="fal fa-times-circle closeavatar" id="closeavatar2"></i> -->
 										</div>
 										
 										<?php if (current_user_can('administrator')) : ?>
@@ -381,9 +448,8 @@ class XploadWebinar{
 								 ?>
 								 <div class="avatar" id="avatar_3" style="<?php echo $avatar_3; ?>">
 									<div id="avatar3" style="<?php echo $avatar3style; ?>">							
-										<div style="display: flex;justify-content: space-between;background-color: rgba(0,0,0,0.7);">
+										<div class="avatart_text">
 											<h3>Professional Trading Strategies</h3>
-											<!-- <i class="fal fa-times-circle closeavatar" id="closeavatar3"></i> -->
 										</div>
 										<a href="https://livetraders.com/product/professional-trading-strategies/" target="_blank">
 										<img src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/images/pts.png'; ?>" alt="Professional Trading Strategies">
@@ -424,40 +490,7 @@ class XploadWebinar{
 						<div class="notification-container" id="notification-container" style="<?php echo $notificationstyle ?>">
 							<div class="notification__title">
 						        <h5>Trade Announcements</h5>
-						        <div class="volume-control-notif" style="display: flex;justify-content: end;">
-						        	<?php if (current_user_can('administrator')) : ?>
-							        	<select name="notificationSound" id="notificationSound">
-											<option value="" disabled selected>Select Sound</option>
-										    <optgroup label="Bell Notification Sound">
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 1.mp3'; ?>">Notification 1</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 2.mp3'; ?>">Notification 2</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 3.mp3'; ?>">Notification 3</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 4.mp3'; ?>">Notification 4</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 5.mp3'; ?>">Notification 5</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 6.mp3'; ?>">Notification 6</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 7.mp3'; ?>">Notification 7</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 8.mp3'; ?>">Notification 8</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 9.mp3'; ?>">Notification 9</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 10.mp3'; ?>">Notification 10</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 11.mp3'; ?>">Notification 11</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Bell Notification/Notification 12.mp3'; ?>">Notification 12</option>
-										    </optgroup>
-
-										    <optgroup label="Cash Register Sound">
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 1.mp3'; ?>">Cash Register 1</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 2.mp3'; ?>">Cash Register 2</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 3.mp3'; ?>">Cash Register 3</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 4.mp3'; ?>">Cash Register 4</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 5.mp3'; ?>">Cash Register 5</option>
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Cash Register/Cash Register 6.mp3'; ?>">Cash Register 6</option>
-										    </optgroup>
-
-										    <optgroup label="Stock Market Sound">
-										      <option value="<?php echo plugin_dir_url( __FILE__ ) . 'assets/audio/Stock Market/Stock Market.mp3'; ?>">Stock Market</option>
-										    </optgroup>
-										</select>
-									<?php endif; ?>
-									<!-- Button trigger modal -->
+						        <div class="volume-control-notif" style="display: flex;justify-content: end;">	
 									<i class="fas fa-search notifSound" id="notif-search"></i>
 									<i class='fas fa-volume-up notifSound' id="notif-volume-up" ></i>
 									<i class='fas fa-volume-mute notifSound xploadhide' id="notif-volume-mute"></i>								
@@ -513,27 +546,6 @@ class XploadWebinar{
 						        	<?php endif; ?>
 						        </h5>
 						        <div class="fontSizeContainer" style="display: flex;">
-						        	<select name="fontSizeSelect" id="fontSizeSelect">
-						        		<option value="16" disabled selected>Font Size</option>
-						        		<option value="8">8</option>
-						        		<option value="10">10</option>
-						        		<option value="12">12</option>
-						        		<option value="14">14</option>
-						        		<option value="16">16</option>
-						        		<option value="18">18</option>
-						        		<option value="20">20</option>
-						        		<option value="22">22</option>
-						        		<option value="24">24</option>
-						        		<option value="26">26</option>
-						        		<option value="28">28</option>
-						        		<option value="30">30</option>
-						        		<option value="32">32</option>
-						        		<option value="34">34</option>
-						        		<option value="36">36</option>
-						        		<option value="38">38</option>
-						        		<option value="40">40</option>
-						        	</select>
-
 						        	<div class="volume-control-chat" style="display: flex;">
 						        		<!-- Button trigger modal -->
 										<i class="fas fa-search chatSound" id="chat-search"></i>	
@@ -563,14 +575,12 @@ class XploadWebinar{
 				    </div>
 				</div>
 			</div>
-
+			<!--
 			<div class="row">
 				<div class="col-12 chartcontainer nopadding" id="chartcontainer">
 					<div class="col-6 nopadding" style="padding-right:.1%;padding-left: .5%;" id="chart1">
-						<!-- TradingView Widget BEGIN -->
 						<div class="tradingview-widget-container">
 						  <div id="tradingview_907a0"></div>
-						  <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div> -->
 						  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 						  <script type="text/javascript">
 						  new TradingView.widget(
@@ -592,17 +602,14 @@ class XploadWebinar{
 						    "NASDAQ:AAPL"
 						  ],
 						  "container_id": "tradingview_907a0"
-						}
+							}
 						  );
 						  </script>
 						</div>
-						<!-- TradingView Widget END -->
 					</div>
 					<div class="col-6" style="padding-left:.1%;padding-right: 1.3%;" id="chart2">
-						<!-- TradingView Widget BEGIN -->
 						<div class="tradingview-widget-container">
 						  <div class="tradingview-widget-container__widget"></div>
-						  <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/screener/" rel="noopener" target="_blank"><span class="blue-text">Stock Screener</span></a> by TradingView</div> -->
 						  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
 						  {
 						  "width": "auto",
@@ -614,14 +621,14 @@ class XploadWebinar{
 						  "colorTheme": "dark",
 						  "locale": "en",
 						  "largeChartUrl": "https://livetraders.com/?page_id=152707"
-						}
+							}
 						  </script>
 						</div>
-						<!-- TradingView Widget END -->
 					</div>
 					
 				</div>
 			</div>
+			-->
 
 			<div class="row">
 				<audio autostart="false" width="0" height="0" id="PlayChatSound">

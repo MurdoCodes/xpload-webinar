@@ -39,7 +39,7 @@ jQuery(function($) {
         	toastr.success(userName + ': ' +userMsg);
         	PlayNotificationSound(audioSrc)
         	
-        	html = "<li class='actual_msg' id='notif_msg_"+notif_id+"' style='text-align:left;float:left;background: #ffffff;width:90%;"+notifColor+"font-size:"+fontsize+"px;'><section><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong><span class='date'>"+datetime+"</span><i class='fa fa-trash deleteNotif' id='"+notif_id+"' style='margin-left: .2vw;'></i><p style='display:block;margin-top:1%;margin-bottom:1%;font-weight:400;' id='userMsg'>"+userMsg+"</p></section></li>";
+        	html = "<li class='actual_msg' id='notif_msg_"+notif_id+"' style='text-align:left;float:left;background: #ffffff;width:90%;"+notifColor+"font-size:"+fontsize+"px;'><section><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong><span class='date'>"+datetime+"</span><i class='fa fa-trash deleteNotif' id='"+notif_id+"' style='margin-left: .2vw;'></i><p style='display:block;margin-top:1%;margin-bottom:1%;font-weight:400;font-size:"+fontsize+"px;' id='userMsg'>"+userMsg+"</p></section></li>";
     	});
 
     	$("#xprowebinarNotificationMsgBox").append(html);
@@ -187,7 +187,7 @@ jQuery(function($) {
 		        	var currentDate = data.xpload_chat_date;
 		        	var chatColor = data.xpload_chat_color
 		        	newmessage = 1;
-		        	html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:right;float:right;word-wrap: break-word;width:85%;background-color:"+chatColor+";font-size:"+fontsize+"px;'><section><span class='date' style='display:inline-block !important;'>"+datetime+"</span> <strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-right: .2vw;'></i><p style='text-align: left;margin-top:1%;margin-bottom:1%;'>"+userMsg+"</p></section></li>";		        	
+		        	html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:right;float:right;word-wrap: break-word;width:85%;background-color:"+chatColor+";><section><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-right: .2vw;'></i><span class='date' style='display:inline-block !important;'>"+datetime+"</span><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong><p style='text-align: left;margin-top:1%;margin-bottom:1%;font-size:"+fontsize+"px;'>"+userMsg+"</p></section></li>";		        	
 	        	});
 				$("#chatbox").append(html);
 				$("#chatbox").animate({scrollTop: $("#chatbox").get(0).scrollHeight},900);
@@ -219,8 +219,7 @@ jQuery(function($) {
 		        	var currentDate = data.xpload_chat_date;
 		        	var chatColor = data.xpload_chat_color
 		        	toastr.warning(userName + ': ' +userMsg);
-
-		        	html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:left;float:left;background-color:"+chatColor+";font-size:"+fontsize+"px;'><section><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong> <span class='date' style='display:inline-block !important;'>"+datetime+"</span><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-left: .2vw;'></i><p style='margin-top:1%;margin-bottom:1%;'>"+userMsg+"</p></section></li>";
+		        	html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:left;float:left;background-color:"+chatColor+";'><section><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong> <span class='date' style='display:inline-block !important;'>"+datetime+"</span><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-left: .2vw;'></i><p style='margin-top:1%;margin-bottom:1%;font-size:"+fontsize+"px;'>"+userMsg+"</p></section></li>";
 	        	}
         	});
 
@@ -314,7 +313,7 @@ jQuery(function($) {
 	        		if(userId != chatUserID){
 	        			html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:left;float:left;background-color:"+chatColor+";font-size:"+fontsize+"px;'><section><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong> <span class='date' style='display:inline-block !important;'>"+datetime+"</span><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-left: .2vw;'></i><p style='margin-top:1%;margin-bottom:1%;'>"+userMsg+"</p></section></li>";
 	        		}else{
-	        			html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:right;float:right;word-wrap: break-word;width:85%;background-color:"+chatColor+";font-size:"+fontsize+"px;'><section> <span class='date' style='display:inline-block !important;'>"+datetime+"</span><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-right: .2vw;'></i><p style='margin-top:1%;margin-bottom:1%;text-align: left;'>"+userMsg+"</p></section></li>";
+	        			html += "<li class='actual_msg' id='chat_msg_"+chat_id+"' style='text-align:right;float:right;word-wrap: break-word;width:85%;background-color:"+chatColor+";font-size:"+fontsize+"px;'><section><i class='fa fa-trash deleteChat' id='"+chat_id+"' style='margin-right: .2vw;'></i><span class='date' style='display:inline-block !important;'>"+datetime+"</span><strong style='text-transform:capitalize;font-weight:900;font-size:.8vw;'>"+userName+"</strong><p style='margin-top:1%;margin-bottom:1%;text-align: left;'>"+userMsg+"</p></section></li>";
 	        				        			
 	        		}
 	        	});
@@ -457,6 +456,24 @@ jQuery(function($) {
 		var fontsize = this.value+"px";
 		$(".chat-container .chatbox p").css("font-size", fontsize);
 		$(".notification-container .notificationBox #userMsg").css("font-size", fontsize);
+
+		userMsg
+	});
+
+	/**
+		**
+		* Preset Select
+		**
+	**/
+	$('#presets').on('change', function() {		
+		var preset = this.value;
+		if(preset == "1"){
+			alert("test");
+		}else if(preset == "2"){
+			alert("test");
+		}else if(preset == "3"){
+			alert("test");
+		}
 	});	
 
 	/**
@@ -662,7 +679,7 @@ jQuery(function($) {
 
 	        document.getElementById(id).style.top = top + "vw";
 	        document.getElementById(id).style.left = left + "vw";	        
-	        if(id == "avatar2" || id == "avatar3" || id == "chat-container"){
+	        if(id == "avatar2" || id == "avatar3"){
 	        	document.getElementById(id).style.position = "absolute";
 	        	var width = document.getElementById(id).style.width;
 	        	var height = document.getElementById(id).style.height
@@ -684,43 +701,28 @@ jQuery(function($) {
 	/** Change made recent **/
 	$( "#videoContainer" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		// containment: "document",
+		minHeight: 150,
+		minWidth: 150,
 		resize: function( e, $el, opt ) {
 			if(event.target.id == "videoContainer"){
 				zindexFunction(this.id);
 			}
 			if(window.innerWidth <= 1920 && window.innerWidth >= 1681){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.85vw').css('margin-left', '-.3vw');
-			}else if(window.innerWidth <= 1680 && window.innerWidth >= 1601){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');			
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.8vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.11vw').css('margin-left', '-.3vw');
+			}else if(window.innerWidth <= 1680 && window.innerWidth >= 1601){	
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.11vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 1600 && window.innerWidth >= 1441){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.85vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.11vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 1440 && window.innerWidth >= 1367){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.88vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.11vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 1366 && window.innerWidth >= 1330){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.9vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.3vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 1329 && window.innerWidth >= 1281){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '30.9vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.4vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 1280 && window.innerWidth >= 1181){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.4vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 1180 && window.innerWidth >= 992){
-				// $('#videocontainerrow').css('position', 'absolute').css('top', '0');
-				// $('#xprowebinar-subscriber').css('height', '100%');
-				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '31vw').css('margin-left', '-.3vw');
+				$('#avatarcontainerow').css('position', 'absolute').css('width', '100%').css('top', '28.4vw').css('margin-left', '-.3vw');
 			}else if(window.innerWidth <= 991){
 				$('#avatarcontainerow').css('position', 'absolute').css('top', '55vw').css('margin-right', '0');
 				var style = document.getElementById(e.target.id).style.cssText;
@@ -744,7 +746,7 @@ jQuery(function($) {
 	});
 	$( "#notification-container" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		// containment: "document",
+		minWidth: 150,
 		resize: function( e, $el, opt ) {
 			if(event.target.id == "notification-container"){
 				zindexFunction(this.id);
@@ -764,7 +766,7 @@ jQuery(function($) {
 	});
 	$( "#chat-container" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		// containment: "document",
+		minWidth: 150,
 		resize: function( e, $el, opt ) {
 			if(event.target.id == "chat-container"){
 				zindexFunction(this.id);
@@ -783,7 +785,8 @@ jQuery(function($) {
 	});
 	$( "#avatar1" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		// containment: "document",
+		minHeight: 30,
+		minWidth: 150,
 		resize: function( e, $el, opt ) {
 			if(event.target.id == "avatar1"){
 				zindexFunction(this.id);
@@ -802,7 +805,8 @@ jQuery(function($) {
 	});
 	$( "#avatar2" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		// containment: "document",
+		minHeight: 30,
+		minWidth: 150,
 		resize: function( e, $el, opt ) {
 			if(event.target.id == "avatar2"){
 				zindexFunction(this.id);
@@ -821,7 +825,8 @@ jQuery(function($) {
 	});
 	$( "#avatar3" ).resizable({
 		handles: "n, e, s, w, ne, se, sw, nw",
-		// containment: "document",
+		minHeight: 30,
+		minWidth: 150,
 		resize: function( e, $el, opt ) {
 			if(event.target.id == "avatar3"){
 				zindexFunction(this.id);
@@ -859,97 +864,13 @@ jQuery(function($) {
 	}
 
 	function reportWindowSize() {
-		console.log(window.innerWidth);
-		if(window.innerWidth >= 1800){
-			document.getElementById("xploadwebinar-container").style.top = "85%";
-		}
-		if(window.innerWidth <= 1800){
-			document.getElementById("xploadwebinar-container").style.top = "82%";
-			document.getElementById("chartcontainer").style.marginTop = "2vw";
-		}
-		if(window.innerWidth <= 1600){
-			document.getElementById("xploadwebinar-container").style.top = "82%";
-			document.getElementById("chartcontainer").style.marginTop = "-2vw";
-		}
-		if(window.innerWidth <= 1375){
-			document.getElementById("xploadwebinar-container").style.top = "80%";
-		}
-		if(window.innerWidth <= 1250){
-			document.getElementById("xploadwebinar-container").style.top = "85%;";
-		}
-		if(window.innerWidth <= 1180){
-			document.getElementById("xploadwebinar-container").style.top = "68%";
-		}
-		if(window.innerWidth <= 1150){
-			document.getElementById("xploadwebinar-container").style.top = "68%";
-			document.getElementById("chartcontainer").style.marginTop = "-8vw";
-		}
-		if(window.innerWidth <= 1100){
-			document.getElementById("xploadwebinar-container").style.top = "68%";
-			document.getElementById("chartcontainer").style.marginTop = "-5vw";
-		}
-		if(window.innerWidth <= 991){
-			var xploadvideocontainer = document.getElementById("xploadvideo-container");
-			var xploadchatnotifcontainer = document.getElementById("xploadchatnotif-container");
-
-			xploadvideocontainer.classList.remove("col-12","col-sm-12","col-md-12");
-			xploadvideocontainer.classList.add("col-7","col-sm-7","col-md-7");
-
-			xploadchatnotifcontainer.classList.remove("col-12","col-sm-12","col-md-12");
-			xploadchatnotifcontainer.classList.add("col-5","col-sm-5","col-md-5");
-
-			document.getElementById("xploadchatnotif-container").style.marginTop  = "0%";
-			document.getElementById("xploadchatnotif-container").style.position  = "relative";
-			document.getElementById("xploadchatnotif-container").style.paddingLeft = "8px";
-			document.getElementById("xploadchatnotif-container").style.paddingRight = "10px";
-			document.getElementById("xploadwebinar-container").style.top = "60%"; 		
-		}
-		if(window.innerWidth <= 835){
-			$(".avatar-container .avatar h3").css("font-size", "1vw");
-			document.getElementById("xploadchatnotif-container").style.marginTop  = "0%";
-			document.getElementById("xploadchatnotif-container").style.position  = "relative";
-			document.getElementById("xploadchatnotif-container").style.paddingLeft = "3px";
-			document.getElementById("xploadchatnotif-container").style.paddingRight = "10px";
-			document.getElementById("xploadchatnotif-container").style.top = "0vw";
-			document.getElementById("xploadwebinar-container").style.top = "54%";
-		}
-		if(window.innerWidth <= 768){
-			document.getElementById("xploadwebinar-container").style.top = "44%";
-			document.getElementById("chartcontainer").style.marginTop = "-15vw";			
-		}
-		if(window.innerWidth <= 575){
-			xploadvideocontainer.classList.add("col-12","col-sm-12","col-md-12");
-			xploadvideocontainer.classList.remove("col-7","col-sm-7","col-md-7");
-
-			xploadchatnotifcontainer.classList.add("col-12","col-sm-12","col-md-12");
-			xploadchatnotifcontainer.classList.remove("col-5","col-sm-5","col-md-5");
-
-			document.getElementById("xploadchatnotif-container").style.marginTop  = "0vw";
-			document.getElementById("xploadchatnotif-container").style.position  = "relative";
-			document.getElementById("xploadchatnotif-container").style.paddingLeft = "0";
-			document.getElementById("xploadchatnotif-container").style.paddingRight = "0";
-			document.getElementById("xploadchatnotif-container").style.top = "-7em";
-			document.getElementById("chartcontainer").style.marginTop = "42vw";
-			document.getElementById("xploadwebinar-container").style.top = "63%";				
-		}
-		if(window.innerWidth <= 500){
-			xploadvideocontainer.classList.add("col-12","col-sm-12","col-md-12");
-			xploadvideocontainer.classList.remove("col-7","col-sm-7","col-md-7");
-
-			xploadchatnotifcontainer.classList.add("col-12","col-sm-12","col-md-12");
-			xploadchatnotifcontainer.classList.remove("col-5","col-sm-5","col-md-5");
-
-			document.getElementById("xploadchatnotif-container").style.marginTop  = "0vw";
-			document.getElementById("xploadchatnotif-container").style.position  = "relative";
-			document.getElementById("xploadchatnotif-container").style.paddingLeft = "0";
-			document.getElementById("xploadchatnotif-container").style.paddingRight = "0";
-			document.getElementById("xploadchatnotif-container").style.top = "-10.3em";
-			document.getElementById("xploadwebinar-container").style.top = "56%";	
-		}
-		
-		if(window.innerWidth <= 480){
-			document.getElementById("xploadwebinar-container").style.top = "60%";	
-		}
+		// console.log(window.innerWidth);
+		// if(window.innerWidth >= 993){
+		// 	document.getElementById("xploadvideo-container").style.marginTop = "0%";
+		// }
+		// if(window.innerWidth <= 992){			
+		// 	document.getElementById("xploadvideo-container").style.marginTop = "15%";
+		// }
 	}
 	window.onresize = reportWindowSize;
 	// Reset Layout View
@@ -1066,6 +987,12 @@ jQuery(function($) {
 			zindexFunction(this.id);
 		}
 	});
+	$( "#sound_font_select" ).click(function() {
+		if(this.id == "sound_font_select"){
+			zindexFunction(this.id);
+		}
+	});
+
 
 	// All elements array
 	var zAllElements = ['avatar1', 'avatar2', 'avatar3', 'videoContainer', 'notification-container', 'chat-container']; 
